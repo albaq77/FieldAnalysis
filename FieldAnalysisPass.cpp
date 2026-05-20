@@ -24,6 +24,10 @@ static cl::opt<bool> FieldAnalysisOnly(
     "field-analysis-only", cl::init(false),
     cl::desc("Only analyze, do not instrument"));
 
+static cl::opt<bool> SimpleAccessRecord(
+    "simple-access-record", cl::init(false),
+    cl::desc("Only record field_id (no address/region), lightweight affinity-only tracing"));
+
 struct AccessStep {
   std::string struct_name;
   uint32_t field_idx;
@@ -324,7 +328,7 @@ static std::optional<FieldInfo> analyzeGEPTyped(
       LeafByteOffset += FieldOffset;
       CurTy = ST->getElementType(FieldIdx);
 
-      if (auto *NestedST = dyn_cast<StructType>(CurTy)) {
+      if (isa<StructType>(CurTy)) {
         continue;
       }
     } else if (CurTy->isArrayTy()) {
@@ -446,10 +450,26 @@ static std::optional<FieldInfo> analyzeGEPDefUse(
       ST = dyn_cast<StructType>(GV2->getValueType());
     else if (auto *AI2 = dyn_cast<AllocaInst>(Src))
       ST = dyn_cast<StructType>(AI2->getAllocatedType());
-    else if (auto *CI2 = dyn_cast<CallBase>(Src))
-      ST = dyn_cast<StructType>(CI2->getType());
   } else if (auto *CI = dyn_cast<CallBase>(PtrOp)) {
     ST = dyn_cast<StructType>(CI->getType());
+    if (!ST) {
+      for (User *U : CI->users()) {
+        if (auto *UI = dyn_cast<Instruction>(U)) {
+          if (MDNode *TBAA = UI->getMetadata(LLVMContext::MD_tbaa)) {
+            if (TBAA->getNumOperands() >= 1) {
+              if (auto *BaseMD = dyn_cast<MDNode>(TBAA->getOperand(0))) {
+                if (BaseMD->getNumOperands() >= 1) {
+                  if (auto *NameMD = dyn_cast<MDString>(BaseMD->getOperand(0))) {
+                    ST = findStructTypeInModule(M, NameMD->getString().str());
+                    if (ST) break;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   if (!ST || ST->isOpaque() || !ST->hasName())
@@ -544,6 +564,11 @@ static std::optional<FieldInfo> analyzeGEP(
 
 PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
                                             ModuleAnalysisManager &MAM) {
+  if (M.getNamedMetadata("fieldanalysis.instrumented"))
+    return PreservedAnalyses::all();
+
+  M.getOrInsertNamedMetadata("fieldanalysis.instrumented");
+
   if (M.getIdentifiedStructTypes().empty())
     return PreservedAnalyses::all();
 
@@ -556,16 +581,30 @@ PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
     FieldInfo info;
   };
   std::vector<GEPRecord> Records;
-  std::set<Value *> ProcessedGEPs;
   std::vector<InstrumentPoint> InstrumentPoints;
+  std::set<std::pair<Instruction*, uint32_t>> InstrumentedPairs;
 
   for (Function &F : M) {
     if (F.isDeclaration())
       continue;
+    std::set<Value *> ProcessedGEPs;
+    unsigned BBIdx = 0;
+
     for (BasicBlock &BB : F) {
       unsigned InstIdx = 0;
 
       for (Instruction &I : BB) {
+        if (auto *CB = dyn_cast<CallBase>(&I)) {
+          if (auto *CF = CB->getCalledFunction()) {
+            StringRef FName = CF->getName();
+            if (FName == "__record_field_access_full" ||
+                FName == "__record_field_access") {
+              ++InstIdx;
+              continue;
+            }
+          }
+        }
+
         MDNode *TBAA = I.getMetadata(LLVMContext::MD_tbaa);
         bool HasTBAA = (TBAA != nullptr);
         bool HitGEP = false;
@@ -576,8 +615,6 @@ PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
             continue;
 
           HitGEP = true;
-          if (ProcessedGEPs.count(V))
-            continue;
 
           Instruction *UserInst = HasTBAA ? &I : nullptr;
           auto Info =
@@ -589,12 +626,12 @@ PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
           uint32_t Fid = Info->field_id;
 
           std::string MapKey;
-          if (auto *GEPI = dyn_cast<GetElementPtrInst>(V)) {
-            MapKey = (Twine(F.getName()) + "::" + BB.getName() + "::" +
+          if (isa<GetElementPtrInst>(V)) {
+            MapKey = (Twine(F.getName()) + "::" + Twine(BBIdx) + "::" +
                       Twine(InstIdx) + "_gep")
                          .str();
           } else {
-            MapKey = (Twine(F.getName()) + "::" + BB.getName() + "::" +
+            MapKey = (Twine(F.getName()) + "::" + Twine(BBIdx) + "::" +
                       Twine(InstIdx) + "_constexpr")
                          .str();
           }
@@ -604,6 +641,10 @@ PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
           int rw_flag = isa<StoreInst>(&I) ? 1 :
                         isa<LoadInst>(&I) ? 0 :
                         isa<MemCpyInst>(&I) || isa<MemSetInst>(&I) ? 2 : 0;
+          auto IPKey = std::make_pair(&I, Fid);
+          if (InstrumentedPairs.count(IPKey))
+            continue;
+          InstrumentedPairs.insert(IPKey);
           InstrumentPoints.push_back({&I, Fid, V, rw_flag});
         }
 
@@ -620,7 +661,7 @@ PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
             ProcessedGEPs.insert(GEP);
             uint32_t Fid = Info->field_id;
 
-            std::string MapKey = (Twine(F.getName()) + "::" + BB.getName() +
+            std::string MapKey = (Twine(F.getName()) + "::" + Twine(BBIdx) +
                                   "::" + Twine(InstIdx) + "_standalone")
                                      .str();
 
@@ -631,12 +672,51 @@ PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
               if (isa<StoreInst>(U)) { default_rw = 1; break; }
               if (isa<MemCpyInst>(U)) { default_rw = 2; break; }
             }
+            Instruction *ActualInsertAt = GEP->getNextNode() ? GEP->getNextNode() : GEP;
+            auto IPKey = std::make_pair(ActualInsertAt, Fid);
+            if (InstrumentedPairs.count(IPKey)) {
+              ++InstIdx;
+              continue;
+            }
+            InstrumentedPairs.insert(IPKey);
             InstrumentPoints.push_back({GEP, Fid, GEP, default_rw});
+          }
+        }
+
+        if (!HitGEP && HasTBAA) {
+          Value *PtrOp = nullptr;
+          if (auto *SI = dyn_cast<StoreInst>(&I))
+            PtrOp = SI->getPointerOperand();
+          else if (auto *LI = dyn_cast<LoadInst>(&I))
+            PtrOp = LI->getPointerOperand();
+
+          if (PtrOp && !isGEPValue(PtrOp)) {
+            auto Info = analyzeGEP(PtrOp, &I, DL, M, FieldIdMap, NextFieldId);
+            if (Info) {
+              uint32_t Fid = Info->field_id;
+
+              std::string MapKey = (Twine(F.getName()) + "::" + Twine(BBIdx) +
+                                    "::" + Twine(InstIdx) + "_direct")
+                                       .str();
+              Records.push_back({MapKey, std::move(*Info)});
+
+              int rw_flag = isa<StoreInst>(&I) ? 1 : 0;
+
+              Value *ArgGEP = SimpleAccessRecord ? nullptr : PtrOp;
+              auto IPKey = std::make_pair(&I, Fid);
+              if (InstrumentedPairs.count(IPKey)) {
+                ++InstIdx;
+                continue;
+              }
+              InstrumentedPairs.insert(IPKey);
+              InstrumentPoints.push_back({&I, Fid, ArgGEP, rw_flag});
+            }
           }
         }
 
         ++InstIdx;
       }
+      ++BBIdx;
     }
   }
 
@@ -875,7 +955,7 @@ PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
       if (!InsertAt) InsertAt = IP.insert_before;
     }
     IRBuilder<> Builder(InsertAt);
-    if (IP.gep_value) {
+    if (IP.gep_value && !SimpleAccessRecord) {
       Builder.CreateCall(RecordFullFn,
                          {ConstantInt::get(Type::getInt32Ty(M.getContext()), IP.field_id),
                           IP.gep_value,
@@ -902,12 +982,6 @@ PassPluginLibraryInfo getFieldAnalysisPluginInfo() {
                   }
                   return false;
                 });
-#ifndef LLVM_FIELDANALYSIS_LINK_INTO_TOOLS
-            PB.registerOptimizerLastEPCallback(
-                [](ModulePassManager &MPM, OptimizationLevel) {
-                  MPM.addPass(GEPFieldAnalysisPass());
-                });
-#endif
           }};
 }
 

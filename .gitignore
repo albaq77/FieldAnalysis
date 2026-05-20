@@ -9,3 +9,9 @@
 /runtime/*.a
 /v1.patch
 __pycache__/
+/.idea
+/.trae
+.vscode
+.vs
+.clangd/
+.cache

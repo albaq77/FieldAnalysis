@@ -21,6 +21,22 @@ def load_gep_field_map(path):
     return index
 
 
+def load_struct_layout(path):
+    if not os.path.isfile(path):
+        print(f"Warning: struct_layout.json not found: {path}", file=sys.stderr)
+        return {}
+    with open(path, "r") as f:
+        data = json.load(f)
+    result = {}
+    structs = data.get("structs", {})
+    for sname, sdata in structs.items():
+        fields = {}
+        for fld in sdata.get("fields", []):
+            fields[fld["idx"]] = fld.get("size", 8)
+        result[sname] = fields
+    return result
+
+
 def load_affinity_bin(path):
     if not os.path.isfile(path):
         print(f"Warning: Affinity binary file not found: {path}", file=sys.stderr)
@@ -94,7 +110,16 @@ def get_struct_fields(graph_obj, uses_nx, field_index):
     return by_struct
 
 
-def bin_pack_struct(struct_name, field_ids, graph_obj, uses_nx, field_index, cacheline_size, field_size):
+def get_field_size(fid, field_index, struct_sizes):
+    if fid not in field_index:
+        return 8
+    sname, fidx, boff = field_index[fid]
+    if sname in struct_sizes and fidx in struct_sizes[sname]:
+        return struct_sizes[sname][fidx]
+    return 8
+
+
+def bin_pack_struct(struct_name, field_ids, graph_obj, uses_nx, field_index, cacheline_size, struct_sizes):
     sorted_edges = get_sorted_edges(graph_obj, uses_nx)
 
     struct_field_set = set(field_ids)
@@ -119,25 +144,27 @@ def bin_pack_struct(struct_name, field_ids, graph_obj, uses_nx, field_index, cac
         for fid in (a, b):
             if fid in placed:
                 continue
-            if current_bin_bytes + field_size > cacheline_size:
+            fsz = get_field_size(fid, field_index, struct_sizes)
+            if current_bin_bytes + fsz > cacheline_size:
                 if current_bin:
                     bins.append(current_bin)
                 current_bin = []
                 current_bin_bytes = 0
             current_bin.append(fid)
-            current_bin_bytes += field_size
+            current_bin_bytes += fsz
             placed.add(fid)
 
     remaining = struct_field_set - placed
     sorted_remaining = sorted(remaining, key=lambda fid: field_index.get(fid, (None, 0, 0))[2])
     for fid in sorted_remaining:
-        if current_bin_bytes + field_size > cacheline_size:
+        fsz = get_field_size(fid, field_index, struct_sizes)
+        if current_bin_bytes + fsz > cacheline_size:
             if current_bin:
                 bins.append(current_bin)
             current_bin = []
             current_bin_bytes = 0
         current_bin.append(fid)
-        current_bin_bytes += field_size
+        current_bin_bytes += fsz
         placed.add(fid)
 
     if current_bin:
@@ -145,7 +172,7 @@ def bin_pack_struct(struct_name, field_ids, graph_obj, uses_nx, field_index, cac
 
     result_bins = []
     for b in bins:
-        result_bins.append([field_index[fid][1] for fid in b])
+        result_bins.append([(field_index[fid][1], get_field_size(fid, field_index, struct_sizes)) for fid in b])
 
     return result_bins
 
@@ -153,6 +180,7 @@ def bin_pack_struct(struct_name, field_ids, graph_obj, uses_nx, field_index, cac
 def main():
     parser = argparse.ArgumentParser(description="Offline GEP field affinity analysis for cacheline-aware struct reordering")
     parser.add_argument("--gep-map", default="gep_field_map.json", help="Path to gep_field_map.json (default: gep_field_map.json)")
+    parser.add_argument("--layout", default="struct_layout.json", help="Path to struct_layout.json (default: struct_layout.json)")
     parser.add_argument("--affinity", default="affinity.bin", help="Path to affinity.bin (default: affinity.bin)")
     parser.add_argument("--output", default="reorder.json", help="Path to output reorder.json (default: reorder.json)")
     parser.add_argument("--cacheline", type=int, default=64, help="Cacheline size in bytes (default: 64)")
@@ -162,6 +190,8 @@ def main():
     if not field_index:
         print("No field map data available. Exiting.")
         sys.exit(1)
+
+    struct_sizes = load_struct_layout(args.layout)
 
     records = load_affinity_bin(args.affinity)
     if not records:
@@ -174,7 +204,7 @@ def main():
         reorder = {}
         for sname, fields in by_struct.items():
             fields.sort()
-            reorder[sname] = [[fidx for _, fidx in fields]]
+            reorder[sname] = [[(fidx, get_field_size(fid, field_index, struct_sizes)) for _, fidx in fields]]
         with open(args.output, "w") as f:
             json.dump(reorder, f, indent=2)
         print(f"Wrote {args.output} with original ordering (no affinity data).")
@@ -191,14 +221,13 @@ def main():
         print("No struct fields found. Exiting.")
         sys.exit(1)
 
-    field_size = 8
     reorder = {}
     total_structs = 0
     total_bins = 0
     total_fields = 0
 
     for sname, field_ids in sorted(by_struct.items()):
-        bins = bin_pack_struct(sname, field_ids, graph_obj, uses_nx, field_index, args.cacheline, field_size)
+        bins = bin_pack_struct(sname, field_ids, graph_obj, uses_nx, field_index, args.cacheline, struct_sizes)
         reorder[sname] = bins
         total_structs += 1
         total_bins += len(bins)
@@ -213,7 +242,7 @@ def main():
     print(f"Total cacheline bins: {total_bins}")
     print(f"Total fields placed: {total_fields}")
     print(f"Cacheline size:      {args.cacheline} bytes")
-    print(f"Assumed field size:  {field_size} bytes")
+    print(f"Field sizes:         from struct_layout.json")
     print(f"Output written to:   {args.output}")
     print()
 
@@ -222,7 +251,9 @@ def main():
         fields_in_struct = sum(len(b) for b in bins)
         print(f"  {sname}: {fields_in_struct} fields -> {len(bins)} cacheline(s)")
         for i, b in enumerate(bins):
-            print(f"    cacheline {i}: field indices {b}")
+            items = [f"f{fidx}({fsz}B)" for fidx, fsz in b]
+            bin_bytes = sum(fsz for _, fsz in b)
+            print(f"    cacheline {i}: [{bin_bytes}B] {', '.join(items)}")
 
 
 if __name__ == "__main__":

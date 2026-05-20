@@ -12,6 +12,43 @@
 2. **运行时共现计数**：在已插桩的程序中记录字段访问的时间窗口共现关系
 3. **离线装箱优化**：基于共现矩阵，将高亲和度的字段对分配到同一缓存行
 
+## 环境依赖
+
+| 依赖 | 最低版本 | 说明 |
+|------|---------|------|
+| **LLVM** | **19.x** | 树内构建需放入 `llvm/lib/Transforms/`，独立构建需 `LLVM_DIR` 指向已安装的 LLVM 19 |
+| **CMake** | **≥ 3.20.0** | LLVM 19 自身要求，FieldAnalysis CMakeLists.txt 写 `3.16` 但在树内构建时以根 CMake 为准 |
+| **C++ 编译器** | GCC ≥ 7.4 / Clang ≥ 5.0 / Apple Clang ≥ 10.0 / VS 2019 16.7 | 需支持 C++17 |
+| **Ninja** | ≥ 1.5 | 推荐构建生成器（`-G Ninja`），也可用 GNU Make |
+| **Python** | ≥ 3.8 | `analyze.py` 和 `build_dfg.py` 运行所需 |
+| **clang** | LLVM 19 配套 | 编译 C 源码、生成 IR、插桩、链接 |
+| **opt** | LLVM 19 配套 | 树内构建时运行 field-analysis pass |
+| **lld** | LLVM 19 配套 | LTO 模式链接（可选，也可用 GNU ld） |
+| **llvm-link** | LLVM 19 配套 | 多文件 LTO 工作流合并 bitcode |
+| **ar** | 系统自带 | 打包 `libaffinity.a` 静态库 |
+| **bash** | ≥ 3.0 | `run_test.sh` 脚本执行环境 |
+| **cc / gcc** | 系统自带 | 编译运行时库 `libaffinity.c`（不参与 Pass 插桩） |
+| **pthread** | 系统自带 | 仅多线程编译时必需（`-lpthread`） |
+
+### 可选依赖
+
+| 依赖 | 说明 |
+|------|------|
+| **Graphviz (dot)** | 将 DFG 的 `.dot` 文件渲染为 PNG/SVG |
+| **LLVM_ENABLE_RTTI** | **必须设为 `ON`**，否则 `.so` 插件无法加载（`undefined symbol` 错误） |
+
+### 操作系统
+
+主要开发测试于 **Linux (x86_64)**。macOS 需设置 `PLUGIN_EXT=.dylib`。Windows 未充分测试。
+
+### LLVM 组件依赖
+
+独立构建时需链接以下 LLVM 组件（`llvm_map_components_to_libnames`）：
+
+```
+core  support  analysis  passes  transformutils  irreader
+```
+
 ## 理论基础
 
 ### 缓存行与结构体布局

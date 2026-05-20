@@ -11,6 +11,7 @@ llvm_map_components_to_libnames(llvm_libs core support analysis passes transform
 
 add_library(FieldAnalysisPlugin MODULE FieldAnalysisPass.cpp)
 target_link_libraries(FieldAnalysisPlugin ${llvm_libs})
+target_link_options(FieldAnalysisPlugin PRIVATE -Wl,-Bsymbolic)
 
 set_target_properties(FieldAnalysisPlugin PROPERTIES
     CXX_STANDARD 17

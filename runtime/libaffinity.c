@@ -39,12 +39,19 @@ struct trace_record {
 };
 
 static uint32_t window[AFFINITY_WINDOW_SIZE];
-static int win_pos = 0;
+static uint64_t win_pos = 0;
 static int win_fill = 0;
 static uint64_t affinity[AFFINITY_MAX_FIELDS][AFFINITY_MAX_FIELDS];
 
 static struct trace_record *trace_buffer = NULL;
 static uint64_t trace_count = 0;
+
+static uintptr_t heap_top = 0;
+
+__attribute__((constructor))
+static void __detect_heap_bounds(void) {
+    heap_top = (uintptr_t)sbrk(0);
+}
 
 static char classify_region(void *addr) {
     extern char __data_start;
@@ -53,7 +60,7 @@ static char classify_region(void *addr) {
     uintptr_t data_start = (uintptr_t)&__data_start;
     uintptr_t data_end = (uintptr_t)&_end;
     if (ua >= data_start && ua < data_end) return 'G';
-    if (ua > data_end && ua < 0x7f0000000000ULL) return 'H';
+    if (ua > data_end && ua < heap_top + (1ULL << 40)) return 'H';
     return 'S';
 }
 
@@ -148,7 +155,7 @@ static void __init_runtime(void) {
     }
 }
 
-__attribute__((destructor))
+__attribute__((destructor(101)))
 static void __dump_affinity(void) {
     TRACE_LOCK();
     FILE *fp = fopen("affinity.bin", "wb");
@@ -167,14 +174,14 @@ void __record_field_access(uint32_t fid) {
     TRACE_LOCK();
     int fill = win_fill < AFFINITY_WINDOW_SIZE ? win_fill : AFFINITY_WINDOW_SIZE;
     for (int i = 1; i <= fill; i++) {
-        uint32_t other = window[(win_pos - i + AFFINITY_WINDOW_SIZE) % AFFINITY_WINDOW_SIZE];
+        uint32_t other = window[(win_pos - i) & (AFFINITY_WINDOW_SIZE - 1)];
         uint32_t a = fid < other ? fid : other;
         uint32_t b = fid < other ? other : fid;
         if (a < AFFINITY_MAX_FIELDS && b < AFFINITY_MAX_FIELDS) {
             affinity[a][b]++;
         }
     }
-    window[win_pos % AFFINITY_WINDOW_SIZE] = fid;
+    window[win_pos & (AFFINITY_WINDOW_SIZE - 1)] = fid;
     win_pos++;
     if (win_fill < AFFINITY_WINDOW_SIZE) {
         win_fill++;
@@ -196,14 +203,14 @@ void __record_field_access_full(uint32_t fid, void *ptr, int is_write) {
     TRACE_LOCK();
     int fill = win_fill < AFFINITY_WINDOW_SIZE ? win_fill : AFFINITY_WINDOW_SIZE;
     for (int i = 1; i <= fill; i++) {
-        uint32_t other = window[(win_pos - i + AFFINITY_WINDOW_SIZE) % AFFINITY_WINDOW_SIZE];
+        uint32_t other = window[(win_pos - i) & (AFFINITY_WINDOW_SIZE - 1)];
         uint32_t a = fid < other ? fid : other;
         uint32_t b = fid < other ? other : fid;
         if (a < AFFINITY_MAX_FIELDS && b < AFFINITY_MAX_FIELDS) {
             affinity[a][b]++;
         }
     }
-    window[win_pos % AFFINITY_WINDOW_SIZE] = fid;
+    window[win_pos & (AFFINITY_WINDOW_SIZE - 1)] = fid;
     win_pos++;
     if (win_fill < AFFINITY_WINDOW_SIZE) {
         win_fill++;
@@ -214,9 +221,13 @@ void __record_field_access_full(uint32_t fid, void *ptr, int is_write) {
         trace_threshold = env ? (uint64_t)atoll(env) : TRACE_FLUSH_THRESHOLD;
         if (trace_threshold == 0) trace_threshold = TRACE_FLUSH_THRESHOLD;
         trace_buffer = (struct trace_record *)malloc(trace_threshold * sizeof(struct trace_record));
+        if (!trace_buffer) {
+            TRACE_UNLOCK();
+            return;
+        }
     }
 
-    trace_buffer[trace_count].ts = (uint64_t)win_pos;
+    trace_buffer[trace_count].ts = win_pos;
     trace_buffer[trace_count].fid = fid;
     trace_buffer[trace_count].addr = (uint64_t)(uintptr_t)ptr;
     trace_buffer[trace_count].is_write = is_write;
@@ -235,7 +246,7 @@ void __record_field_access_full(uint32_t fid, void *ptr, int is_write) {
     TRACE_UNLOCK();
 }
 
-__attribute__((destructor))
+__attribute__((destructor(100)))
 static void __dump_trace(void) {
     TRACE_LOCK();
     if (trace_count > 0) {

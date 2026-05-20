@@ -2,6 +2,54 @@
 
 本文档提供两种编译方式下完整的操作流程：独立分步执行和脚本一键执行。
 
+## 环境依赖
+
+> 以下所有版本要求基于 **LLVM 19**。低版本 LLVM 不保证兼容。
+
+### 必需依赖
+
+| 依赖 | 最低版本 | 说明 |
+|------|---------|------|
+| **LLVM 19** | 19.x | 树内构建放入 `llvm/lib/Transforms/`，独立构建通过 `LLVM_DIR` 指定 |
+| **CMake** | ≥ 3.20.0 | 构建系统 |
+| **C++ 编译器** | GCC 7.4 / Clang 5.0 | 需支持 C++17（编译 FieldAnalysisPass.cpp） |
+| **Ninja** | ≥ 1.5 | 推荐构建生成器（`-G Ninja`） |
+| **Python 3** | ≥ 3.8 | 运行 `tools/analyze.py` 和 `tools/build_dfg.py` |
+| **clang** | LLVM 19 配套 | 编译、插桩、链接 |
+| **opt** | LLVM 19 配套 | 树内模式运行 pass（插件模式不需要） |
+| **ar** | 系统自带 | 打包运行时库 `libaffinity.a` |
+| **bash** | ≥ 3.0 | `run_test.sh` 执行环境 |
+
+### 可选依赖
+
+| 依赖 | 用途 |
+|------|------|
+| **lld** | LTO 多文件链接（可用 GNU ld 替代） |
+| **llvm-link** | LTO 合并 bitcode |
+| **pthread** | 多线程安全（`-DFIELDANALYSIS_MULTITHREAD -lpthread`） |
+| **Graphviz (dot)** | 渲染 DFG 图片（`dot -Tpng dfg_*.dot -o dfg_*.png`） |
+
+### 关键编译选项
+
+| 选项 | 值 | 说明 |
+|------|---|------|
+| `LLVM_ENABLE_RTTI` | **必须 `ON`** | 关闭时 `.so` 插件加载失败（`undefined symbol`） |
+| `LLVM_ENABLE_PROJECTS` | `clang;lld` | 必须包含 clang |
+
+### LLVM 组件依赖
+
+独立构建 `find_package(LLVM)` 时需确保以下组件已编译：
+
+```
+core  support  analysis  passes  transformutils  irreader
+```
+
+如果缺少组件，cmake 配置阶段会报错提示。
+
+### 操作系统
+
+开发测试于 **Linux (x86_64)**。macOS 需设置 `PLUGIN_EXT=.dylib`。Windows 未充分测试。
+
 ***
 
 ## 方式一：树内构建（opt + pass 集成）
@@ -457,9 +505,10 @@ dot -Tsvg dfg_unified.dot -o dfg_unified.svg
 
 ### 编译期 flags（Pass）
 
-| flag                    | 作用               | 示例                                                 |
-| ----------------------- | ---------------- | -------------------------------------------------- |
-| `--field-analysis-only` | 仅分析输出 JSON，不插桩   | `opt -passes=field-analysis --field-analysis-only` |
+| flag                      | 作用                          | 示例                                                 |
+| ------------------------- | ----------------------------- | -------------------------------------------------- |
+| `--field-analysis-only`   | 仅分析输出 JSON，不插桩        | `opt -passes=field-analysis --field-analysis-only` |
+| `--simple-access-record`  | 仅记录 `field_id`（无地址/region），轻量级亲和性专用 | `opt -passes=field-analysis --simple-access-record` |
 
 ### 运行时环境变量
 
