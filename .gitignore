@@ -1,0 +1,11 @@
+/build/
+/test/*.ll
+/test/*.bin
+/test/*.txt
+/test/test_struct
+/test/*.json
+/test/*.dot
+/runtime/*.o
+/runtime/*.a
+/v1.patch
+__pycache__/
