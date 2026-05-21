@@ -344,12 +344,21 @@ python3 tools/fa_runner.py --template test/my_project/fa_test.json
 | 2 | Analysis-only | `opt -passes=field-analysis --field-analysis-only` → `{name}_analyzed.ll` + `gep_field_map.json` + `struct_layout.json` |
 | 3 | Instrument | `opt -passes=field-analysis` → `{name}_instrumented.ll` + `gep_field_map.json` + `struct_layout.json` + 插桩验证 |
 | 4 | Compile | `clang inst.ll + libaffinity.a` → 可执行文件 |
-| 5 | Run | 执行插桩程序 → `trace.*.bin` + `affinity.bin` + `access_trace.*.txt` |
+| 5 | Run | 执行插桩程序 → `trace.*.bin` + `affinity.bin` + `access_trace.*.txt`；**Ctrl+C 终止运行但保存已采集数据，自动继续后续分析步骤** |
 | 5.5 | Resolve trace | 解析 `access_trace.*.txt` → `variable_trace.*.txt`（变量名 + 大小） |
 | 6 | Analyze | `analyze.py` → `reorder.json` |
 | 7 | Build DFG | `build_dfg.py` → `dfg_*.dot` |
 | 8 | Render DFG | `dot -Tpng` → `dfg_*.png`（需 Graphviz） |
 | 9 | Display | 打印 `gep_field_map.json`、`struct_layout.json`、`reorder.json`、trace 前 20 行 |
+
+### 运行时中断（Ctrl+C）
+
+Step 5（运行插桩程序）期间按下 Ctrl+C 时：
+
+1. **C 运行时**（`libaffinity.c`）的 SIGINT handler 拦截信号 → 自动 flush trace buffer 到 `access_trace.*.txt` + 写入 `affinity.bin` → 安全退出
+2. **Python 脚本**捕获 `KeyboardInterrupt` → 打印提示 → **不崩溃，继续执行 Step 5.5/6/7/8/9 的分析步骤**
+
+因此你可以在采集到足够数据后手动 Ctrl+C 终止程序，脚本会自动处理剩余的分析流程，无需手动重新运行 `--steps 5.5-7`。
 
 ### 构建模式
 

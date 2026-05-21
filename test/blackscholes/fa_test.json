@@ -15,9 +15,9 @@
         "output_file": "prices_output.txt"
     },
     "trace": {
-        "runtime_seconds": 20,
+        "runtime_seconds": 30,
         "flush_threshold": null,
-        "sample_rate": 1000
+        "sample_rate": 1
     },
     "variants": {
         "serial": {
@@ -31,7 +31,7 @@
         },
         "pthreads": {
             "sources": ["blackscholes.m4.cpp"],
-            "opt_level": "O2",
+            "opt_level": "O1",
             "compile_flags": ["-DENABLE_THREADS", "-DNCO=4", "-DNUM_RUNS=10"],
             "link_flags": ["-lm", "-lpthread"],
             "run_args": ["{nthreads}", "{input_file}", "{output_file}"],

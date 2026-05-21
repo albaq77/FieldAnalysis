@@ -41,8 +41,8 @@ def load_gep_field_map(path):
     with open(path, "r") as f:
         raw = json.load(f)
     id_to_info = {}
-    for entry in raw:
-        fid = entry.get("field_id") or entry.get("id")
+    for key, entry in raw.items():
+        fid = entry.get("id")
         if fid is not None:
             id_to_info[int(fid)] = entry
     return id_to_info
@@ -58,10 +58,9 @@ def get_field_size(fid, id_to_info, struct_layout):
     if not info:
         return 0
 
-    struct_name = info.get("struct_name", "")
-    field_idx = info.get("field_idx", 0)
+    struct_name = info.get("struct", "")
 
-    if struct_name and struct_name.startswith("scalar."):
+    if struct_name.startswith("scalar."):
         type_name = struct_name[len("scalar."):]
         return SCALAR_SIZES.get(type_name, 0)
 
@@ -70,6 +69,7 @@ def get_field_size(fid, id_to_info, struct_layout):
     if not st:
         return 0
 
+    field_idx = info.get("field", 0)
     fields = st.get("fields", [])
     if field_idx < len(fields):
         return fields[field_idx].get("size", 0)
@@ -77,20 +77,24 @@ def get_field_size(fid, id_to_info, struct_layout):
     return 0
 
 
-def get_field_name(fid, id_to_info):
+def get_field_name(fid, id_to_info, struct_layout):
     info = id_to_info.get(fid)
     if not info:
         return f"unknown_{fid}"
 
-    struct_name = info.get("struct_name", "unknown")
-    field_idx = info.get("field_idx", 0)
+    struct_name = info.get("struct", "unknown")
+    field_idx = info.get("field", 0)
 
     if struct_name.startswith("scalar."):
         return struct_name
 
-    field_names = info.get("field_names", [])
-    if field_idx < len(field_names):
-        return f"{struct_name}.{field_names[field_idx]}"
+    structs = struct_layout.get("structs", {})
+    st = structs.get(struct_name)
+    if st:
+        fields = st.get("fields", [])
+        if field_idx < len(fields):
+            field_name = fields[field_idx].get("name", f"field_{field_idx}")
+            return f"{struct_name}.{field_name}"
 
     return f"{struct_name}.field_{field_idx}"
 
@@ -112,7 +116,7 @@ def resolve_trace_file(trace_path, id_to_info, struct_layout, output_path, skip_
             rw = m.group(3)
             region = m.group(4)
 
-            name = get_field_name(fid, id_to_info)
+            name = get_field_name(fid, id_to_info, struct_layout)
             size = get_field_size(fid, id_to_info, struct_layout)
 
             fout.write(f"{name}  {rw}  {size}  {region}\n")

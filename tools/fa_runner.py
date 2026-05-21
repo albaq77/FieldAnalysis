@@ -826,6 +826,11 @@ class FieldAnalysisRunner:
                 continue
             try:
                 steps[step_id]()
+            except KeyboardInterrupt:
+                Log.warn("Interrupted by user (Ctrl+C)")
+                Log.info("Program trace data saved by runtime signal handler")
+                Log.info("Continuing to analysis steps...")
+                Log.info("")
             except RuntimeError as e:
                 Log.error(f"Step {step_id} failed: {e}")
                 sys.exit(1)
