@@ -1,0 +1,51 @@
+{
+    "name": "blackscholes",
+    "description": "PARSEC Black-Scholes European Options Pricing Benchmark",
+    "source_dir": "src",
+    "output_dir": "dfg",
+    "default_variant": "serial",
+    "lto": false,
+    "multithread": false,
+    "simple_access": false,
+    "pre_compile": null,
+    "input_files": {
+        "input_file": "src/in_64K.txt"
+    },
+    "output_files": {
+        "output_file": "prices_output.txt"
+    },
+    "trace": {
+        "runtime_seconds": 20,
+        "flush_threshold": null,
+        "sample_rate": 1000
+    },
+    "variants": {
+        "serial": {
+            "sources": ["blackscholes.c"],
+            "opt_level": "O1",
+            "compile_flags": ["-DNUM_RUNS=10"],
+            "link_flags": ["-lm"],
+            "run_args": ["1", "{input_file}", "{output_file}"],
+            "multithread": false,
+            "pre_compile": null
+        },
+        "pthreads": {
+            "sources": ["blackscholes.m4.cpp"],
+            "opt_level": "O2",
+            "compile_flags": ["-DENABLE_THREADS", "-DNCO=4", "-DNUM_RUNS=10"],
+            "link_flags": ["-lm", "-lpthread"],
+            "run_args": ["{nthreads}", "{input_file}", "{output_file}"],
+            "multithread": true,
+            "pre_compile": "m4 {source_dir}/c.m4.pthreads {source_dir}/blackscholes.c > {source_dir}/blackscholes.m4.cpp"
+        },
+        "simd": {
+            "sources": ["blackscholes.simd.c"],
+            "opt_level": "O1",
+            "compile_flags": ["-msse3", "-DNCO=4", "-DNUM_RUNS=10"],
+            "link_flags": ["-lm"],
+            "run_args": ["1", "{input_file}", "{output_file}"],
+            "multithread": false,
+            "pre_compile": null
+        }
+    }
+}

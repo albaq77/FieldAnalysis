@@ -255,29 +255,251 @@ python3 FieldAnalysis/tools/build_dfg.py --end 100000
 
 ***
 
-## 测试脚本使用
+## 通用测试运行器（fa_runner.py）
 
-`test/run_test.sh` 封装了完整的分步流程（编译 → 插桩 → 运行 → 分析）：
+`tools/fa_runner.py` 是 FieldAnalysis 的**通用测试运行器**，将固定的 Pipeline（编译 → 插桩 → 运行 → 分析）与测试用例特定的配置分离。用户只需编写 JSON 配置文件即可运行任意 benchmark。
 
-```bash
-cd FieldAnalysis/test
+### 设计理念
 
-# 默认使用 PATH 中的 clang
-bash run_test.sh
-
-# 指定 clang 路径
-CLANG=/home/albaz/llvm-build/build-debug/bin/clang bash run_test.sh
-
-# 指定插件构建目录（避免 /mnt/hgfs 共享文件夹的符号链接问题）
-FA_BUILD_DIR=/home/albaz/FieldAnalysis-build bash run_test.sh
+```
+                    fa_runner.py（固定 Pipeline）
+                    ┌─────────────────────────────┐
+   fa_test.json ──▶│ Step 0:   编译 runtime 库      │
+  （测试配置）       │ Step 1:   clang → IR         │
+                    │ Step 2:   opt → 分析 (JSON)   │
+                    │ Step 3:   opt → 插桩          │
+                    │ Step 4:   clang → 可执行文件   │
+                    │ Step 5:   运行程序             │
+                    │ Step 6:   analyze.py          │
+                    │ Step 7:   build_dfg.py        │
+                    │ Step 8:   渲染 DFG (可选)      │
+                    │ Step 9:   展示结果             │
+                    └─────────────────────────────┘
 ```
 
-脚本会依次执行：
+### 快速开始
 
-1. `clang -fpass-plugin` 编译 + 插桩 → 生成 `test_struct`、`gep_field_map.json`、`struct_layout.json`
-2. 运行 `test_struct` → 生成 `affinity.bin`、`trace.bin`、`access_trace.txt`
-3. `analyze.py` → 生成 `reorder.json`
-4. `build_dfg.py` → 生成 4 个 DOT 文件
+```bash
+# 在 FieldAnalysis 根目录下执行
+
+# 运行 blackscholes（默认 serial 变体）
+python3 tools/fa_runner.py --config test/blackscholes/fa_test.json
+
+# 列出所有可用变体
+python3 tools/fa_runner.py --config test/blackscholes/fa_test.json --list
+
+# 运行多线程变体（4 线程）
+python3 tools/fa_runner.py --config test/blackscholes/fa_test.json --variant pthreads --nthreads 4
+
+# 运行 test_structs（多结构体综合测试）
+python3 tools/fa_runner.py --config test/test_structs/fa_test.json
+
+# 试运行：仅打印命令不执行
+python3 tools/fa_runner.py --config test/test_structs/fa_test.json --dry-run
+
+# 只运行指定步骤（例如仅运行和离线分析）
+python3 tools/fa_runner.py --config test/test_structs/fa_test.json --steps 5-7
+
+# 自动发现所有测试
+python3 tools/fa_runner.py --discover
+
+# 为新测试生成配置模板
+python3 tools/fa_runner.py --template test/my_project/fa_test.json
+```
+
+### 命令行参数
+
+| 参数 | 说明 | 示例 |
+|------|------|------|
+| `--config` / `-c` | JSON 配置文件路径 | `--config test/blackscholes/fa_test.json` |
+| `--variant` / `-V` | 变体名称（默认使用配置中的 default_variant） | `--variant pthreads` |
+| `--build-mode` / `-b` | 构建模式：`plugin`（默认）或 `in-tree` | `--build-mode in-tree` |
+| `--opt-level` / `-O` | 优化级别（默认使用变体中的 `opt_level`） | `-O O0` |
+| `--clang` | clang 路径 | `--clang /opt/llvm/bin/clang-19` |
+| `--opt` | opt 路径（in-tree 模式） | `--opt /opt/llvm/bin/opt` |
+| `--llvm-link` | llvm-link 路径（LTO 模式） | `--llvm-link /opt/llvm/bin/llvm-link` |
+| `--fa-dir` | FieldAnalysis 根目录 | `--fa-dir /path/to/FieldAnalysis` |
+| `--fa-build-dir` | Plugin 构建目录 | `--fa-build-dir /home/user/fa-build` |
+| `--nthreads` / `-n` | 线程数（默认 1） | `-n 4` |
+| `--steps` / `-s` | 步骤范围 | `-s 0-9`, `-s 5-7`, `-s 3` |
+| `--simple-access` | 启用 `--simple-access-record`（仅 field_id） | `--simple-access` |
+| `--analysis-only` | 仅分析不插桩，跳过步骤 3/4/5 | `--analysis-only` |
+| `--trace-seconds` | TRACE_RUNTIME_SECONDS | `--trace-seconds 30` |
+| `--trace-flush` | TRACE_FLUSH_THRESHOLD | `--trace-flush 50000` |
+| `--trace-sample` | TRACE_SAMPLE_RATE | `--trace-sample 100` |
+| `--dry-run` | 打印命令不执行 | `--dry-run` |
+| `--discover` / `-d` | 发现所有测试 | `--discover` |
+| `--list` / `-l` | 列出变体 | `--list` |
+| `--template` / `-t` | 生成配置模板 | `--template test/xxx/fa_test.json` |
+
+### 步骤编号
+
+每个步骤对应固定的 Pipeline 阶段，`--steps N-M` 只运行指定范围的步骤：
+
+| 步骤 | 操作 | 说明 |
+|------|------|------|
+| 0 | Build runtime | 编译 `libaffinity.a` |
+| 0.5 | Build plugin | plugin 模式下编译 `FieldAnalysis.so`（仅 plugin） |
+| 1 | Generate IR | `clang -S -emit-llvm` |
+| 2 | Analysis-only | `opt -passes=field-analysis --field-analysis-only` → `{name}_analyzed.ll` + `gep_field_map.json` + `struct_layout.json` |
+| 3 | Instrument | `opt -passes=field-analysis` → `{name}_instrumented.ll` + `gep_field_map.json` + `struct_layout.json` + 插桩验证 |
+| 4 | Compile | `clang inst.ll + libaffinity.a` → 可执行文件 |
+| 5 | Run | 执行插桩程序 → `trace.*.bin` + `affinity.bin` + `access_trace.*.txt` |
+| 5.5 | Resolve trace | 解析 `access_trace.*.txt` → `variable_trace.*.txt`（变量名 + 大小） |
+| 6 | Analyze | `analyze.py` → `reorder.json` |
+| 7 | Build DFG | `build_dfg.py` → `dfg_*.dot` |
+| 8 | Render DFG | `dot -Tpng` → `dfg_*.png`（需 Graphviz） |
+| 9 | Display | 打印 `gep_field_map.json`、`struct_layout.json`、`reorder.json`、trace 前 20 行 |
+
+### 构建模式
+
+`fa_runner.py` 支持两种构建模式，用法一致（变更 `--build-mode` 即可）：
+
+| 模式 | Pipeline | 适用场景 |
+|------|----------|---------|
+| `plugin`（默认） | `clang→IR` → `opt+插件→pass` → `clang→exe` | LLVM 已安装，编译独立 .so |
+| `in-tree` | `clang→IR` → `opt内置pass` → `clang→exe` | Pass 已编译进 opt |
+
+LTO 多文件工作流通过 JSON 配置中的 `"lto": true` 或变体内的 `"_lto": true` 启用。
+
+### JSON 配置格式
+
+完整的 JSON 配置结构如下：
+
+```json
+{
+    "name": "项目名称",
+    "description": "测试描述",
+    "source_dir": "src",
+    "output_dir": "dfg",
+    "default_variant": "serial",
+    "lto": false,
+    "multithread": false,
+    "simple_access": false,
+    "pre_compile": null,
+    "input_files": {
+        "input": "src/input.txt"
+    },
+    "output_files": {
+        "output": "output.txt"
+    },
+    "trace": {
+        "runtime_seconds": null,
+        "flush_threshold": null,
+        "sample_rate": null
+    },
+    "variants": {
+        "serial": {
+            "sources": ["main.c"],
+            "opt_level": "O2",
+            "compile_flags": [],
+            "link_flags": ["-lm"],
+            "run_args": ["{input}", "{output}"],
+            "multithread": false,
+            "pre_compile": null
+        },
+        "pthreads": {
+            "sources": ["main_pthreads.c"],
+            "opt_level": "O2",
+            "compile_flags": ["-DENABLE_THREADS"],
+            "link_flags": ["-lm", "-lpthread"],
+            "run_args": ["{nthreads}", "{input}", "{output}"],
+            "multithread": true,
+            "pre_compile": null
+        }
+    }
+}
+```
+
+### 配置字段说明
+
+**顶层字段**：
+
+| 字段 | 类型 | 必需 | 说明 |
+|------|------|:---:|------|
+| `name` | string | ✅ | 唯一标识符，用于命名中间产物 |
+| `description` | string | | 人类可读描述 |
+| `source_dir` | string | ✅ | 相对于 `fa_test.json` 的源码目录 |
+| `output_dir` | string | | 输出目录（默认 `"dfg"`） |
+| `default_variant` | string | | 默认变体名（默认 `"serial"`） |
+| `lto` | bool | | 是否使用 LTO 多文件工作流 |
+| `multithread` | bool | | 默认多线程开关（变体可覆盖） |
+| `simple_access` | bool | | 对应 `--simple-access-record`：仅记录 field_id |
+| `pre_compile` | string | | 编译前脚本（如 m4 展开），可用 `{source_dir}` `{test_dir}` |
+| `input_files` | object | | 测试输入文件，在 `run_args` 中用 `{key}` 引用 |
+| `output_files` | object | | 输出文件路径，在 `run_args` 中用 `{key}` 引用 |
+| `trace` | object | | 默认 trace 设置：`runtime_seconds` / `flush_threshold` / `sample_rate` |
+| `variants` | object | ✅ | 至少一个变体 |
+
+**变体字段**：
+
+| 字段 | 类型 | 必需 | 说明 |
+|------|------|:---:|------|
+| `sources` | string[] | ✅ | 源文件列表（相对于 `source_dir`） |
+| `compile_flags` | string[] | ✅ | clang 编译参数（**不要包含 -O***，用下面的 `opt_level` 控制） |
+| `link_flags` | string[] | ✅ | 链接参数 |
+| `run_args` | string[] | ✅ | 运行参数，占位符 `{nthreads}` `{key}` |
+| `opt_level` | string | | 优化级别 `O0`/`O1`/`O2`/`O3`（默认 `O2`） |
+| `multithread` | bool | | 覆盖顶层 `multithread` |
+| `pre_compile` | string | | 变体专属预处理命令（覆盖顶层） |
+| `_lto` | bool | | 强制该变体使用 LTO 工作流 |
+
+### 添加新测试
+
+```bash
+# Step 1: 生成配置模板
+python3 tools/fa_runner.py --template test/new_project/fa_test.json
+
+# Step 2: 编辑 fa_test.json
+#   - 修改 name、source_dir
+#   - 填写 sources、compile_flags、link_flags
+#   - 配置 run_args 占位符
+#   - 如有多个变体自定义 variants
+
+# Step 3: 试运行验证
+python3 tools/fa_runner.py --config test/new_project/fa_test.json --dry-run
+
+# Step 4: 正式运行
+python3 tools/fa_runner.py --config test/new_project/fa_test.json
+```
+
+### 环境变量
+
+| 变量 | 用途 | 默认 |
+|------|------|------|
+| `CLANG` | clang 路径 | `clang` |
+| `OPT` | opt 路径 | `opt` |
+| `LLVM_LINK` | llvm-link 路径（LTO） | `llvm-link` |
+| `BUILD_MODE` | 构建模式 | `plugin` |
+| `PLUGIN_EXT` | 插件后缀 | Linux `.so`, macOS `.dylib`, Windows `.dll` |
+| `FA_BUILD_DIR` | 插件构建目录 | `{fa_dir}/build` |
+| `LLVM_DIR` | LLVM cmake 目录 | 自动推断 |
+| `RUNTIME_CC` | runtime 编译器 | `cc` |
+
+### 已有的测试用例
+
+| 测试 | 配置文件 | 变体 | 说明 |
+|------|---------|------|------|
+| blackscholes | `test/blackscholes/fa_test.json` | serial, pthreads, simd | PARSEC Black-Scholes 基准测试 |
+| test_structs | `test/test_structs/fa_test.json` | serial | 4 结构体 × 全局/栈/堆/嵌套/数组 综合测试 |
+
+### 与旧脚本的对比
+
+| 特性 | `run_test.sh` | `fa_runner.py` |
+|------|:---:|:---:|
+| 平台 | bash 脚本 | Python 跨平台 |
+| 配置方式 | 环境变量 | JSON 配置文件 |
+| 多变体 | 手动改脚本 | `--variant` 切换 |
+| 步骤选择 | 不支持 | `--steps N-M` |
+| 试运行 | 不支持 | `--dry-run` |
+| 自动发现 | 不支持 | `--discover` |
+| LTO | 不支持 | `"lto": true` |
+| 产物验证 | 无 | `_verify_instrumentation` + `_verify_json_output` |
+| 模板生成 | 需手动写 | `--template` |
+
+***
+
+## 测试脚本使用（旧版 run_test.sh）
 
 ***
 
@@ -476,6 +698,7 @@ TRACE_RUNTIME_SECONDS=30 TRACE_FLUSH_THRESHOLD=100000 ./program
 | `affinity.bin`     | 共现矩阵（上三角，字段两两访问次数）             |
 | `trace.0.bin`, `trace.1.bin`, ... | 访存时序追踪轮转文件（二进制，28 bytes/条，默认每 100 万条一个文件） |
 | `access_trace.0.txt`, `access_trace.1.txt`, ... | 访存序列（人类可读：`[ts] fid R/W addr region`） |
+| `variable_trace.0.txt`, `variable_trace.1.txt`, ... | 变量访问序列（`struct.field R/W size region`，由 `resolve_trace.py` 生成） |
 
 ### 离线分析产出
 

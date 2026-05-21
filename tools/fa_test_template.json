@@ -1,0 +1,72 @@
+{
+    "_comment": "FieldAnalysis Test Configuration Template - Copy and adapt for your project",
+    "_docs": {
+        "name": "Unique test identifier",
+        "description": "Human-readable description",
+        "source_dir": "Relative path from this config file to the source directory",
+        "output_dir": "Relative path from this config file to the output directory",
+        "default_variant": "Default variant name to use when --variant is not specified",
+        "lto": "Set true to use LTO multi-file workflow (llvm-link + opt)",
+        "multithread": "Default multithread setting; variants can override",
+        "simple_access": "Use simple access record mode (field_id only, no address). Set true to pass --simple-access-record to opt",
+        "pre_compile": "Shell command to run before compilation; {source_dir} and {test_dir} are replaced",
+        "input_files": "Named input files; referenced as {name} in run_args",
+        "output_files": "Named output files; referenced as {name} in run_args",
+        "trace": "Default trace settings; can be overridden by CLI flags",
+        "variants": {
+            "_comment": "Each variant defines a different build configuration",
+            "opt_level": "Optimization level (O0/O1/O2/O3); controlled by runner, do NOT put -O* in compile_flags",
+            "sources": "List of source files relative to source_dir",
+            "compile_flags": "Flags passed to clang during compilation (exclude -O*)",
+            "link_flags": "Flags passed during linking (-lm, -lpthread, etc.)",
+            "run_args": "Arguments passed to the executable; placeholders: {nthreads}, {input_file_name}, {output_file_name}",
+            "multithread": "If true, runtime is built with -DFIELDANALYSIS_MULTITHREAD",
+            "pre_compile": "Variant-specific pre-compile command (overrides top-level)",
+            "_lto": "If true, this variant forces LTO workflow regardless of top-level lto setting"
+        }
+    },
+
+    "name": "my_test",
+    "description": "Description of the test program",
+    "source_dir": "src",
+    "output_dir": "dfg",
+    "default_variant": "serial",
+    "lto": false,
+    "multithread": false,
+    "simple_access": false,
+    "pre_compile": null,
+
+    "input_files": {
+        "input": "src/input.txt"
+    },
+    "output_files": {
+        "output": "output.txt"
+    },
+
+    "trace": {
+        "runtime_seconds": null,
+        "flush_threshold": null,
+        "sample_rate": null
+    },
+
+    "variants": {
+        "serial": {
+            "opt_level": "O2",
+            "sources": ["main.c"],
+            "compile_flags": [],
+            "link_flags": ["-lm"],
+            "run_args": ["{input}", "{output}"],
+            "multithread": false,
+            "pre_compile": null
+        },
+        "pthreads": {
+            "opt_level": "O2",
+            "sources": ["main.c"],
+            "compile_flags": ["-DENABLE_THREADS"],
+            "link_flags": ["-lm", "-lpthread"],
+            "run_args": ["{nthreads}", "{input}", "{output}"],
+            "multithread": true,
+            "pre_compile": null
+        }
+    }
+}

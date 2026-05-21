@@ -1,0 +1,27 @@
+{
+    "name": "test_structs",
+    "description": "Multi-struct test covering global/stack/heap allocations, nested structs, struct arrays, and array fields",
+    "source_dir": "src",
+    "output_dir": "dfg",
+    "default_variant": "serial",
+    "lto": false,
+    "multithread": false,
+    "simple_access": false,
+    "pre_compile": null,
+    "trace": {
+        "runtime_seconds": null,
+        "flush_threshold": null,
+        "sample_rate": null
+    },
+    "variants": {
+        "serial": {
+            "sources": ["test_struct.c"],
+            "opt_level": "O2",
+            "compile_flags": [],
+            "link_flags": [],
+            "run_args": [],
+            "multithread": false,
+            "pre_compile": null
+        }
+    }
+}

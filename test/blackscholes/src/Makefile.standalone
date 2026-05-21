@@ -1,0 +1,22 @@
+TARGET = blackscholes
+SRC = blackscholes.c
+M4_SRC = blackscholes.m4.cpp
+MACROS = c.m4.pthreads
+
+CC = gcc
+CFLAGS = -O0 -static -pthread -g -DENABLE_THREADS -DNCO=4
+LDFLAGS = -static
+LIBS = -lm
+
+all: $(TARGET)
+
+$(TARGET): $(M4_SRC)
+	$(CC) $(CFLAGS) $(LDFLAGS) $(M4_SRC) $(LIBS) -o $(TARGET)
+
+$(M4_SRC): $(SRC) $(MACROS)
+	m4 $(MACROS) $(SRC) > $(M4_SRC)
+
+clean:
+	rm -f $(TARGET) $(M4_SRC)
+
+.PHONY: all clean

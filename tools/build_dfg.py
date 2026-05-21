@@ -170,8 +170,6 @@ def build_dfg_edges(records, window_size=10):
 
 
 def generate_dot(edges, fids, fid_info, title="DFG", color_by_region=False, records=None):
-    lines = [f"// {title}", "strict digraph {", f'  label="{title}";', "  node [shape=record, style=filled];"]
-
     region_colors = {"G": "lightblue", "H": "lightcoral", "S": "lightgreen"}
 
     fid_region = {}
@@ -179,18 +177,26 @@ def generate_dot(edges, fids, fid_info, title="DFG", color_by_region=False, reco
         for rec in records:
             fid_region[rec['fid']] = rec['region']
 
-    nodes = set(fids)
-    for fid in sorted(nodes):
+    lines = [
+        f"// {title}",
+        "digraph {",
+        f'  label="{title}";',
+        "  node [shape=record, style=filled];",
+    ]
+
+    for fid in sorted(fids):
         fname, ftype, fsize = resolve_field_name(fid, fid_info)
-        label = f"{fid}: {fname}\\n{ftype} ({fsize}B)"
+        size_str = f"{fsize}" if fsize > 0 else "0"
         if color_by_region:
-            color = region_colors.get(fid_region.get(fid, "G"), "white")
+            region = fid_region.get(fid, "G")
+            color = region_colors.get(region, "white")
         else:
             color = "lightblue"
-        lines.append(f'  {fid} [label="{label}", fillcolor="{color}"];')
+        lines.append(f'  {fid} [label="{fname}", type="{ftype}", size="{size_str}", fillcolor="{color}"];')
 
     for (a, b), w in sorted(edges.items(), key=lambda x: -x[1]):
-        lines.append(f'  {a} -> {b} [label="weight={w}", weight="{w}"];')
+        penwidth = max(1.0, min(6.0, 1.0 + w * 0.3))
+        lines.append(f'  {a} -> {b} [label="{w}", weight="{w}", penwidth="{penwidth:.1f}"];')
 
     lines.append("}")
     return "\n".join(lines)
@@ -244,13 +250,13 @@ def print_summary(records, fid_info):
             fid_stats[fid]["reads"] += 1
         fid_stats[fid]["regions"][rec['region']] += 1
 
-    print(f"\n{'Field':<30} {'Type':<12} {'Size':>4} {'Total':>8} {'Reads':>8} {'Writes':>8} {'Region'}")
-    print("-" * 100)
+    # print(f"\n{'Field':<30} {'Type':<12} {'Size':>4} {'Total':>8} {'Reads':>8} {'Writes':>8} {'Region'}")
+    # print("-" * 100)
     for fid in sorted(fid_stats.keys(), key=lambda x: fid_stats[x]["count"], reverse=True):
         fname, ftype, fsize = resolve_field_name(fid, fid_info)
         st = fid_stats[fid]
         regions = "/".join(f"{k}:{v}" for k, v in sorted(st["regions"].items()))
-        print(f"{fname:<30} {ftype:<12} {fsize:>4} {st['count']:>8} {st['reads']:>8} {st['writes']:>8} {regions}")
+        # print(f"{fname:<30} {ftype:<12} {fsize:>4} {st['count']:>8} {st['reads']:>8} {st['writes']:>8} {regions}")
 
 
 def main():

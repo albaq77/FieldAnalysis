@@ -5,6 +5,7 @@
 /test/test_struct
 /test/*.json
 /test/*.dot
+/test/*/dfg/
 /runtime/*.o
 /runtime/*.a
 /v1.patch
