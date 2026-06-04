@@ -5,6 +5,7 @@
 /test/test_struct
 /test/*.json
 /test/*.dot
+/test/*.zip
 /test/*/dfg/
 /runtime/*.o
 /runtime/*.a

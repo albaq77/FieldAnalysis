@@ -1,0 +1,38 @@
+{
+    "name": "locked",
+    "description": "False sharing benchmark - locked access pattern with pthread mutex (toy = false sharing, toy_manual = cache-line aligned fix)",
+    "source_dir": "src",
+    "output_dir": "dfg",
+    "default_variant": "toy",
+    "lto": false,
+    "multithread": true,
+    "simple_access": false,
+    "pre_compile": null,
+    "input_files": {},
+    "output_files": {},
+    "trace": {
+        "runtime_seconds": 30,
+        "flush_threshold": null,
+        "sample_rate": 1
+    },
+    "variants": {
+        "toy": {
+            "sources": ["toy.c"],
+            "opt_level": "O2",
+            "compile_flags": [],
+            "link_flags": ["-lpthread"],
+            "run_args": [],
+            "multithread": true,
+            "pre_compile": null
+        },
+        "toy_manual": {
+            "sources": ["toy_manual.c"],
+            "opt_level": "O2",
+            "compile_flags": [],
+            "link_flags": ["-lpthread"],
+            "run_args": [],
+            "multithread": true,
+            "pre_compile": null
+        }
+    }
+}

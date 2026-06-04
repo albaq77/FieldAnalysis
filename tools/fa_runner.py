@@ -294,6 +294,11 @@ class FieldAnalysisRunner:
         self.nthreads = args.nthreads or 1
         self.use_lto = self.variant.get("_lto", config.lto)
 
+        self.is_cpp = any(
+            s.endswith((".cpp", ".cc", ".cxx", ".C"))
+            for s in self.variant.get("sources", [])
+        )
+
         self.trace_env = {}
         trace_cfg = config.trace
         if args.trace_seconds is not None:
@@ -566,6 +571,8 @@ class FieldAnalysisRunner:
         exe_path = self.output_dir / self.config.name
         ldflags = self.variant["link_flags"]
         extra_ld = ["-lpthread"] if self.multithread else []
+        if self.is_cpp:
+            extra_ld.append("-lstdc++")
         cmd = (
             [self.clang, str(inst_path), "-o", str(exe_path),
              str(self._runtime_lib_path())]
@@ -622,6 +629,8 @@ class FieldAnalysisRunner:
         exe_path = self.output_dir / self.config.name
         ldflags = self.variant["link_flags"]
         extra_ld = ["-lpthread"] if self.multithread else []
+        if self.is_cpp:
+            extra_ld.append("-lstdc++")
         cmd = (
             [self.clang, str(inst_path), "-o", str(exe_path),
              str(self._runtime_lib_path())]
@@ -637,6 +646,8 @@ class FieldAnalysisRunner:
         cflags = self.variant["compile_flags"]
         ldflags = self.variant["link_flags"]
         extra_ld = ["-lpthread"] if self.multithread else []
+        if self.is_cpp:
+            extra_ld.append("-lstdc++")
 
         obj_dir = self.output_dir / "obj"
         if not self.dry_run:

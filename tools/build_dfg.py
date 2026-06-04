@@ -128,7 +128,18 @@ def load_field_info(gep_map_path, layout_path):
     for fid, info in fid_info.items():
         sname = info["struct"]
         fidx = info["field_idx"]
-        if sname in struct_fields and fidx in struct_fields[sname]:
+        if "field_type" in info and "field_size" in info:
+            info["field_type"] = info["field_type"]
+            info["field_size"] = info["field_size"]
+            info["field_offset_in_struct"] = info.get("offset", 0)
+        elif sname.startswith("scalar."):
+            remainder = sname[len("scalar."):]
+            type_name = remainder.split(".")[0] if "." in remainder else remainder
+            SCALAR_SIZES = {"float": 4, "double": 8, "i8": 1, "i16": 2, "i32": 4, "i64": 8, "ptr": 8, "unknown": 0}
+            info["field_type"] = type_name
+            info["field_size"] = SCALAR_SIZES.get(type_name, 0)
+            info["field_offset_in_struct"] = 0
+        elif sname in struct_fields and fidx in struct_fields[sname]:
             finfo = struct_fields[sname][fidx]
             info["field_type"] = finfo["type"]
             info["field_size"] = finfo["size"]
@@ -152,6 +163,12 @@ def resolve_field_name(fid, fid_info):
         raw_name = raw_name[7:]
     elif raw_name.startswith("class."):
         raw_name = raw_name[6:]
+    elif raw_name.startswith("scalar."):
+        remainder = raw_name[len("scalar."):]
+        if "." in remainder:
+            parts = remainder.split(".", 1)
+            return parts[1], info.get("field_type", "?"), info.get("field_size", 0)
+        return remainder, info.get("field_type", "?"), info.get("field_size", 0)
     return f"{raw_name}.field{fidx}", info.get("field_type", "?"), info.get("field_size", 0)
 
 

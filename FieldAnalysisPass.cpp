@@ -12,6 +12,7 @@
 #include "llvm/Support/CommandLine.h"
 #include "llvm/Support/raw_ostream.h"
 #include "llvm/Support/FileSystem.h"
+#include "llvm/Demangle/Demangle.h"
 #include <map>
 #include <string>
 #include <optional>
@@ -39,6 +40,8 @@ struct FieldInfo {
   uint32_t field_idx;
   uint64_t byte_offset;
   uint32_t field_id;
+  std::string field_type;
+  uint64_t field_size;
   std::vector<AccessStep> access_path;
   std::string source_file;
   uint32_t source_line;
@@ -143,6 +146,56 @@ static std::string getTBATypeName(Instruction *I) {
   return NameMD->getString().str();
 }
 
+static std::string getBasePointerName(Value *GEPV) {
+  if (!GEPV)
+    return "";
+
+  Value *BasePtr = nullptr;
+  if (auto *GEP = dyn_cast<GetElementPtrInst>(GEPV))
+    BasePtr = GEP->getPointerOperand();
+  else if (auto *CE = dyn_cast<ConstantExpr>(GEPV))
+    if (CE->getOpcode() == Instruction::GetElementPtr)
+      BasePtr = CE->getOperand(0);
+
+  if (!BasePtr)
+    return "";
+
+  while (auto *BC = dyn_cast<BitCastInst>(BasePtr))
+    BasePtr = BC->getOperand(0);
+
+  if (auto *GV = dyn_cast<GlobalVariable>(BasePtr)) {
+    if (GV->hasName())
+      return GV->getName().str();
+    return "";
+  }
+
+  if (auto *AI = dyn_cast<AllocaInst>(BasePtr)) {
+    if (AI->hasName())
+      return AI->getName().str();
+    return "";
+  }
+
+  if (auto *Load = dyn_cast<LoadInst>(BasePtr)) {
+    Value *SrcPtr = Load->getPointerOperand();
+    while (auto *BC = dyn_cast<BitCastInst>(SrcPtr))
+      SrcPtr = BC->getOperand(0);
+    if (auto *GV = dyn_cast<GlobalVariable>(SrcPtr)) {
+      if (GV->hasName())
+        return GV->getName().str();
+    } else if (auto *AI = dyn_cast<AllocaInst>(SrcPtr)) {
+      if (AI->hasName())
+        return AI->getName().str();
+    }
+  }
+
+  return "";
+}
+
+static const std::map<std::string, uint64_t> SCALAR_SIZES = {
+    {"float", 4}, {"double", 8}, {"i8", 1}, {"i16", 2},
+    {"i32", 4}, {"i64", 8}, {"ptr", 8}
+};
+
 static std::optional<FieldInfo> createScalarFieldInfo(
     Value *PtrOp, Instruction *UserInst,
     const DataLayout &DL,
@@ -177,7 +230,12 @@ static std::optional<FieldInfo> createScalarFieldInfo(
   if (TypeName == "omnipotent char" || TypeName == "p__IO_FILE")
     return std::nullopt;
 
-  std::string StructName = (Twine("scalar.") + TypeName).str();
+  std::string BaseName = getBasePointerName(PtrOp);
+  std::string StructName;
+  if (!BaseName.empty())
+    StructName = (Twine("scalar.") + TypeName + "." + BaseName).str();
+  else
+    StructName = (Twine("scalar.") + TypeName).str();
   uint32_t FieldIdx = 0;
   auto Key = std::make_pair(StructName, FieldIdx);
   uint32_t FieldId;
@@ -194,6 +252,8 @@ static std::optional<FieldInfo> createScalarFieldInfo(
   Info.field_idx = FieldIdx;
   Info.byte_offset = 0;
   Info.field_id = FieldId;
+  Info.field_type = TypeName;
+  Info.field_size = SCALAR_SIZES.count(TypeName) ? SCALAR_SIZES.at(TypeName) : 0;
   Info.access_path = {{StructName, FieldIdx, 0}};
   Info.source_file = "";
   Info.source_line = 0;
@@ -232,10 +292,27 @@ static StructType *findStructTypeInModule(Module &M, const std::string &TBAA) {
                  ? S.substr(P.size())
                  : S;
     };
-    if (stripPrefix(Name, "struct.") == TBAA)
+    std::string Stripped = stripPrefix(Name, "struct.");
+    if (Stripped.empty())
+      Stripped = stripPrefix(Name, "class.");
+    if (Stripped == TBAA)
       return ST;
-    if (stripPrefix(Name, "class.") == TBAA)
-      return ST;
+
+    std::string Demangled = llvm::demangle(TBAA);
+    if (!Demangled.empty() && Demangled != TBAA) {
+      const char *TInfoPrefix = "typeinfo name for ";
+      if (Demangled.compare(0, strlen(TInfoPrefix), TInfoPrefix) == 0)
+        Demangled = Demangled.substr(strlen(TInfoPrefix));
+      else {
+        const char *TInfoPrefix2 = "typeinfo for ";
+        if (Demangled.compare(0, strlen(TInfoPrefix2), TInfoPrefix2) == 0)
+          Demangled = Demangled.substr(strlen(TInfoPrefix2));
+      }
+      if (Stripped == Demangled)
+        return ST;
+      if (Name == Demangled)
+        return ST;
+    }
   }
   return nullptr;
 }
@@ -291,6 +368,147 @@ static bool buildAccessPathRecursive(
   return true;
 }
 
+static std::string getTBAAFieldTypeName(MDNode *FieldTypeNode) {
+  if (!FieldTypeNode || FieldTypeNode->getNumOperands() < 1)
+    return "?";
+  auto *TypeNameMD =
+      dyn_cast_or_null<MDString>(FieldTypeNode->getOperand(0));
+  if (!TypeNameMD)
+    return "?";
+  std::string Name = TypeNameMD->getString().str();
+  if (Name == "omnipotent char")
+    return "i8";
+  std::string Demangled = llvm::demangle(Name);
+  if (!Demangled.empty() && Demangled != Name) {
+    const char *TInfoPrefix = "typeinfo name for ";
+    if (Demangled.compare(0, strlen(TInfoPrefix), TInfoPrefix) == 0)
+      Demangled = Demangled.substr(strlen(TInfoPrefix));
+    else {
+      const char *TInfoPrefix2 = "typeinfo for ";
+      if (Demangled.compare(0, strlen(TInfoPrefix2), TInfoPrefix2) == 0)
+        Demangled = Demangled.substr(strlen(TInfoPrefix2));
+    }
+    if (!Demangled.empty() && Demangled != Name)
+      return Demangled;
+  }
+  return Name;
+}
+
+static uint64_t getTBAAFieldTypeSize(const std::string &TypeName,
+                                      const DataLayout &DL) {
+  if (TypeName == "int" || TypeName == "unsigned int" || TypeName == "i32")
+    return 4;
+  if (TypeName == "long" || TypeName == "unsigned long" || TypeName == "i64")
+    return 8;
+  if (TypeName == "short" || TypeName == "unsigned short" || TypeName == "i16")
+    return 2;
+  if (TypeName == "char" || TypeName == "unsigned char" || TypeName == "i8")
+    return 1;
+  if (TypeName == "float")
+    return 4;
+  if (TypeName == "double")
+    return 8;
+  if (TypeName == "long double")
+    return 16;
+  if (TypeName == "bool")
+    return 1;
+  if (TypeName.find('*') != std::string::npos || TypeName == "ptr")
+    return DL.getPointerSize();
+  return 0;
+}
+
+static bool buildAccessPathFromTBAAStruct(
+    MDNode *StructTypeNode, uint64_t Offset, const DataLayout &DL,
+    std::vector<AccessStep> &Path,
+    std::string &LeafStructName, uint32_t &LeafFieldIdx,
+    uint64_t &LeafTotalOffset) {
+
+  if (!StructTypeNode || StructTypeNode->getNumOperands() < 1)
+    return false;
+
+  auto *NameMD = dyn_cast_or_null<MDString>(StructTypeNode->getOperand(0));
+  if (!NameMD)
+    return false;
+  std::string StructName = NameMD->getString().str();
+
+  std::string Demangled = llvm::demangle(StructName);
+  if (!Demangled.empty() && Demangled != StructName) {
+    const char *TInfoPrefix = "typeinfo name for ";
+    if (Demangled.compare(0, strlen(TInfoPrefix), TInfoPrefix) == 0)
+      Demangled = Demangled.substr(strlen(TInfoPrefix));
+    else {
+      const char *TInfoPrefix2 = "typeinfo for ";
+      if (Demangled.compare(0, strlen(TInfoPrefix2), TInfoPrefix2) == 0)
+        Demangled = Demangled.substr(strlen(TInfoPrefix2));
+    }
+    if (!Demangled.empty() && Demangled != StructName)
+      StructName = Demangled;
+  }
+
+  unsigned NumOperands = StructTypeNode->getNumOperands();
+  unsigned NumFields = (NumOperands - 1) / 2;
+  if (NumFields < 2)
+    return false;
+
+  for (unsigned i = 0; i < NumFields; ++i) {
+    unsigned TypeIdx = 1 + i * 2;
+    unsigned OffsetIdx = 1 + i * 2 + 1;
+    if (OffsetIdx >= NumOperands)
+      return false;
+
+    auto *FieldOffsetMD =
+        dyn_cast_or_null<ConstantAsMetadata>(StructTypeNode->getOperand(OffsetIdx));
+    if (!FieldOffsetMD)
+      return false;
+    uint64_t FieldOffset =
+        cast<ConstantInt>(FieldOffsetMD->getValue())->getZExtValue();
+
+    uint64_t FieldEnd = 0;
+    if (i + 1 < NumFields) {
+      unsigned NextOffsetIdx = 1 + (i + 1) * 2 + 1;
+      if (NextOffsetIdx < NumOperands) {
+        if (auto *NextOffMD =
+                dyn_cast_or_null<ConstantAsMetadata>(StructTypeNode->getOperand(NextOffsetIdx))) {
+          FieldEnd = cast<ConstantInt>(NextOffMD->getValue())->getZExtValue();
+        }
+      }
+    }
+    if (FieldEnd == 0) {
+      FieldEnd = FieldOffset + 8;
+    }
+
+    if (Offset >= FieldOffset && Offset < FieldEnd) {
+      AccessStep Step;
+      Step.struct_name = StructName;
+      Step.field_idx = i;
+      Step.field_offset = FieldOffset;
+      Path.push_back(Step);
+
+      auto *FieldTypeNode =
+          dyn_cast_or_null<MDNode>(StructTypeNode->getOperand(TypeIdx));
+      if (FieldTypeNode && FieldTypeNode->getNumOperands() >= 1) {
+        if (auto *SubNameMD =
+                dyn_cast_or_null<MDString>(FieldTypeNode->getOperand(0))) {
+          std::string SubName = SubNameMD->getString().str();
+          if (SubName.find("_ZTS") == 0 || SubName.find("_ZTI") == 0) {
+            uint64_t SubOffset = Offset - FieldOffset;
+            return buildAccessPathFromTBAAStruct(
+                FieldTypeNode, SubOffset, DL, Path,
+                LeafStructName, LeafFieldIdx, LeafTotalOffset);
+          }
+        }
+      }
+
+      LeafStructName = StructName;
+      LeafFieldIdx = i;
+      LeafTotalOffset = Offset;
+      return true;
+    }
+  }
+
+  return false;
+}
+
 static std::optional<FieldInfo> analyzeGEPFromTBAA(
     Instruction *UserInst, Value *GEPV,
     const DataLayout &DL, Module &M,
@@ -318,17 +536,25 @@ static std::optional<FieldInfo> analyzeGEPFromTBAA(
   std::string TBAAStructName = StructNameMD->getString().str();
 
   StructType *BaseST = findStructTypeInModule(M, TBAAStructName);
-  if (!BaseST)
-    return std::nullopt;
 
   std::vector<AccessStep> AccessPath;
-  StructType *LeafStruct = nullptr;
+  std::string LeafStructName;
   uint32_t LeafFieldIdx = 0;
   uint64_t LeafTotalOffset = 0;
 
-  if (!buildAccessPathRecursive(BaseST, FieldOffset, DL, AccessPath,
-                                LeafStruct, LeafFieldIdx, LeafTotalOffset)) {
-    return std::nullopt;
+  if (BaseST) {
+    StructType *LeafStruct = nullptr;
+    if (!buildAccessPathRecursive(BaseST, FieldOffset, DL, AccessPath,
+                                  LeafStruct, LeafFieldIdx, LeafTotalOffset)) {
+      return std::nullopt;
+    }
+    LeafStructName = LeafStruct->getName().str();
+  } else {
+    if (!buildAccessPathFromTBAAStruct(BaseTypeNode, FieldOffset, DL,
+                                       AccessPath, LeafStructName,
+                                       LeafFieldIdx, LeafTotalOffset)) {
+      return std::nullopt;
+    }
   }
 
   uint64_t gep_byte_offset = FieldOffset;
@@ -338,7 +564,6 @@ static std::optional<FieldInfo> analyzeGEPFromTBAA(
       gep_byte_offset = AccOffset.getZExtValue();
   }
 
-  std::string LeafStructName = LeafStruct->getName().str();
   auto Key = std::make_pair(LeafStructName, LeafFieldIdx);
   uint32_t FieldId;
   auto It = FieldIdMap.find(Key);
@@ -355,6 +580,34 @@ static std::optional<FieldInfo> analyzeGEPFromTBAA(
   Info.byte_offset = gep_byte_offset;
   Info.field_id = FieldId;
   Info.access_path = std::move(AccessPath);
+
+  if (BaseST) {
+    Type *FieldTy = BaseST->getElementType(LeafFieldIdx);
+    if (FieldTy->isPointerTy()) {
+      Info.field_type = "ptr";
+      Info.field_size = DL.getPointerSize();
+    } else if (FieldTy->isIntegerTy()) {
+      Info.field_type = "i" + std::to_string(FieldTy->getIntegerBitWidth());
+      Info.field_size = DL.getTypeAllocSize(FieldTy);
+    } else if (FieldTy->isFloatingPointTy()) {
+      Info.field_type = FieldTy->isDoubleTy() ? "double" : "float";
+      Info.field_size = DL.getTypeAllocSize(FieldTy);
+    } else if (auto *NestedST = dyn_cast<StructType>(FieldTy)) {
+      Info.field_type = NestedST->getName().str();
+      Info.field_size = DL.getTypeAllocSize(FieldTy);
+    } else {
+      Info.field_type = "?";
+      Info.field_size = DL.getTypeAllocSize(FieldTy);
+    }
+  } else {
+    MDNode *FieldTypeNode = nullptr;
+    unsigned NumOps = BaseTypeNode->getNumOperands();
+    unsigned TypeIdx = 1 + LeafFieldIdx * 2;
+    if (TypeIdx < NumOps)
+      FieldTypeNode = dyn_cast_or_null<MDNode>(BaseTypeNode->getOperand(TypeIdx));
+    Info.field_type = getTBAAFieldTypeName(FieldTypeNode);
+    Info.field_size = getTBAAFieldTypeSize(Info.field_type, DL);
+  }
   Info.source_file = "";
   Info.source_line = 0;
   Info.source_col = 0;
@@ -478,6 +731,25 @@ static std::optional<FieldInfo> analyzeGEPTyped(
   Info.byte_offset = LeafByteOffset;
   Info.field_id = FieldId;
   Info.access_path = std::move(AccessPath);
+  {
+    Type *FieldTy = LeafStruct->getElementType(LeafFieldIdx);
+    if (FieldTy->isPointerTy()) {
+      Info.field_type = "ptr";
+      Info.field_size = DL.getPointerSize();
+    } else if (FieldTy->isIntegerTy()) {
+      Info.field_type = "i" + std::to_string(FieldTy->getIntegerBitWidth());
+      Info.field_size = DL.getTypeAllocSize(FieldTy);
+    } else if (FieldTy->isFloatingPointTy()) {
+      Info.field_type = FieldTy->isDoubleTy() ? "double" : "float";
+      Info.field_size = DL.getTypeAllocSize(FieldTy);
+    } else if (auto *NestedST = dyn_cast<StructType>(FieldTy)) {
+      Info.field_type = NestedST->getName().str();
+      Info.field_size = DL.getTypeAllocSize(FieldTy);
+    } else {
+      Info.field_type = "?";
+      Info.field_size = DL.getTypeAllocSize(FieldTy);
+    }
+  }
   Info.source_file = "";
   Info.source_line = 0;
   Info.source_col = 0;
@@ -594,6 +866,25 @@ static std::optional<FieldInfo> analyzeGEPDefUse(
   Info.field_id = FieldId;
   Info.access_path = {
       {StructName, FieldIdx, SL->getElementOffset(FieldIdx)}};
+  {
+    Type *FieldTy = ST->getElementType(FieldIdx);
+    if (FieldTy->isPointerTy()) {
+      Info.field_type = "ptr";
+      Info.field_size = DL.getPointerSize();
+    } else if (FieldTy->isIntegerTy()) {
+      Info.field_type = "i" + std::to_string(FieldTy->getIntegerBitWidth());
+      Info.field_size = DL.getTypeAllocSize(FieldTy);
+    } else if (FieldTy->isFloatingPointTy()) {
+      Info.field_type = FieldTy->isDoubleTy() ? "double" : "float";
+      Info.field_size = DL.getTypeAllocSize(FieldTy);
+    } else if (auto *NestedST = dyn_cast<StructType>(FieldTy)) {
+      Info.field_type = NestedST->getName().str();
+      Info.field_size = DL.getTypeAllocSize(FieldTy);
+    } else {
+      Info.field_type = "?";
+      Info.field_size = DL.getTypeAllocSize(FieldTy);
+    }
+  }
   Info.source_file = "";
   Info.source_line = 0;
   Info.source_col = 0;
@@ -701,6 +992,11 @@ PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
               continue;
             }
           }
+        }
+
+        if (isa<PHINode>(&I)) {
+          ++InstIdx;
+          continue;
         }
 
         MDNode *TBAA = I.getMetadata(LLVMContext::MD_tbaa);
@@ -849,6 +1145,9 @@ PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
         OS << "\"field\": " << Rec.info.field_idx << ", ";
         OS << "\"offset\": " << Rec.info.byte_offset << ", ";
         OS << "\"id\": " << Rec.info.field_id << ", ";
+        OS << "\"field_type\": \"" << escapeJsonString(Rec.info.field_type)
+           << "\", ";
+        OS << "\"field_size\": " << Rec.info.field_size << ", ";
 
         OS << "\"source\": {";
         OS << "\"file\": \"" << escapeJsonString(Rec.info.source_file)
@@ -1065,9 +1364,10 @@ PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
     Instruction *InsertAt = IP.insert_before;
     if (IP.gep_value && IP.gep_value == IP.insert_before) {
       InsertAt = IP.insert_before->getNextNode();
-      if (!InsertAt) InsertAt = IP.insert_before;
     }
     IRBuilder<> Builder(InsertAt);
+    if (!InsertAt)
+      Builder.SetInsertPoint(IP.insert_before->getParent());
     if (IP.gep_value && !SimpleAccessRecord) {
       Builder.CreateCall(RecordFullFn,
                          {ConstantInt::get(Type::getInt32Ty(M.getContext()), IP.field_id),
