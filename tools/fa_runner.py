@@ -727,6 +727,23 @@ class FieldAnalysisRunner:
         else:
             Log.warn("variable_trace files not generated")
 
+    def step56_build_address_map(self):
+        Log.step("Step 5.6: Build address map (build_address_map.py)")
+        addr_map_py = self.tools_dir / "build_address_map.py"
+        if not (self.output_dir / "gep_field_map.json").exists():
+            Log.warn("gep_field_map.json not found, skipping address map")
+            return
+        trace_files = list(self.output_dir.glob("access_trace.*.txt"))
+        if not trace_files:
+            Log.warn("No access_trace.*.txt found, skipping address map")
+            return
+        run_cmd(["python3", str(addr_map_py), str(self.output_dir)],
+                cwd=str(self.output_dir), dry_run=self.dry_run)
+        if (self.output_dir / "address_map.json").exists():
+            Log.ok("Generated: address_map.json")
+        else:
+            Log.warn("address_map.json not generated")
+
     def step6_analyze(self):
         Log.step("Step 6: Run affinity analysis (analyze.py)")
         analyze_py = self.tools_dir / "analyze.py"
@@ -822,12 +839,13 @@ class FieldAnalysisRunner:
         if not self.analysis_only:
             steps[5] = self.step5_run_program
         steps["5.5"] = self.step55_resolve_trace
+        steps["5.6"] = self.step56_build_address_map
         steps[6] = self.step6_analyze
         steps[7] = self.step7_build_dfg
         # steps[8] = self.step8_render_dfg
         # steps[9] = self.step9_display_results
 
-        step_order = [0, "0.5", 1, 2, 3, 4, 5, "5.5", 6, 7, 8, 9]
+        step_order = [0, "0.5", 1, 2, 3, 4, 5, "5.5", "5.6", 6, 7, 8, 9]
 
         for step_id in step_order:
             if step_id not in steps:

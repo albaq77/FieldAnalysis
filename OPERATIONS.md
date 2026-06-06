@@ -346,6 +346,7 @@ python3 tools/fa_runner.py --template test/my_project/fa_test.json
 | 4 | Compile | `clang inst.ll + libaffinity.a` → 可执行文件 |
 | 5 | Run | 执行插桩程序 → `trace.*.bin` + `affinity.bin` + `access_trace.*.txt`；**Ctrl+C 终止运行但保存已采集数据，自动继续后续分析步骤** |
 | 5.5 | Resolve trace | 解析 `access_trace.*.txt` → `variable_trace.*.txt`（变量名 + 大小） |
+| 5.6 | Build address map | 生成 `address_map.json`（运行时地址 → 结构体字段映射，按时间分段检测堆/栈地址复用，含偏移量、类型、大小、访问次数） |
 | 6 | Analyze | `analyze.py` → `reorder.json` |
 | 7 | Build DFG | `build_dfg.py` → `dfg_*.dot` |
 | 8 | Render DFG | `dot -Tpng` → `dfg_*.png`（需 Graphviz） |
@@ -714,10 +715,79 @@ TRACE_RUNTIME_SECONDS=30 TRACE_FLUSH_THRESHOLD=100000 ./program
 | 文件                | 工具             | 说明            |
 | ----------------- | -------------- | ------------- |
 | `reorder.json`    | `analyze.py`   | 贪心装箱后的缓存行重排建议 |
+| `address_map.json` | `build_address_map.py` | 运行时地址 → struct.field 映射，按时间分段（segments），检测堆/栈地址复用（has_conflict），含偏移量、类型、大小、访问次数 |
 | `dfg_global.dot`  | `build_dfg.py` | 全局变量数据流图      |
 | `dfg_heap.dot`    | `build_dfg.py` | 堆变量数据流图       |
 | `dfg_stack.dot`   | `build_dfg.py` | 栈变量数据流图       |
 | `dfg_unified.dot` | `build_dfg.py` | 统一数据流图（三色区分）  |
+
+### 地址复用与语义冲突（address_map.json）
+
+由于 ASLR 和内存布局随机化，每次运行程序的地址都不同，因此 `address_map.json` 在**每次运行后**由 `build_address_map.py` 根据当次实际采集的 `access_trace.*.txt` 动态生成。
+
+#### 堆/栈地址复用问题
+
+堆内存和栈内存的地址可能在程序运行期间被复用，导致同一地址在不同时间段表达不同的语义：
+
+- **堆**：`malloc(A)` → 使用 → `free(A)` → `malloc(B)` 可能返回相同地址 A，但类型不同
+- **栈**：`foo()` 的局部变量地址在 `foo` 返回后，可能被 `bar()` 的局部变量复用
+
+#### 时间分段机制
+
+`build_address_map.py` 按时间戳顺序处理所有 trace 行，检测同一地址上 `field_id` 的变化。当检测到变化时，自动创建新的时间分段（segment），每个 segment 记录该时间段内地址的语义：
+
+```json
+{
+  "0x7fff1234": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "MyStruct",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 100,
+        "ts_last": 500,
+        "access_count": 50
+      },
+      {
+        "struct": "OtherStruct",
+        "field": 2,
+        "offset": 8,
+        "field_type": "i32",
+        "field_size": 4,
+        "ts_first": 600,
+        "ts_last": 900,
+        "access_count": 30
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 80
+  }
+}
+```
+
+#### 字段说明
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `region` | string | 内存区域：`G`(全局)、`H`(堆)、`S`(栈) |
+| `segments` | array | 时间分段列表，按 `ts_first` 升序排列 |
+| `segments[].struct` | string | 结构体类型名 |
+| `segments[].field` | int | 字段索引 |
+| `segments[].offset` | int | 字段在结构体内的字节偏移 |
+| `segments[].field_type` | string | 字段类型（如 `i32`、`ptr`、`float`） |
+| `segments[].field_size` | int | 字段大小（字节） |
+| `segments[].ts_first` | int | 该 segment 首次访问的时间戳 |
+| `segments[].ts_last` | int | 该 segment 末次访问的时间戳 |
+| `segments[].access_count` | int | 该 segment 内的访问次数 |
+| `has_conflict` | bool | `true` 表示该地址存在语义冲突（>1 个 segment） |
+| `total_accesses` | int | 该地址的总访问次数 |
+
+#### 全局变量
+
+全局变量（`region=G`）的地址在程序生命周期内固定不变，不会出现复用问题。对于全局变量，`has_conflict` 始终为 `false`，只有一个 segment。
 
 ### DOT 渲染
 
