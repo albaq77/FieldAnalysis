@@ -1,0 +1,70 @@
+{
+  "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.%\"class.std::unique_ptr\" = type { %\"struct.std::__uniq_ptr_data\" }": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.[2 x %\"class.std::thread\"]": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.i8": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.int": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.ptr": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.vtable pointer._ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvmEiEEEEEE": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "struct.timespec": [
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        8
+      ]
+    ]
+  ]
+}

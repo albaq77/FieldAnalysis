@@ -1,0 +1,41 @@
+{
+  "structs": {
+    "union.pthread_mutex_t": {
+      "size": 40,
+      "fields": [
+        {"idx": 0, "type": "%struct.__pthread_mutex_s = type { i32, i32, i32, i32, i32, i16, i16, %struct.__pthread_internal_list }", "offset": 0, "size": 40}
+      ]
+    },
+    "struct.__pthread_mutex_s": {
+      "size": 40,
+      "fields": [
+        {"idx": 0, "type": "i32", "offset": 0, "size": 4},
+        {"idx": 1, "type": "i32", "offset": 4, "size": 4},
+        {"idx": 2, "type": "i32", "offset": 8, "size": 4},
+        {"idx": 3, "type": "i32", "offset": 12, "size": 4},
+        {"idx": 4, "type": "i32", "offset": 16, "size": 4},
+        {"idx": 5, "type": "i16", "offset": 20, "size": 2},
+        {"idx": 6, "type": "i16", "offset": 22, "size": 2},
+        {"idx": 7, "type": "%struct.__pthread_internal_list = type { ptr, ptr }", "offset": 24, "size": 16}
+      ]
+    },
+    "struct.__pthread_internal_list": {
+      "size": 16,
+      "fields": [
+        {"idx": 0, "type": "ptr", "offset": 0, "size": 8},
+        {"idx": 1, "type": "ptr", "offset": 8, "size": 8}
+      ]
+    }
+  },
+  "variables": {
+    "global": [
+
+    ],
+    "heap_sites": [
+
+    ],
+    "stack_vars": [
+
+    ]
+  }
+}

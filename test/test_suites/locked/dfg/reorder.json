@@ -1,0 +1,66 @@
+{
+  "scalar.int": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.%union.pthread_mutex_t = type { %struct.__pthread_mutex_s }.ownThreadLock": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.any pointer": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.i32.dynMemory": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.i8": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.unknown.ownThreadLock": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.[4 x i32]": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.[4 x i64]": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ]
+}

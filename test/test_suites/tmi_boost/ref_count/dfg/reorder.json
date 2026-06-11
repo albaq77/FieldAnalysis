@@ -1,0 +1,130 @@
+{
+  "Globals": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.%\"struct.std::array.0\" = type { [256 x ptr] }": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.any pointer": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.i32": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.i64": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.i8": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.i8.G": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.i8._ZSt4cout": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.int": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.long": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.long long": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.ptr": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.vtable pointer": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "std::basic_ios<char, std::char_traits<char>>": [
+    [
+      [
+        5,
+        8
+      ]
+    ]
+  ],
+  "std::ctype<char>": [
+    [
+      [
+        6,
+        8
+      ]
+    ]
+  ],
+  "struct.PaddedInt": [
+    [
+      [
+        0,
+        4
+      ]
+    ]
+  ]
+}

@@ -61,11 +61,7 @@ def get_field_size(fid, id_to_info, struct_layout):
     struct_name = info.get("struct", "")
 
     if struct_name.startswith("scalar."):
-        remainder = struct_name[len("scalar."):]
-        if "." in remainder:
-            type_name = remainder.split(".")[0]
-        else:
-            type_name = remainder
+        type_name = struct_name[len("scalar."):]
         return SCALAR_SIZES.get(type_name, 0)
 
     structs = struct_layout.get("structs", {})
@@ -90,11 +86,7 @@ def get_field_name(fid, id_to_info, struct_layout):
     field_idx = info.get("field", 0)
 
     if struct_name.startswith("scalar."):
-        remainder = struct_name[len("scalar."):]
-        if "." in remainder:
-            parts = remainder.split(".", 1)
-            return parts[1]
-        return remainder
+        return struct_name
 
     structs = struct_layout.get("structs", {})
     st = structs.get(struct_name)

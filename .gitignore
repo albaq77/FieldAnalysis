@@ -17,3 +17,5 @@ __pycache__/
 .vs
 .clangd/
 .cache
+*.txt
+*.bin

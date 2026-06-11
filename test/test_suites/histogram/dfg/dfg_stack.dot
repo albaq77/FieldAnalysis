@@ -1,0 +1,5 @@
+// DFG-stack
+digraph {
+  label="DFG-stack";
+  node [shape=record, style=filled];
+}

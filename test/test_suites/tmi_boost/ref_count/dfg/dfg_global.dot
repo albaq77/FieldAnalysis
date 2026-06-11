@@ -1,0 +1,10 @@
+// DFG-global
+digraph {
+  label="DFG-global";
+  node [shape=record, style=filled];
+  1 [label="scalar.long long.field0", type="?", size="0", fillcolor="lightblue"];
+  2 [label="scalar.any pointer.field0", type="?", size="0", fillcolor="lightblue"];
+  2 -> 2 [label="20422", weight="20422", penwidth="6.0"];
+  1 -> 2 [label="291", weight="291", penwidth="6.0"];
+  1 -> 1 [label="12", weight="12", penwidth="4.6"];
+}

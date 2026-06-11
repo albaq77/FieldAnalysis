@@ -1,0 +1,14 @@
+// DFG-global
+digraph {
+  label="DFG-global";
+  node [shape=record, style=filled];
+  2 [label="scalar.any pointer.field0", type="?", size="0", fillcolor="lightblue"];
+  3 [label="scalar.long.field0", type="?", size="0", fillcolor="lightblue"];
+  17 [label="scalar.i64.PThreadTable.field0", type="?", size="0", fillcolor="lightblue"];
+  2 -> 3 [label="164712", weight="164712", penwidth="6.0"];
+  2 -> 2 [label="82470", weight="82470", penwidth="6.0"];
+  3 -> 3 [label="82286", weight="82286", penwidth="6.0"];
+  3 -> 17 [label="32", weight="32", penwidth="6.0"];
+  2 -> 17 [label="22", weight="22", penwidth="6.0"];
+  17 -> 17 [label="3", weight="3", penwidth="1.9"];
+}

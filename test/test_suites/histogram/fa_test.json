@@ -1,0 +1,40 @@
+{
+    "name": "histogram",
+    "description": "Histogram benchmark (Phoenix) - hist-pthread (false sharing on struct fields) vs hist-pthread-manual (padding fix)",
+    "source_dir": ".",
+    "output_dir": "dfg",
+    "default_variant": "hist_pthread",
+    "lto": false,
+    "multithread": true,
+    "simple_access": false,
+    "pre_compile": null,
+    "input_files": {
+        "bitmap": "input.bmp"
+    },
+    "output_files": {},
+    "trace": {
+        "runtime_seconds": 30,
+        "flush_threshold": null,
+        "sample_rate": 1
+    },
+    "variants": {
+        "hist_pthread": {
+            "sources": ["hist-pthread.c"],
+            "opt_level": "O2",
+            "compile_flags": ["-DTHREADS=4"],
+            "link_flags": ["-lpthread"],
+            "run_args": ["{bitmap}"],
+            "multithread": true,
+            "pre_compile": null
+        },
+        "hist_pthread_manual": {
+            "sources": ["hist-pthread-manual.c"],
+            "opt_level": "O2",
+            "compile_flags": ["-DTHREADS=4"],
+            "link_flags": ["-lpthread"],
+            "run_args": ["{bitmap}"],
+            "multithread": true,
+            "pre_compile": null
+        }
+    }
+}

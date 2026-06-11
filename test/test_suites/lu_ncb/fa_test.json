@@ -1,0 +1,38 @@
+{
+    "name": "lu_ncb",
+    "description": "SPLASH-2 LU Non-contiguous Blocks benchmark - lu (original) vs lu_manual (cache-line aligned struct fields fix)",
+    "source_dir": ".",
+    "output_dir": "dfg",
+    "default_variant": "lu",
+    "lto": false,
+    "multithread": true,
+    "simple_access": false,
+    "pre_compile": null,
+    "input_files": {},
+    "output_files": {},
+    "trace": {
+        "runtime_seconds": 120,
+        "flush_threshold": null,
+        "sample_rate": 1
+    },
+    "variants": {
+        "lu": {
+            "sources": ["lu.c"],
+            "opt_level": "O2",
+            "compile_flags": [],
+            "link_flags": ["-lm", "-lpthread"],
+            "run_args": ["-n128", "-p2", "-b16"],
+            "multithread": true,
+            "pre_compile": null
+        },
+        "lu_manual": {
+            "sources": ["lu_manual.c"],
+            "opt_level": "O2",
+            "compile_flags": [],
+            "link_flags": ["-lm", "-lpthread"],
+            "run_args": ["-n128", "-p2", "-b16"],
+            "multithread": true,
+            "pre_compile": null
+        }
+    }
+}

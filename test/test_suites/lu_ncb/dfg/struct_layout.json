@@ -1,0 +1,31 @@
+{
+  "structs": {
+    "struct.timeval": {
+      "size": 16,
+      "fields": [
+        {"idx": 0, "type": "i64", "offset": 0, "size": 8},
+        {"idx": 1, "type": "i64", "offset": 8, "size": 8}
+      ]
+    }
+  },
+  "variables": {
+    "global": [
+
+    ],
+    "heap_sites": [
+
+    ],
+    "stack_vars": [
+      {"function": "main", "type": "struct.timeval", "size": 16, "file": "", "line": 0},
+      {"function": "OneSolve", "type": "struct.timeval", "size": 16, "file": "", "line": 0},
+      {"function": "OneSolve", "type": "struct.timeval", "size": 16, "file": "", "line": 0},
+      {"function": "OneSolve", "type": "struct.timeval", "size": 16, "file": "", "line": 0},
+      {"function": "lu", "type": "struct.timeval", "size": 16, "file": "", "line": 0},
+      {"function": "lu", "type": "struct.timeval", "size": 16, "file": "", "line": 0},
+      {"function": "lu", "type": "struct.timeval", "size": 16, "file": "", "line": 0},
+      {"function": "lu", "type": "struct.timeval", "size": 16, "file": "", "line": 0},
+      {"function": "lu", "type": "struct.timeval", "size": 16, "file": "", "line": 0},
+      {"function": "lu", "type": "struct.timeval", "size": 16, "file": "", "line": 0}
+    ]
+  }
+}

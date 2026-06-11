@@ -1,0 +1,18 @@
+// DFG-global
+digraph {
+  label="DFG-global";
+  node [shape=record, style=filled];
+  0 [label="scalar.int.field0", type="?", size="0", fillcolor="lightblue"];
+  1 [label="scalar.%union.pthread_mutex_t = type { %struct.__pthread_mutex_s }.ownThreadLock.field0", type="?", size="0", fillcolor="lightblue"];
+  2 [label="scalar.any pointer.field0", type="?", size="0", fillcolor="lightblue"];
+  5 [label="scalar.unknown.ownThreadLock.field0", type="?", size="0", fillcolor="lightblue"];
+  0 -> 2 [label="1704614", weight="1704614", penwidth="6.0"];
+  0 -> 0 [label="814304", weight="814304", penwidth="6.0"];
+  2 -> 2 [label="814299", weight="814299", penwidth="6.0"];
+  0 -> 1 [label="36", weight="36", penwidth="6.0"];
+  1 -> 2 [label="36", weight="36", penwidth="6.0"];
+  0 -> 5 [label="16", weight="16", penwidth="5.8"];
+  2 -> 5 [label="14", weight="14", penwidth="5.2"];
+  5 -> 5 [label="3", weight="3", penwidth="1.9"];
+  1 -> 5 [label="3", weight="3", penwidth="1.9"];
+}

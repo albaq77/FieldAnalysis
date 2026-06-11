@@ -1,0 +1,142 @@
+{
+  "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data": [
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ]
+    ]
+  ],
+  "spinlock_pool": [
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        8
+      ]
+    ]
+  ],
+  "scalar.long": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.any pointer": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.%\"class.std::vector\" = type { %\"struct.std::_Vector_base\" }.indices": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.i8": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.%class.spinlock = type { %\"struct.std::atomic_flag\" }.pool": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.%class.cacheline_t = type { [8 x i64] }.ibuffer": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.i64": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.any pointer.indices": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "class.std::__cxx11::basic_string": [
+    [
+      [
+        2,
+        8
+      ]
+    ]
+  ],
+  "scalar.%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.ptr": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>": [
+    [
+      [
+        1,
+        8
+      ]
+    ]
+  ],
+  "scalar.int": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.[4 x i64]": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ]
+}

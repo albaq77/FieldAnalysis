@@ -1,0 +1,119 @@
+{
+  "structs": {
+    "class.std::ios_base::Init": {
+      "size": 1,
+      "fields": [
+        {"idx": 0, "type": "i8", "offset": 0, "size": 1}
+      ]
+    },
+    "union.pthread_mutex_t": {
+      "size": 40,
+      "fields": [
+        {"idx": 0, "type": "%struct.__pthread_mutex_s = type { i32, i32, i32, i32, i32, i16, i16, %struct.__pthread_internal_list }", "offset": 0, "size": 40}
+      ]
+    },
+    "struct.__pthread_mutex_s": {
+      "size": 40,
+      "fields": [
+        {"idx": 0, "type": "i32", "offset": 0, "size": 4},
+        {"idx": 1, "type": "i32", "offset": 4, "size": 4},
+        {"idx": 2, "type": "i32", "offset": 8, "size": 4},
+        {"idx": 3, "type": "i32", "offset": 12, "size": 4},
+        {"idx": 4, "type": "i32", "offset": 16, "size": 4},
+        {"idx": 5, "type": "i16", "offset": 20, "size": 2},
+        {"idx": 6, "type": "i16", "offset": 22, "size": 2},
+        {"idx": 7, "type": "%struct.__pthread_internal_list = type { ptr, ptr }", "offset": 24, "size": 16}
+      ]
+    },
+    "struct.__pthread_internal_list": {
+      "size": 16,
+      "fields": [
+        {"idx": 0, "type": "ptr", "offset": 0, "size": 8},
+        {"idx": 1, "type": "ptr", "offset": 8, "size": 8}
+      ]
+    },
+    "union.pthread_barrier_t": {
+      "size": 32,
+      "fields": [
+        {"idx": 0, "type": "i64", "offset": 0, "size": 8},
+        {"idx": 1, "type": "[24 x i8]", "offset": 8, "size": 24}
+      ]
+    },
+    "class.std::basic_ostream": {
+      "size": 272,
+      "fields": [
+        {"idx": 0, "type": "ptr", "offset": 0, "size": 8},
+        {"idx": 1, "type": "%\"class.std::basic_ios\" = type { %\"class.std::ios_base\", ptr, i8, i8, ptr, ptr, ptr, ptr }", "offset": 8, "size": 264}
+      ]
+    },
+    "class.std::basic_ios": {
+      "size": 264,
+      "fields": [
+        {"idx": 0, "type": "%\"class.std::ios_base\" = type { ptr, i64, i64, i32, i32, i32, ptr, %\"struct.std::ios_base::_Words\", [8 x %\"struct.std::ios_base::_Words\"], i32, ptr, %\"class.std::locale\" }", "offset": 0, "size": 216},
+        {"idx": 1, "type": "ptr", "offset": 216, "size": 8},
+        {"idx": 2, "type": "i8", "offset": 224, "size": 1},
+        {"idx": 3, "type": "i8", "offset": 225, "size": 1},
+        {"idx": 4, "type": "ptr", "offset": 232, "size": 8},
+        {"idx": 5, "type": "ptr", "offset": 240, "size": 8},
+        {"idx": 6, "type": "ptr", "offset": 248, "size": 8},
+        {"idx": 7, "type": "ptr", "offset": 256, "size": 8}
+      ]
+    },
+    "class.std::ios_base": {
+      "size": 216,
+      "fields": [
+        {"idx": 0, "type": "ptr", "offset": 0, "size": 8},
+        {"idx": 1, "type": "i64", "offset": 8, "size": 8},
+        {"idx": 2, "type": "i64", "offset": 16, "size": 8},
+        {"idx": 3, "type": "i32", "offset": 24, "size": 4},
+        {"idx": 4, "type": "i32", "offset": 28, "size": 4},
+        {"idx": 5, "type": "i32", "offset": 32, "size": 4},
+        {"idx": 6, "type": "ptr", "offset": 40, "size": 8},
+        {"idx": 7, "type": "%\"struct.std::ios_base::_Words\" = type { ptr, i64 }", "offset": 48, "size": 16},
+        {"idx": 8, "type": "[8 x %\"struct.std::ios_base::_Words\"]", "offset": 64, "size": 128},
+        {"idx": 9, "type": "i32", "offset": 192, "size": 4},
+        {"idx": 10, "type": "ptr", "offset": 200, "size": 8},
+        {"idx": 11, "type": "%\"class.std::locale\" = type { ptr }", "offset": 208, "size": 8}
+      ]
+    },
+    "struct.std::ios_base::_Words": {
+      "size": 16,
+      "fields": [
+        {"idx": 0, "type": "ptr", "offset": 0, "size": 8},
+        {"idx": 1, "type": "i64", "offset": 8, "size": 8}
+      ]
+    },
+    "class.std::locale": {
+      "size": 8,
+      "fields": [
+        {"idx": 0, "type": "ptr", "offset": 0, "size": 8}
+      ]
+    },
+    "struct.std::array.0": {
+      "size": 2048,
+      "fields": [
+        {"idx": 0, "type": "[256 x ptr]", "offset": 0, "size": 2048}
+      ]
+    },
+    "struct.PaddedInt": {
+      "size": 4,
+      "fields": [
+        {"idx": 0, "type": "i32", "offset": 0, "size": 4}
+      ]
+    }
+  },
+  "variables": {
+    "global": [
+      {"name": "_ZStL8__ioinit", "type": "class.std::ios_base::Init", "size": 1, "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/iostream", "line": 74},
+      {"name": "ref_count_mutex", "type": "union.pthread_mutex_t", "size": 40, "file": "/mnt/hgfs/graduate/LLVM/llvm-project-19/llvm-project/FieldAnalysis/test/test_suites/tmi_boost/ref_count/shared_ptr_fs.cpp", "line": 27},
+      {"name": "b", "type": "union.pthread_barrier_t", "size": 32, "file": "/mnt/hgfs/graduate/LLVM/llvm-project-19/llvm-project/FieldAnalysis/test/test_suites/tmi_boost/ref_count/shared_ptr_fs.cpp", "line": 40},
+      {"name": "_ZSt4cout", "type": "class.std::basic_ostream", "size": 272, "file": "", "line": 0}
+    ],
+    "heap_sites": [
+
+    ],
+    "stack_vars": [
+
+    ]
+  }
+}
