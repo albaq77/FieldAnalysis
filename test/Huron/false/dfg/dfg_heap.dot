@@ -1,0 +1,7 @@
+// DFG-heap
+digraph {
+  label="DFG-heap";
+  node [shape=record, style=filled];
+  2 [label="array", type="i32", size="4", fillcolor="lightblue"];
+  2 -> 2 [label="15999975", weight="15999975", penwidth="6.0"];
+}

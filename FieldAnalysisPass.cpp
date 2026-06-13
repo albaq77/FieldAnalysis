@@ -13,6 +13,7 @@
 #include "llvm/Support/raw_ostream.h"
 #include "llvm/Support/FileSystem.h"
 #include "llvm/Demangle/Demangle.h"
+#include "JsonWriter.h"
 #include <map>
 #include <string>
 #include <optional>
@@ -59,31 +60,6 @@ struct GEPFieldAnalysisPass : PassInfoMixin<GEPFieldAnalysisPass> {
   PreservedAnalyses run(Module &M, ModuleAnalysisManager &MAM);
   static bool isRequired() { return true; }
 };
-
-static std::string escapeJsonString(const std::string &S) {
-  std::string Result;
-  Result.reserve(S.size());
-  for (char C : S) {
-    switch (C) {
-    case '"':  Result += "\\\""; break;
-    case '\\': Result += "\\\\"; break;
-    case '\b': Result += "\\b";  break;
-    case '\f': Result += "\\f";  break;
-    case '\n': Result += "\\n";  break;
-    case '\r': Result += "\\r";  break;
-    case '\t': Result += "\\t";  break;
-    default:
-      if (static_cast<unsigned char>(C) < 0x20) {
-        raw_string_ostream RSOS(Result);
-        RSOS << "\\u" << format_hex_no_prefix(static_cast<unsigned>(C), 4);
-      } else {
-        Result += C;
-      }
-      break;
-    }
-  }
-  return Result;
-}
 
 static bool isGEPValue(Value *V) {
   if (isa<GetElementPtrInst>(V))
@@ -665,6 +641,8 @@ static std::optional<FieldInfo> analyzeGEPTyped(
         return std::nullopt;
 
       uint32_t FieldIdx = static_cast<uint32_t>(CI->getZExtValue());
+      if (FieldIdx >= ST->getNumElements())
+        return std::nullopt;
       const StructLayout *SL = DL.getStructLayout(ST);
       uint64_t FieldOffset = SL->getElementOffset(FieldIdx);
 
@@ -787,6 +765,8 @@ static std::optional<FieldInfo> analyzeGEPDefUse(
     if (!CurTy)
       break;
     if (auto *ST = dyn_cast<StructType>(CurTy)) {
+      if (CI->getZExtValue() >= ST->getNumElements())
+        break;
       const StructLayout *SL = DL.getStructLayout(ST);
       GEPOffset += SL->getElementOffset(CI->getZExtValue());
       CurTy = ST->getElementType(CI->getZExtValue());
@@ -951,6 +931,230 @@ static std::optional<FieldInfo> analyzeGEP(
   return std::nullopt;
 }
 
+struct GEPRecord {
+  std::string map_key;
+  FieldInfo info;
+};
+
+static void writeFieldMapJson(const std::vector<GEPRecord> &Records,
+                               raw_ostream &OS) {
+  JsonWriter W(OS);
+  W.beginObject();
+  for (const auto &Rec : Records) {
+    W.key(Rec.map_key);
+    W.beginObject();
+    W.key("struct").value(Rec.info.struct_name);
+    W.key("field").value(Rec.info.field_idx);
+    W.key("offset").value(Rec.info.byte_offset);
+    W.key("id").value(Rec.info.field_id);
+    W.key("field_type").value(Rec.info.field_type);
+    W.key("field_size").value(Rec.info.field_size);
+
+    W.key("source");
+    W.beginObject();
+    W.key("file").value(Rec.info.source_file);
+    W.key("line").value(Rec.info.source_line);
+    W.key("col").value(Rec.info.source_col);
+    W.endObject();
+
+    W.key("access_path");
+    W.beginArray();
+    for (const auto &Step : Rec.info.access_path) {
+      W.beginObject();
+      W.key("struct").value(Step.struct_name);
+      W.key("field").value(Step.field_idx);
+      W.key("field_offset").value(Step.field_offset);
+      W.endObject();
+    }
+    W.endArray();
+
+    W.endObject();
+  }
+  W.endObject();
+}
+
+static void writeStructLayoutJson(Module &M, const DataLayout &DL,
+                                   raw_ostream &OS) {
+  JsonWriter W(OS);
+  W.beginObject();
+
+  W.key("structs");
+  W.beginObject();
+  for (StructType *ST : M.getIdentifiedStructTypes()) {
+    if (ST->isOpaque() || !ST->hasName())
+      continue;
+    W.key(ST->getName().str());
+    W.beginObject();
+    W.key("size").value(DL.getTypeAllocSize(ST));
+
+    W.key("fields");
+    W.beginArray();
+    const StructLayout *SL = DL.getStructLayout(ST);
+    for (unsigned i = 0; i < ST->getNumElements(); ++i) {
+      W.beginObject();
+      W.key("idx").value(i);
+      Type *ET = ST->getElementType(i);
+      std::string TypeStr;
+      raw_string_ostream TSS(TypeStr);
+      ET->print(TSS);
+      W.key("type").value(TSS.str());
+      W.key("offset").value(SL->getElementOffset(i));
+      W.key("size").value(DL.getTypeAllocSize(ET));
+      W.endObject();
+    }
+    W.endArray();
+
+    W.endObject();
+  }
+  W.endObject();
+
+  W.key("variables");
+  W.beginObject();
+
+  W.key("global");
+  W.beginArray();
+  for (GlobalVariable &GV : M.globals()) {
+    Type *Ty = GV.getValueType();
+    if (!isa<StructType>(Ty))
+      continue;
+    auto *ST = cast<StructType>(Ty);
+    if (ST->isOpaque() || !ST->hasName())
+      continue;
+    W.beginObject();
+    W.key("name").value(GV.getName().str());
+    W.key("type").value(ST->getName().str());
+    W.key("size").value(DL.getTypeAllocSize(ST));
+    unsigned Line = 0;
+    std::string FilePath;
+    if (MDNode *MD = GV.getMetadata(LLVMContext::MD_dbg)) {
+      if (auto *GVE = dyn_cast<DIGlobalVariableExpression>(MD)) {
+        if (auto *DGV = GVE->getVariable()) {
+          Line = DGV->getLine();
+          if (auto *File = DGV->getFile()) {
+            StringRef Dir = File->getDirectory();
+            StringRef Filename = File->getFilename();
+            if (!Dir.empty())
+              FilePath = (Dir + "/" + Filename).str();
+            else
+              FilePath = Filename.str();
+          }
+        }
+      }
+    }
+    W.key("file").value(FilePath);
+    W.key("line").value(Line);
+    W.endObject();
+  }
+  W.endArray();
+
+  W.key("heap_sites");
+  W.beginArray();
+  for (Function &F : M) {
+    for (BasicBlock &BB : F) {
+      for (Instruction &I : BB) {
+        auto *CB = dyn_cast<CallBase>(&I);
+        if (!CB)
+          continue;
+        StringRef Callee =
+            CB->getCalledFunction() ? CB->getCalledFunction()->getName() : "";
+        if (Callee != "malloc" && Callee != "calloc" && Callee != "realloc")
+          continue;
+
+        StructType *HeapST = nullptr;
+        for (User *U : CB->users()) {
+          if (auto *UI = dyn_cast<Instruction>(U)) {
+            if (MDNode *TBAA = UI->getMetadata(LLVMContext::MD_tbaa)) {
+              if (TBAA->getNumOperands() >= 1) {
+                if (auto *BaseMD = dyn_cast<MDNode>(TBAA->getOperand(0))) {
+                  if (BaseMD->getNumOperands() >= 1) {
+                    if (auto *NameMD =
+                            dyn_cast<MDString>(BaseMD->getOperand(0))) {
+                      HeapST = findStructTypeInModule(
+                          M, NameMD->getString().str());
+                      break;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        if (!HeapST)
+          continue;
+
+        W.beginObject();
+        W.key("function").value(F.getName().str());
+        W.key("type").value(HeapST->getName().str());
+        W.key("size").value(DL.getTypeAllocSize(HeapST));
+        unsigned Line = 0;
+        std::string FilePath;
+        if (CB->getDebugLoc()) {
+          Line = CB->getDebugLoc().getLine();
+          if (const DILocation *DIL = CB->getDebugLoc().get()) {
+            if (DIScope *Scope = DIL->getScope()) {
+              StringRef Dir = Scope->getDirectory();
+              StringRef Filename = Scope->getFilename();
+              if (!Dir.empty())
+                FilePath = (Dir + "/" + Filename).str();
+              else
+                FilePath = Filename.str();
+            }
+          }
+        }
+        W.key("file").value(FilePath);
+        W.key("line").value(Line);
+        W.endObject();
+      }
+    }
+  }
+  W.endArray();
+
+  W.key("stack_vars");
+  W.beginArray();
+  for (Function &F : M) {
+    for (BasicBlock &BB : F) {
+      for (Instruction &I : BB) {
+        auto *AI = dyn_cast<AllocaInst>(&I);
+        if (!AI)
+          continue;
+        Type *ATy = AI->getAllocatedType();
+        if (!isa<StructType>(ATy))
+          continue;
+        auto *ST = cast<StructType>(ATy);
+        if (ST->isOpaque() || !ST->hasName())
+          continue;
+
+        W.beginObject();
+        W.key("function").value(F.getName().str());
+        W.key("type").value(ST->getName().str());
+        W.key("size").value(DL.getTypeAllocSize(ST));
+        unsigned Line = 0;
+        std::string FilePath;
+        if (AI->getDebugLoc()) {
+          Line = AI->getDebugLoc().getLine();
+          if (const DILocation *DIL = AI->getDebugLoc().get()) {
+            if (DIScope *Scope = DIL->getScope()) {
+              StringRef Dir = Scope->getDirectory();
+              StringRef Filename = Scope->getFilename();
+              if (!Dir.empty())
+                FilePath = (Dir + "/" + Filename).str();
+              else
+                FilePath = Filename.str();
+            }
+          }
+        }
+        W.key("file").value(FilePath);
+        W.key("line").value(Line);
+        W.endObject();
+      }
+    }
+  }
+  W.endArray();
+
+  W.endObject();
+  W.endObject();
+}
+
 PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
                                             ModuleAnalysisManager &MAM) {
   if (M.getNamedMetadata("fieldanalysis.instrumented"))
@@ -965,10 +1169,6 @@ PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
   std::map<std::pair<std::string, uint32_t>, uint32_t> FieldIdMap;
   uint32_t NextFieldId = 0;
 
-  struct GEPRecord {
-    std::string map_key;
-    FieldInfo info;
-  };
   std::vector<GEPRecord> Records;
   std::vector<InstrumentPoint> InstrumentPoints;
   std::set<std::pair<Instruction*, uint32_t>> InstrumentedPairs;
@@ -1133,43 +1333,7 @@ PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
     std::error_code EC;
     raw_fd_ostream OS("gep_field_map.json", EC, sys::fs::OF_Text);
     if (!EC) {
-      OS << "{\n";
-      bool First = true;
-      for (auto &Rec : Records) {
-        if (!First)
-          OS << ",\n";
-        First = false;
-        OS << "  \"" << escapeJsonString(Rec.map_key) << "\": {";
-        OS << "\"struct\": \"" << escapeJsonString(Rec.info.struct_name)
-           << "\", ";
-        OS << "\"field\": " << Rec.info.field_idx << ", ";
-        OS << "\"offset\": " << Rec.info.byte_offset << ", ";
-        OS << "\"id\": " << Rec.info.field_id << ", ";
-        OS << "\"field_type\": \"" << escapeJsonString(Rec.info.field_type)
-           << "\", ";
-        OS << "\"field_size\": " << Rec.info.field_size << ", ";
-
-        OS << "\"source\": {";
-        OS << "\"file\": \"" << escapeJsonString(Rec.info.source_file)
-           << "\", ";
-        OS << "\"line\": " << Rec.info.source_line << ", ";
-        OS << "\"col\": " << Rec.info.source_col;
-        OS << "}, ";
-
-        OS << "\"access_path\": [";
-        for (size_t i = 0; i < Rec.info.access_path.size(); ++i) {
-          if (i > 0)
-            OS << ", ";
-          const auto &Step = Rec.info.access_path[i];
-          OS << "{\"struct\": \"" << escapeJsonString(Step.struct_name)
-             << "\", \"field\": " << Step.field_idx
-             << ", \"field_offset\": " << Step.field_offset << "}";
-        }
-        OS << "]";
-
-        OS << "}";
-      }
-      OS << "\n}\n";
+      writeFieldMapJson(Records, OS);
     }
   }
 
@@ -1177,169 +1341,7 @@ PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
     std::error_code EC2;
     raw_fd_ostream LayoutOS("struct_layout.json", EC2, sys::fs::OF_Text);
     if (!EC2) {
-      LayoutOS << "{\n";
-
-      LayoutOS << "  \"structs\": {\n";
-      bool FirstStruct = true;
-      for (StructType *ST : M.getIdentifiedStructTypes()) {
-        if (ST->isOpaque() || !ST->hasName()) continue;
-        if (!FirstStruct) LayoutOS << ",\n";
-        FirstStruct = false;
-
-        std::string StructName = escapeJsonString(ST->getName().str());
-        uint64_t TotalSize = DL.getTypeAllocSize(ST);
-        LayoutOS << "    \"" << StructName << "\": {\n";
-        LayoutOS << "      \"size\": " << TotalSize << ",\n";
-        LayoutOS << "      \"fields\": [\n";
-
-        const StructLayout *SL = DL.getStructLayout(ST);
-        for (unsigned i = 0; i < ST->getNumElements(); ++i) {
-          if (i > 0) LayoutOS << ",\n";
-          Type *ET = ST->getElementType(i);
-          std::string TypeStr;
-          raw_string_ostream TSS(TypeStr);
-          ET->print(TSS);
-
-          LayoutOS << "        {\"idx\": " << i
-                   << ", \"type\": \"" << escapeJsonString(TSS.str()) << "\""
-                   << ", \"offset\": " << SL->getElementOffset(i)
-                   << ", \"size\": " << DL.getTypeAllocSize(ET) << "}";
-        }
-        LayoutOS << "\n      ]\n    }";
-      }
-      LayoutOS << "\n  },\n";
-
-      LayoutOS << "  \"variables\": {\n";
-
-      LayoutOS << "    \"global\": [\n";
-      bool FirstGV = true;
-      for (GlobalVariable &GV : M.globals()) {
-        Type *Ty = GV.getValueType();
-        if (!isa<StructType>(Ty)) continue;
-        auto *ST = cast<StructType>(Ty);
-        if (ST->isOpaque() || !ST->hasName()) continue;
-        if (!FirstGV) LayoutOS << ",\n";
-        FirstGV = false;
-        LayoutOS << "      {\"name\": \"" << escapeJsonString(GV.getName().str()) << "\""
-                 << ", \"type\": \"" << escapeJsonString(ST->getName().str()) << "\""
-                 << ", \"size\": " << DL.getTypeAllocSize(ST);
-        unsigned Line = 0;
-        std::string FilePath;
-        if (MDNode *MD = GV.getMetadata(LLVMContext::MD_dbg)) {
-          if (auto *GVE = dyn_cast<DIGlobalVariableExpression>(MD)) {
-            if (auto *DGV = GVE->getVariable()) {
-              Line = DGV->getLine();
-              if (auto *File = DGV->getFile()) {
-                StringRef Dir = File->getDirectory();
-                StringRef Filename = File->getFilename();
-                if (!Dir.empty())
-                  FilePath = (Dir + "/" + Filename).str();
-                else
-                  FilePath = Filename.str();
-              }
-            }
-          }
-        }
-        LayoutOS << ", \"file\": \"" << escapeJsonString(FilePath) << "\""
-                 << ", \"line\": " << Line << "}";
-      }
-      LayoutOS << "\n    ],\n";
-
-      LayoutOS << "    \"heap_sites\": [\n";
-      bool FirstHeap = true;
-      for (Function &F : M) {
-        for (BasicBlock &BB : F) {
-          for (Instruction &I : BB) {
-            auto *CB = dyn_cast<CallBase>(&I);
-            if (!CB) continue;
-            StringRef Callee = CB->getCalledFunction() ? CB->getCalledFunction()->getName() : "";
-            if (Callee != "malloc" && Callee != "calloc" && Callee != "realloc") continue;
-
-            StructType *HeapST = nullptr;
-            for (User *U : CB->users()) {
-              if (auto *UI = dyn_cast<Instruction>(U)) {
-                if (MDNode *TBAA = UI->getMetadata(LLVMContext::MD_tbaa)) {
-                  if (TBAA->getNumOperands() >= 1) {
-                    if (auto *BaseMD = dyn_cast<MDNode>(TBAA->getOperand(0))) {
-                      if (BaseMD->getNumOperands() >= 1) {
-                        if (auto *NameMD = dyn_cast<MDString>(BaseMD->getOperand(0))) {
-                          HeapST = findStructTypeInModule(M, NameMD->getString().str());
-                          break;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            if (!HeapST) continue;
-
-            if (!FirstHeap) LayoutOS << ",\n";
-            FirstHeap = false;
-            unsigned Line = 0;
-            std::string FilePath;
-            if (CB->getDebugLoc()) {
-              Line = CB->getDebugLoc().getLine();
-              if (const DILocation *DIL = CB->getDebugLoc().get()) {
-                if (DIScope *Scope = DIL->getScope()) {
-                  StringRef Dir = Scope->getDirectory();
-                  StringRef Filename = Scope->getFilename();
-                  if (!Dir.empty())
-                    FilePath = (Dir + "/" + Filename).str();
-                  else
-                    FilePath = Filename.str();
-                }
-              }
-            }
-            LayoutOS << "      {\"function\": \"" << escapeJsonString(F.getName().str()) << "\""
-                     << ", \"type\": \"" << escapeJsonString(HeapST->getName().str()) << "\""
-                     << ", \"size\": " << DL.getTypeAllocSize(HeapST)
-                     << ", \"file\": \"" << escapeJsonString(FilePath) << "\""
-                     << ", \"line\": " << Line << "}";
-          }
-        }
-      }
-      LayoutOS << "\n    ],\n";
-
-      LayoutOS << "    \"stack_vars\": [\n";
-      bool FirstStack = true;
-      for (Function &F : M) {
-        for (BasicBlock &BB : F) {
-          for (Instruction &I : BB) {
-            auto *AI = dyn_cast<AllocaInst>(&I);
-            if (!AI) continue;
-            Type *ATy = AI->getAllocatedType();
-            if (!isa<StructType>(ATy)) continue;
-            auto *ST = cast<StructType>(ATy);
-            if (ST->isOpaque() || !ST->hasName()) continue;
-
-            if (!FirstStack) LayoutOS << ",\n";
-            FirstStack = false;
-            unsigned Line = 0;
-            std::string FilePath;
-            if (AI->getDebugLoc()) {
-              Line = AI->getDebugLoc().getLine();
-              if (const DILocation *DIL = AI->getDebugLoc().get()) {
-                if (DIScope *Scope = DIL->getScope()) {
-                  StringRef Dir = Scope->getDirectory();
-                  StringRef Filename = Scope->getFilename();
-                  if (!Dir.empty())
-                    FilePath = (Dir + "/" + Filename).str();
-                  else
-                    FilePath = Filename.str();
-                }
-              }
-            }
-            LayoutOS << "      {\"function\": \"" << escapeJsonString(F.getName().str()) << "\""
-                     << ", \"type\": \"" << escapeJsonString(ST->getName().str()) << "\""
-                     << ", \"size\": " << DL.getTypeAllocSize(ST)
-                     << ", \"file\": \"" << escapeJsonString(FilePath) << "\""
-                     << ", \"line\": " << Line << "}";
-          }
-        }
-      }
-      LayoutOS << "\n    ]\n";
-      LayoutOS << "  }\n}\n";
+      writeStructLayoutJson(M, DL, LayoutOS);
     }
   }
 

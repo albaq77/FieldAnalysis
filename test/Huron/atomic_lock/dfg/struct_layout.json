@@ -1,0 +1,839 @@
+{
+
+  "structs": {
+
+    "class.std::ios_base::Init": {
+
+      "size": 1,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i8",
+          "offset": 0,
+          "size": 1
+        }
+      ]
+    },
+    "class.std::basic_ostream": {
+
+      "size": 272,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "ptr",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "%\"class.std::basic_ios\" = type { %\"class.std::ios_base\", ptr, i8, i8, ptr, ptr, ptr, ptr }",
+          "offset": 8,
+          "size": 264
+        }
+      ]
+    },
+    "class.std::basic_ios": {
+
+      "size": 264,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"class.std::ios_base\" = type { ptr, i64, i64, i32, i32, i32, ptr, %\"struct.std::ios_base::_Words\", [8 x %\"struct.std::ios_base::_Words\"], i32, ptr, %\"class.std::locale\" }",
+          "offset": 0,
+          "size": 216
+        },
+        {
+
+          "idx": 1,
+          "type": "ptr",
+          "offset": 216,
+          "size": 8
+        },
+        {
+
+          "idx": 2,
+          "type": "i8",
+          "offset": 224,
+          "size": 1
+        },
+        {
+
+          "idx": 3,
+          "type": "i8",
+          "offset": 225,
+          "size": 1
+        },
+        {
+
+          "idx": 4,
+          "type": "ptr",
+          "offset": 232,
+          "size": 8
+        },
+        {
+
+          "idx": 5,
+          "type": "ptr",
+          "offset": 240,
+          "size": 8
+        },
+        {
+
+          "idx": 6,
+          "type": "ptr",
+          "offset": 248,
+          "size": 8
+        },
+        {
+
+          "idx": 7,
+          "type": "ptr",
+          "offset": 256,
+          "size": 8
+        }
+      ]
+    },
+    "class.std::ios_base": {
+
+      "size": 216,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "ptr",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "i64",
+          "offset": 8,
+          "size": 8
+        },
+        {
+
+          "idx": 2,
+          "type": "i64",
+          "offset": 16,
+          "size": 8
+        },
+        {
+
+          "idx": 3,
+          "type": "i32",
+          "offset": 24,
+          "size": 4
+        },
+        {
+
+          "idx": 4,
+          "type": "i32",
+          "offset": 28,
+          "size": 4
+        },
+        {
+
+          "idx": 5,
+          "type": "i32",
+          "offset": 32,
+          "size": 4
+        },
+        {
+
+          "idx": 6,
+          "type": "ptr",
+          "offset": 40,
+          "size": 8
+        },
+        {
+
+          "idx": 7,
+          "type": "%\"struct.std::ios_base::_Words\" = type { ptr, i64 }",
+          "offset": 48,
+          "size": 16
+        },
+        {
+
+          "idx": 8,
+          "type": "[8 x %\"struct.std::ios_base::_Words\"]",
+          "offset": 64,
+          "size": 128
+        },
+        {
+
+          "idx": 9,
+          "type": "i32",
+          "offset": 192,
+          "size": 4
+        },
+        {
+
+          "idx": 10,
+          "type": "ptr",
+          "offset": 200,
+          "size": 8
+        },
+        {
+
+          "idx": 11,
+          "type": "%\"class.std::locale\" = type { ptr }",
+          "offset": 208,
+          "size": 8
+        }
+      ]
+    },
+    "struct.std::ios_base::_Words": {
+
+      "size": 16,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "ptr",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "i64",
+          "offset": 8,
+          "size": 8
+        }
+      ]
+    },
+    "class.std::locale": {
+
+      "size": 8,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "ptr",
+          "offset": 0,
+          "size": 8
+        }
+      ]
+    },
+    "struct.std::chrono::duration": {
+
+      "size": 8,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i64",
+          "offset": 0,
+          "size": 8
+        }
+      ]
+    },
+    "class.spinlock": {
+
+      "size": 1,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"struct.std::atomic_flag\" = type { %\"struct.std::__atomic_flag_base\" }",
+          "offset": 0,
+          "size": 1
+        }
+      ]
+    },
+    "struct.std::atomic_flag": {
+
+      "size": 1,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"struct.std::__atomic_flag_base\" = type { i8 }",
+          "offset": 0,
+          "size": 1
+        }
+      ]
+    },
+    "struct.std::__atomic_flag_base": {
+
+      "size": 1,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i8",
+          "offset": 0,
+          "size": 1
+        }
+      ]
+    },
+    "struct.std::chrono::duration.0": {
+
+      "size": 8,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i64",
+          "offset": 0,
+          "size": 8
+        }
+      ]
+    },
+    "struct.timespec": {
+
+      "size": 16,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i64",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "i64",
+          "offset": 8,
+          "size": 8
+        }
+      ]
+    },
+    "class.std::thread": {
+
+      "size": 8,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"class.std::thread::id\" = type { i64 }",
+          "offset": 0,
+          "size": 8
+        }
+      ]
+    },
+    "class.std::thread::id": {
+
+      "size": 8,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i64",
+          "offset": 0,
+          "size": 8
+        }
+      ]
+    },
+    "class.std::unique_ptr": {
+
+      "size": 8,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"struct.std::__uniq_ptr_data\" = type { %\"class.std::__uniq_ptr_impl\" }",
+          "offset": 0,
+          "size": 8
+        }
+      ]
+    },
+    "struct.std::__uniq_ptr_data": {
+
+      "size": 8,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"class.std::__uniq_ptr_impl\" = type { %\"class.std::tuple\" }",
+          "offset": 0,
+          "size": 8
+        }
+      ]
+    },
+    "class.std::__uniq_ptr_impl": {
+
+      "size": 8,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"class.std::tuple\" = type { %\"struct.std::_Tuple_impl\" }",
+          "offset": 0,
+          "size": 8
+        }
+      ]
+    },
+    "class.std::tuple": {
+
+      "size": 8,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"struct.std::_Tuple_impl\" = type { %\"struct.std::_Head_base.2\" }",
+          "offset": 0,
+          "size": 8
+        }
+      ]
+    },
+    "struct.std::_Tuple_impl": {
+
+      "size": 8,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"struct.std::_Head_base.2\" = type { ptr }",
+          "offset": 0,
+          "size": 8
+        }
+      ]
+    },
+    "struct.std::_Head_base.2": {
+
+      "size": 8,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "ptr",
+          "offset": 0,
+          "size": 8
+        }
+      ]
+    },
+    "struct.std::thread::_State_impl": {
+
+      "size": 24,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"struct.std::thread::_State\" = type { ptr }",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+          "offset": 8,
+          "size": 16
+        }
+      ]
+    },
+    "struct.std::thread::_State": {
+
+      "size": 8,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "ptr",
+          "offset": 0,
+          "size": 8
+        }
+      ]
+    },
+    "struct.std::thread::_Invoker": {
+
+      "size": 16,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"class.std::tuple.3\" = type { %\"struct.std::_Tuple_impl.4\" }",
+          "offset": 0,
+          "size": 16
+        }
+      ]
+    },
+    "class.std::tuple.3": {
+
+      "size": 16,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"struct.std::_Tuple_impl.4\" = type { %\"struct.std::_Tuple_impl.5\", %\"struct.std::_Head_base.7\" }",
+          "offset": 0,
+          "size": 16
+        }
+      ]
+    },
+    "struct.std::_Tuple_impl.4": {
+
+      "size": 16,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"struct.std::_Tuple_impl.5\" = type { %\"struct.std::_Head_base.6\" }",
+          "offset": 0,
+          "size": 4
+        },
+        {
+
+          "idx": 1,
+          "type": "%\"struct.std::_Head_base.7\" = type { ptr }",
+          "offset": 8,
+          "size": 8
+        }
+      ]
+    },
+    "struct.std::_Tuple_impl.5": {
+
+      "size": 4,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"struct.std::_Head_base.6\" = type { i32 }",
+          "offset": 0,
+          "size": 4
+        }
+      ]
+    },
+    "struct.std::_Head_base.6": {
+
+      "size": 4,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i32",
+          "offset": 0,
+          "size": 4
+        }
+      ]
+    },
+    "struct.std::_Head_base.7": {
+
+      "size": 8,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "ptr",
+          "offset": 0,
+          "size": 8
+        }
+      ]
+    },
+    "struct.std::_Index_tuple": {
+
+      "size": 1,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i8",
+          "offset": 0,
+          "size": 1
+        }
+      ]
+    },
+    "struct.std::__invoke_other": {
+
+      "size": 1,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i8",
+          "offset": 0,
+          "size": 1
+        }
+      ]
+    }
+  },
+  "variables": {
+
+    "global": [
+
+      {
+
+        "name": "_ZStL8__ioinit",
+        "type": "class.std::ios_base::Init",
+        "size": 1,
+        "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/iostream",
+        "line": 74
+      },
+      {
+
+        "name": "_ZSt4cout",
+        "type": "class.std::basic_ostream",
+        "size": 272,
+        "file": "",
+        "line": 0
+      }
+    ],
+    "heap_sites": [
+
+    ],
+    "stack_vars": [
+
+      {
+
+        "function": "_Z12thread_printm",
+        "type": "struct.std::chrono::duration",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE",
+        "type": "struct.std::chrono::duration",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE",
+        "type": "struct.std::chrono::duration",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE",
+        "type": "struct.std::chrono::duration.0",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE",
+        "type": "struct.std::chrono::duration",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE",
+        "type": "struct.timespec",
+        "size": 16,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "main",
+        "type": "class.std::thread",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "main",
+        "type": "class.std::thread",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt6threadC2IRFvmEJiEvEEOT_DpOT0_",
+        "type": "class.std::unique_ptr",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNKSt6thread8joinableEv",
+        "type": "class.std::thread::id",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNKSt6thread8joinableEv",
+        "type": "class.std::thread::id",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZSteqNSt6thread2idES0_",
+        "type": "class.std::thread::id",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZSteqNSt6thread2idES0_",
+        "type": "class.std::thread::id",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZSt4swapINSt6thread2idEENSt9enable_ifIXsr6__and_ISt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS5_ESt18is_move_assignableIS5_EEE5valueEvE4typeERS5_SE_",
+        "type": "class.std::thread::id",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt6chrono8durationIlSt5ratioILl1ELl1EEE4zeroEv",
+        "type": "struct.std::chrono::duration",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1EEEElS3_EENSt9enable_ifIXsr13__is_durationIT_EE5valueES6_E4typeERKNS1_IT0_T1_EE",
+        "type": "struct.std::chrono::duration",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1000000000EEEElS2_ILl1ELl1EEEENSt9enable_ifIXsr13__is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE",
+        "type": "struct.std::chrono::duration.0",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt6chronomiIlSt5ratioILl1ELl1EElS2_EENSt11common_typeIJNS_8durationIT_T0_EENS4_IT1_T2_EEEE4typeERKS7_RKSA_",
+        "type": "struct.std::chrono::duration",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt6chronomiIlSt5ratioILl1ELl1EElS2_EENSt11common_typeIJNS_8durationIT_T0_EENS4_IT1_T2_EEEE4typeERKS7_RKSA_",
+        "type": "struct.std::chrono::duration",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt6chronomiIlSt5ratioILl1ELl1EElS2_EENSt11common_typeIJNS_8durationIT_T0_EENS4_IT1_T2_EEEE4typeERKS7_RKSA_",
+        "type": "struct.std::chrono::duration",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt6chronoltIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE",
+        "type": "struct.std::chrono::duration",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt6chronoltIlSt5ratioILl1ELl1EElS2_EEbRKNS_8durationIT_T0_EERKNS3_IT1_T2_EE",
+        "type": "struct.std::chrono::duration",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1EEEES3_lLb1ELb1EE6__castIlS3_EES4_RKNS1_IT_T0_EE",
+        "type": "struct.std::chrono::duration",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1000000000EEEES2_ILl1000000000ELl1EElLb0ELb1EE6__castIlS2_ILl1ELl1EEEES4_RKNS1_IT_T0_EE",
+        "type": "struct.std::chrono::duration.0",
+        "size": 8,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt6thread8_InvokerISt5tupleIJPFvmEiEEEclEv",
+        "type": "struct.std::_Index_tuple",
+        "size": 1,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZNSt6thread8_InvokerISt5tupleIJPFvmEiEEE9_M_invokeIJLm0ELm1EEEEvSt12_Index_tupleIJXspT_EEE",
+        "type": "struct.std::_Index_tuple",
+        "size": 1,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZSt8__invokeIPFvmEJiEENSt15__invoke_resultIT_JDpT0_EE4typeEOS3_DpOS4_",
+        "type": "struct.std::__invoke_other",
+        "size": 1,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "_ZSt13__invoke_implIvPFvmEJiEET_St14__invoke_otherOT0_DpOT1_",
+        "type": "struct.std::__invoke_other",
+        "size": 1,
+        "file": "",
+        "line": 0
+      }
+    ]
+  }
+}

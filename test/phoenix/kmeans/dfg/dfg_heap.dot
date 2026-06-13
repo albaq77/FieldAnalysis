@@ -1,0 +1,32 @@
+// DFG-heap
+digraph {
+  label="DFG-heap";
+  node [shape=record, style=filled];
+  2 [label="ptr", type="ptr", size="8", fillcolor="lightblue"];
+  3 [label="i32", type="i32", size="4", fillcolor="lightblue"];
+  4 [label=".field1", type="?", size="0", fillcolor="lightblue"];
+  5 [label=".field0", type="?", size="0", fillcolor="lightblue"];
+  8 [label="means", type="ptr", size="8", fillcolor="lightblue"];
+  11 [label="i64", type="i64", size="8", fillcolor="lightblue"];
+  3 -> 3 [label="8806003", weight="8806003", penwidth="6.0"];
+  3 -> 8 [label="2007247", weight="2007247", penwidth="6.0"];
+  8 -> 8 [label="121475", weight="121475", penwidth="6.0"];
+  3 -> 5 [label="215", weight="215", penwidth="6.0"];
+  3 -> 4 [label="213", weight="213", penwidth="6.0"];
+  3 -> 11 [label="115", weight="115", penwidth="6.0"];
+  2 -> 3 [label="115", weight="115", penwidth="6.0"];
+  5 -> 8 [label="33", weight="33", penwidth="6.0"];
+  4 -> 8 [label="33", weight="33", penwidth="6.0"];
+  4 -> 5 [label="29", weight="29", penwidth="6.0"];
+  4 -> 11 [label="19", weight="19", penwidth="6.0"];
+  8 -> 11 [label="18", weight="18", penwidth="6.0"];
+  5 -> 11 [label="18", weight="18", penwidth="6.0"];
+  2 -> 8 [label="18", weight="18", penwidth="6.0"];
+  2 -> 5 [label="11", weight="11", penwidth="4.3"];
+  2 -> 4 [label="10", weight="10", penwidth="4.0"];
+  4 -> 4 [label="8", weight="8", penwidth="3.4"];
+  5 -> 5 [label="7", weight="7", penwidth="3.1"];
+  2 -> 11 [label="4", weight="4", penwidth="2.2"];
+  11 -> 11 [label="3", weight="3", penwidth="1.9"];
+  2 -> 2 [label="1", weight="1", penwidth="1.3"];
+}

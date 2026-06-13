@@ -1,0 +1,10 @@
+// DFG-stack
+digraph {
+  label="DFG-stack";
+  node [shape=record, style=filled];
+  4 [label="scalar.i8.field0", type="?", size="0", fillcolor="lightblue"];
+  5 [label="scalar.%struct.OptionData_ = type { float, float, float, float, float, float, i8, float, float }.field0", type="?", size="0", fillcolor="lightblue"];
+  4 -> 5 [label="182364", weight="182364", penwidth="6.0"];
+  4 -> 4 [label="91186", weight="91186", penwidth="6.0"];
+  5 -> 5 [label="91175", weight="91175", penwidth="6.0"];
+}

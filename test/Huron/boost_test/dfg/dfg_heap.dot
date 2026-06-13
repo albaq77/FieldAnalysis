@@ -1,0 +1,42 @@
+// DFG-heap
+digraph {
+  label="DFG-heap";
+  node [shape=record, style=filled];
+  3 [label="long", type="long", size="0", fillcolor="lightblue"];
+  6 [label="i8", type="i8", size="1", fillcolor="lightblue"];
+  7 [label="pool", type="i8", size="1", fillcolor="lightblue"];
+  8 [label="cacheline_t = type { [8 x i64] }.ibuffer", type="%class", size="0", fillcolor="lightblue"];
+  9 [label="i64", type="i64", size="8", fillcolor="lightblue"];
+  10 [label="std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data.field_1", type="ptr", size="8", fillcolor="lightblue"];
+  11 [label="std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data.field_2", type="ptr", size="8", fillcolor="lightblue"];
+  12 [label="ptr", type="ptr", size="8", fillcolor="lightblue"];
+  9 -> 9 [label="5782938", weight="5782938", penwidth="6.0"];
+  6 -> 9 [label="1611387", weight="1611387", penwidth="6.0"];
+  8 -> 9 [label="1597242", weight="1597242", penwidth="6.0"];
+  7 -> 9 [label="1595925", weight="1595925", penwidth="6.0"];
+  6 -> 7 [label="202615", weight="202615", penwidth="6.0"];
+  6 -> 8 [label="202169", weight="202169", penwidth="6.0"];
+  7 -> 8 [label="200394", weight="200394", penwidth="6.0"];
+  3 -> 6 [label="105920", weight="105920", penwidth="6.0"];
+  6 -> 6 [label="79922", weight="79922", penwidth="6.0"];
+  3 -> 3 [label="51955", weight="51955", penwidth="6.0"];
+  7 -> 7 [label="23796", weight="23796", penwidth="6.0"];
+  8 -> 8 [label="23143", weight="23143", penwidth="6.0"];
+  3 -> 9 [label="15664", weight="15664", penwidth="6.0"];
+  10 -> 12 [label="9639", weight="9639", penwidth="6.0"];
+  10 -> 10 [label="4912", weight="4912", penwidth="6.0"];
+  12 -> 12 [label="4662", weight="4662", penwidth="6.0"];
+  3 -> 8 [label="1908", weight="1908", penwidth="6.0"];
+  3 -> 7 [label="1474", weight="1474", penwidth="6.0"];
+  6 -> 10 [label="345", weight="345", penwidth="6.0"];
+  10 -> 11 [label="336", weight="336", penwidth="6.0"];
+  9 -> 10 [label="311", weight="311", penwidth="6.0"];
+  9 -> 12 [label="258", weight="258", penwidth="6.0"];
+  6 -> 12 [label="236", weight="236", penwidth="6.0"];
+  11 -> 12 [label="232", weight="232", penwidth="6.0"];
+  6 -> 11 [label="79", weight="79", penwidth="6.0"];
+  9 -> 11 [label="75", weight="75", penwidth="6.0"];
+  11 -> 11 [label="24", weight="24", penwidth="6.0"];
+  3 -> 10 [label="13", weight="13", penwidth="4.9"];
+  3 -> 12 [label="11", weight="11", penwidth="4.3"];
+}

@@ -1,0 +1,5342 @@
+{
+  "0x70a5bbc29540": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.vtable pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "vtable pointer",
+        "field_size": 0,
+        "ts_first": 1,
+        "ts_last": 53539,
+        "access_count": 18
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 18
+  },
+  "0x70a5bbc23358": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.i8._ZSt4cout",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2,
+        "ts_last": 9,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 15,
+        "ts_last": 15,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8._ZSt4cout",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 21,
+        "ts_last": 53532,
+        "access_count": 14
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 53540,
+        "ts_last": 53540,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 18
+  },
+  "0x70a5bbc29548": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.i8._ZSt4cout",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 3,
+        "ts_last": 10,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 16,
+        "ts_last": 16,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8._ZSt4cout",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 22,
+        "ts_last": 53533,
+        "access_count": 14
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 53541,
+        "ts_last": 53541,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 18
+  },
+  "0x70a5bbc29638": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "std::basic_ios<char, std::char_traits<char>>",
+        "field": 5,
+        "offset": 240,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 4,
+        "ts_last": 53542,
+        "access_count": 18
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 18
+  },
+  "0x70a5bbc2a7f8": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "std::ctype<char>",
+        "field": 6,
+        "offset": 56,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 5,
+        "ts_last": 53543,
+        "access_count": 18
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 18
+  },
+  "0x70a5bbc2a7c0": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 6,
+        "ts_last": 6,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x70a5bbc1f1f0": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 7,
+        "ts_last": 7,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x70a5bbc2a803": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 13,
+        "ts_last": 53544,
+        "access_count": 17
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 17
+  },
+  "0x7fffe8b631f8": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.timespec",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 32,
+        "ts_last": 32,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x7fffe8b63200": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.timespec",
+        "field": 1,
+        "offset": 8,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 33,
+        "ts_last": 33,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x7fffe8b631d8": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 58,
+        "ts_last": 58,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 67,
+        "ts_last": 1243,
+        "access_count": 8
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 9
+  },
+  "0x7fffe8b63198": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 59,
+        "ts_last": 59,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 69,
+        "ts_last": 69,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x7fffe8b631e8": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 60,
+        "ts_last": 53537,
+        "access_count": 37
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 37
+  },
+  "0x7fffe8b631f0": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 2,
+        "offset": 16,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 61,
+        "ts_last": 53513,
+        "access_count": 36
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 36
+  },
+  "0x7fffe8b631e0": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 63,
+        "ts_last": 63,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 75,
+        "ts_last": 75,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 81,
+        "ts_last": 81,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 510,
+        "ts_last": 510,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 516,
+        "ts_last": 516,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 563,
+        "ts_last": 563,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 585,
+        "ts_last": 585,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 806,
+        "ts_last": 806,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 1441,
+        "ts_last": 1441,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 2566,
+        "ts_last": 2566,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 23239,
+        "ts_last": 23239,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23419,
+        "ts_last": 53538,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.%\"class.std::vector\" = type { %\"struct.std::_Vector_base\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::vector\" = type { %\"struct.std::_Vector_base\" }",
+        "field_size": 0,
+        "ts_first": 53545,
+        "ts_last": 53545,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 14
+  },
+  "0x556bdf05f010": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field_size": 0,
+        "ts_first": 64,
+        "ts_last": 64,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 503,
+        "ts_last": 505,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bbb229c18": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.vtable pointer._ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvP19ClassicFalseSharingES4_EEEEEE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "vtable pointer",
+        "field_size": 0,
+        "ts_first": 65,
+        "ts_last": 1241,
+        "access_count": 8
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 8
+  },
+  "0x556bdf05f038": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 66,
+        "ts_last": 89,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05f040": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 68,
+        "ts_last": 90,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x7fffe8b627d0": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.%\"class.std::unique_ptr\" = type { %\"struct.std::__uniq_ptr_data\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::unique_ptr\" = type { %\"struct.std::__uniq_ptr_data\" }",
+        "field_size": 0,
+        "ts_first": 70,
+        "ts_last": 779,
+        "access_count": 12
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 12
+  },
+  "0x556bdf05f018": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 73,
+        "ts_last": 73,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 2,
+        "offset": 16,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 76,
+        "ts_last": 76,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 506,
+        "ts_last": 575,
+        "access_count": 3
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x7fffe8b631a0": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 77,
+        "ts_last": 77,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 87,
+        "ts_last": 87,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf05f188": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field_size": 0,
+        "ts_first": 82,
+        "ts_last": 82,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 507,
+        "ts_last": 551,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 556,
+        "ts_last": 558,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 570,
+        "ts_last": 703,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 7
+  },
+  "0x556bdf05f1a8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 84,
+        "ts_last": 524,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05f1b0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 86,
+        "ts_last": 525,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05efc0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "ClassicFalseSharing",
+        "field": 0,
+        "offset": 0,
+        "field_type": "int",
+        "field_size": 4,
+        "ts_first": 91,
+        "ts_last": 994923,
+        "access_count": 141149
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 141149
+  },
+  "0x556bdf05f180": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 501,
+        "ts_last": 501,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 504,
+        "ts_last": 549,
+        "access_count": 3
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 4
+  },
+  "0x556bdf05f190": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 508,
+        "ts_last": 508,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 2,
+        "offset": 16,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 511,
+        "ts_last": 511,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 559,
+        "ts_last": 705,
+        "access_count": 3
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x7fffe8b631a8": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 512,
+        "ts_last": 512,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 522,
+        "ts_last": 522,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf05f300": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field_size": 0,
+        "ts_first": 517,
+        "ts_last": 517,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 560,
+        "ts_last": 790,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 793,
+        "ts_last": 795,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 53476,
+        "ts_last": 56703,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 7
+  },
+  "0x556bdf05f020": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 521,
+        "ts_last": 576,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05efc4": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "ClassicFalseSharing",
+        "field": 1,
+        "offset": 4,
+        "field_type": "int",
+        "field_size": 4,
+        "ts_first": 526,
+        "ts_last": 526,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf05f2f0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 544,
+        "ts_last": 544,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 547,
+        "ts_last": 783,
+        "access_count": 3
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 4
+  },
+  "0x556bdf05f2f8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 553,
+        "ts_last": 553,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 555,
+        "ts_last": 555,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 557,
+        "ts_last": 557,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 784,
+        "ts_last": 784,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 787,
+        "ts_last": 789,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 53474,
+        "ts_last": 56631,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 8
+  },
+  "0x556bdf05f308": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 561,
+        "ts_last": 561,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 568,
+        "ts_last": 568,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 796,
+        "ts_last": 796,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 799,
+        "ts_last": 801,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 53478,
+        "ts_last": 56702,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 7
+  },
+  "0x556bdf05f310": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 2,
+        "offset": 16,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 564,
+        "ts_last": 564,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 580,
+        "ts_last": 580,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 802,
+        "ts_last": 802,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x7fffe8b631b0": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 565,
+        "ts_last": 565,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 573,
+        "ts_last": 573,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x7fffe8b62870": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.%\"class.std::unique_ptr\" = type { %\"struct.std::__uniq_ptr_data\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::unique_ptr\" = type { %\"struct.std::__uniq_ptr_data\" }",
+        "field_size": 0,
+        "ts_first": 574,
+        "ts_last": 53523,
+        "access_count": 72
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 72
+  },
+  "0x556bdf05efc8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "ClassicFalseSharing",
+        "field": 2,
+        "offset": 8,
+        "field_type": "int",
+        "field_size": 4,
+        "ts_first": 577,
+        "ts_last": 577,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x7fffe8b631b8": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 581,
+        "ts_last": 581,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 591,
+        "ts_last": 591,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf05f5a0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field_size": 0,
+        "ts_first": 586,
+        "ts_last": 586,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 803,
+        "ts_last": 2535,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2540,
+        "ts_last": 2542,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.i32",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i32",
+        "field_size": 4,
+        "ts_first": 57023,
+        "ts_last": 57023,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 6
+  },
+  "0x556bdf05f5d8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 588,
+        "ts_last": 707,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05f5e0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 590,
+        "ts_last": 708,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05efcc": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "ClassicFalseSharing",
+        "field": 3,
+        "offset": 12,
+        "field_type": "int",
+        "field_size": 4,
+        "ts_first": 706,
+        "ts_last": 706,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf05efd0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "ClassicFalseSharing",
+        "field": 4,
+        "offset": 16,
+        "field_type": "int",
+        "field_size": 4,
+        "ts_first": 709,
+        "ts_last": 709,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf05f580": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 780,
+        "ts_last": 780,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 782,
+        "ts_last": 2500,
+        "access_count": 3
+      },
+      {
+        "struct": "scalar.i32",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i32",
+        "field_size": 4,
+        "ts_first": 56707,
+        "ts_last": 56707,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x556bdf05f588": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 785,
+        "ts_last": 785,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 786,
+        "ts_last": 786,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 788,
+        "ts_last": 788,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2501,
+        "ts_last": 2501,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2504,
+        "ts_last": 2506,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 6
+  },
+  "0x556bdf05f590": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 791,
+        "ts_last": 791,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 792,
+        "ts_last": 792,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 794,
+        "ts_last": 794,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2507,
+        "ts_last": 2507,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2510,
+        "ts_last": 2512,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.i32",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i32",
+        "field_size": 4,
+        "ts_first": 77932,
+        "ts_last": 77932,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 7
+  },
+  "0x556bdf05f598": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 797,
+        "ts_last": 797,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 798,
+        "ts_last": 798,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 800,
+        "ts_last": 800,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2513,
+        "ts_last": 2513,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2517,
+        "ts_last": 2528,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 6
+  },
+  "0x556bdf05f5a8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 804,
+        "ts_last": 804,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 811,
+        "ts_last": 811,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2544,
+        "ts_last": 2544,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2547,
+        "ts_last": 2549,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x556bdf05f5c0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 2,
+        "offset": 16,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 807,
+        "ts_last": 807,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 1250,
+        "ts_last": 1250,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2562,
+        "ts_last": 2562,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x7fffe8b631c0": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 808,
+        "ts_last": 808,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 816,
+        "ts_last": 816,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf05f728": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 813,
+        "ts_last": 1231,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05f730": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 815,
+        "ts_last": 1232,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05f5b0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 1093,
+        "ts_last": 1093,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 1100,
+        "ts_last": 1100,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2550,
+        "ts_last": 2550,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2553,
+        "ts_last": 2555,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.i32",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i32",
+        "field_size": 4,
+        "ts_first": 75141,
+        "ts_last": 75141,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 6
+  },
+  "0x7fffe8b631c8": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 1095,
+        "ts_last": 1095,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 1109,
+        "ts_last": 1109,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf05f878": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 1103,
+        "ts_last": 2543,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05f880": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 1107,
+        "ts_last": 2571,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05efd4": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "ClassicFalseSharing",
+        "field": 5,
+        "offset": 20,
+        "field_type": "int",
+        "field_size": 4,
+        "ts_first": 1233,
+        "ts_last": 1233,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf05f5b8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 1236,
+        "ts_last": 1236,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 1240,
+        "ts_last": 1240,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2556,
+        "ts_last": 2556,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2559,
+        "ts_last": 2561,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x7fffe8b631d0": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 1237,
+        "ts_last": 1237,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 1245,
+        "ts_last": 1245,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf05f9c8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 1242,
+        "ts_last": 1321,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05f9d0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 1244,
+        "ts_last": 1324,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05efdc": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "ClassicFalseSharing",
+        "field": 7,
+        "offset": 28,
+        "field_type": "int",
+        "field_size": 4,
+        "ts_first": 1327,
+        "ts_last": 1327,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x7fffe8b63188": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 1437,
+        "ts_last": 1437,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 1445,
+        "ts_last": 7058,
+        "access_count": 4
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x556bdf05fd60": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field_size": 0,
+        "ts_first": 1442,
+        "ts_last": 1442,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2563,
+        "ts_last": 23367,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23370,
+        "ts_last": 23372,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x556bbb229c58": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.vtable pointer._ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvP19PartialFalseSharingES4_EEEEEE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "vtable pointer",
+        "field_size": 0,
+        "ts_first": 1443,
+        "ts_last": 7056,
+        "access_count": 4
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 4
+  },
+  "0x556bdf05fdb8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 1444,
+        "ts_last": 7425,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05fdc0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 1446,
+        "ts_last": 7426,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x7fffe8b627e0": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.%\"class.std::unique_ptr\" = type { %\"struct.std::__uniq_ptr_data\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::unique_ptr\" = type { %\"struct.std::__uniq_ptr_data\" }",
+        "field_size": 0,
+        "ts_first": 1447,
+        "ts_last": 23320,
+        "access_count": 6
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 6
+  },
+  "0x556bdf05fd20": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 2497,
+        "ts_last": 2497,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2499,
+        "ts_last": 23324,
+        "access_count": 3
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 4
+  },
+  "0x556bdf05fd28": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2502,
+        "ts_last": 2502,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 2503,
+        "ts_last": 2503,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2505,
+        "ts_last": 2505,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23325,
+        "ts_last": 23325,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23328,
+        "ts_last": 23330,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 6
+  },
+  "0x556bdf05fd30": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2508,
+        "ts_last": 2508,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 2509,
+        "ts_last": 2509,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2511,
+        "ts_last": 2511,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23331,
+        "ts_last": 23331,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23334,
+        "ts_last": 23336,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 6
+  },
+  "0x556bdf05fd38": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2514,
+        "ts_last": 2514,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 2515,
+        "ts_last": 2515,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2525,
+        "ts_last": 2525,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23337,
+        "ts_last": 23337,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23340,
+        "ts_last": 23342,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 6
+  },
+  "0x556bdf05fd40": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2537,
+        "ts_last": 2537,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 2539,
+        "ts_last": 2539,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2541,
+        "ts_last": 2541,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23343,
+        "ts_last": 23343,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23346,
+        "ts_last": 23348,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 6
+  },
+  "0x556bdf05fd48": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2545,
+        "ts_last": 2545,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 2546,
+        "ts_last": 2546,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2548,
+        "ts_last": 2548,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23349,
+        "ts_last": 23349,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23352,
+        "ts_last": 23354,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 6
+  },
+  "0x556bdf05fd50": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2551,
+        "ts_last": 2551,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 2552,
+        "ts_last": 2552,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2554,
+        "ts_last": 2554,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23355,
+        "ts_last": 23355,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23358,
+        "ts_last": 23360,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 6
+  },
+  "0x556bdf05fd58": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2557,
+        "ts_last": 2557,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 2558,
+        "ts_last": 2558,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 2560,
+        "ts_last": 2560,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23361,
+        "ts_last": 23361,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23364,
+        "ts_last": 23366,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 6
+  },
+  "0x556bdf05fd68": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2564,
+        "ts_last": 2564,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 2570,
+        "ts_last": 2570,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23373,
+        "ts_last": 23373,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23376,
+        "ts_last": 23378,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x556bdf05fda0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 2,
+        "offset": 16,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 2567,
+        "ts_last": 2567,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 10122,
+        "ts_last": 10122,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23415,
+        "ts_last": 23415,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf05ff08": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2573,
+        "ts_last": 2578,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05ff10": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2575,
+        "ts_last": 2579,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05efd8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "ClassicFalseSharing",
+        "field": 6,
+        "offset": 24,
+        "field_type": "int",
+        "field_size": 4,
+        "ts_first": 2577,
+        "ts_last": 2577,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf05fc48": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 2580,
+        "ts_last": 2580,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf05fd70": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 6792,
+        "ts_last": 6792,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 6795,
+        "ts_last": 6795,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23379,
+        "ts_last": 23379,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23382,
+        "ts_last": 23384,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x556bdf060058": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 6797,
+        "ts_last": 10178,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060060": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 6799,
+        "ts_last": 10180,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05fd78": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 7048,
+        "ts_last": 7048,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 7054,
+        "ts_last": 7054,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23385,
+        "ts_last": 23385,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23388,
+        "ts_last": 23390,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x556bdf0601a8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 7057,
+        "ts_last": 9942,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf0601b0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 7059,
+        "ts_last": 9944,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05fd80": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 7177,
+        "ts_last": 7177,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 7219,
+        "ts_last": 7219,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23391,
+        "ts_last": 23391,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23394,
+        "ts_last": 23396,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x7fffe8b63180": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 7215,
+        "ts_last": 7215,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 7222,
+        "ts_last": 9892,
+        "access_count": 4
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x556bbb229c98": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.vtable pointer._ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvP17ArrayFalseSharingES4_EEEEEE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "vtable pointer",
+        "field_size": 0,
+        "ts_first": 7220,
+        "ts_last": 9889,
+        "access_count": 4
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 4
+  },
+  "0x556bdf060448": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 7221,
+        "ts_last": 11794,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060450": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 7223,
+        "ts_last": 11796,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05fd88": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 7317,
+        "ts_last": 7317,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 7320,
+        "ts_last": 7320,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23397,
+        "ts_last": 23397,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23400,
+        "ts_last": 23402,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x556bdf060598": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 7322,
+        "ts_last": 10131,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf0605a0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 7324,
+        "ts_last": 10164,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05fc00": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 7427,
+        "ts_last": 994918,
+        "access_count": 196422
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 196422
+  },
+  "0x556bdf05fd90": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 9646,
+        "ts_last": 9646,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 9650,
+        "ts_last": 9650,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23403,
+        "ts_last": 23403,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23406,
+        "ts_last": 23408,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x556bdf0606e8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 9662,
+        "ts_last": 22094,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf0606f0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 9664,
+        "ts_last": 22097,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05fd98": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 9884,
+        "ts_last": 9884,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 9887,
+        "ts_last": 9887,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23409,
+        "ts_last": 23409,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23412,
+        "ts_last": 23414,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x556bdf060838": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 9891,
+        "ts_last": 21978,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060840": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 9893,
+        "ts_last": 22055,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf05fcc0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "PartialFalseSharing",
+        "field": 3,
+        "offset": 192,
+        "field_type": "long",
+        "field_size": 8,
+        "ts_first": 9948,
+        "ts_last": 9948,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf0603d0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 10167,
+        "ts_last": 10167,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf05fc40": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "PartialFalseSharing",
+        "field": 1,
+        "offset": 64,
+        "field_type": "long",
+        "field_size": 8,
+        "ts_first": 10181,
+        "ts_last": 10181,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf0603c0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.int",
+        "field": 0,
+        "offset": 0,
+        "field_type": "int",
+        "field_size": 0,
+        "ts_first": 11798,
+        "ts_last": 994814,
+        "access_count": 235823
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 235823
+  },
+  "0x556bdf0603f0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 22095,
+        "ts_last": 22095,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf0603e0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 22099,
+        "ts_last": 22099,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x7fffe8b63178": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23235,
+        "ts_last": 23235,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 23243,
+        "ts_last": 23680,
+        "access_count": 3
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 4
+  },
+  "0x556bdf060b50": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field_size": 0,
+        "ts_first": 23240,
+        "ts_last": 23240,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23416,
+        "ts_last": 23416,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bbb229cd8": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.vtable pointer._ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvP18NestedFalseSharingES4_EEEEEE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "vtable pointer",
+        "field_size": 0,
+        "ts_first": 23241,
+        "ts_last": 23678,
+        "access_count": 3
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 3
+  },
+  "0x556bdf060be8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23242,
+        "ts_last": 33154,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060bf0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23244,
+        "ts_last": 33281,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060ad0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23321,
+        "ts_last": 23321,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23323,
+        "ts_last": 23323,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf060ad8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23326,
+        "ts_last": 23326,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23327,
+        "ts_last": 23327,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23329,
+        "ts_last": 23329,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060ae0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23332,
+        "ts_last": 23332,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23333,
+        "ts_last": 23333,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23335,
+        "ts_last": 23335,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060ae8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23338,
+        "ts_last": 23338,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23339,
+        "ts_last": 23339,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23341,
+        "ts_last": 23341,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060af0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23344,
+        "ts_last": 23344,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23345,
+        "ts_last": 23345,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23347,
+        "ts_last": 23347,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060af8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23350,
+        "ts_last": 23350,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23351,
+        "ts_last": 23351,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23353,
+        "ts_last": 23353,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060b00": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23356,
+        "ts_last": 23356,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23357,
+        "ts_last": 23357,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23359,
+        "ts_last": 23359,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060b08": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23362,
+        "ts_last": 23362,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23363,
+        "ts_last": 23363,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23365,
+        "ts_last": 23365,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060b10": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23368,
+        "ts_last": 23368,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23369,
+        "ts_last": 23369,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23371,
+        "ts_last": 23371,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060b18": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23374,
+        "ts_last": 23374,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23375,
+        "ts_last": 23375,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23377,
+        "ts_last": 23377,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060b20": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23380,
+        "ts_last": 23380,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23381,
+        "ts_last": 23381,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23383,
+        "ts_last": 23383,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060b28": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23386,
+        "ts_last": 23386,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23387,
+        "ts_last": 23387,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23389,
+        "ts_last": 23389,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060b30": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23392,
+        "ts_last": 23392,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23393,
+        "ts_last": 23393,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23395,
+        "ts_last": 23395,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060b38": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23398,
+        "ts_last": 23398,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23399,
+        "ts_last": 23399,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23401,
+        "ts_last": 23401,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060b40": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23404,
+        "ts_last": 23404,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23405,
+        "ts_last": 23405,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23407,
+        "ts_last": 23407,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060b48": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23410,
+        "ts_last": 23410,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar._ZTSNSt6thread2idE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "_ZTSNSt6thread2idE",
+        "field_size": 0,
+        "ts_first": 23411,
+        "ts_last": 23411,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.long",
+        "field": 0,
+        "offset": 0,
+        "field_type": "long",
+        "field_size": 0,
+        "ts_first": 23413,
+        "ts_last": 23413,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 3
+  },
+  "0x556bdf060b58": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23417,
+        "ts_last": 23417,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23423,
+        "ts_last": 23423,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf060bd0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 2,
+        "offset": 16,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23420,
+        "ts_last": 23420,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf060d38": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23616,
+        "ts_last": 25020,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060d40": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23621,
+        "ts_last": 25025,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060b60": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23672,
+        "ts_last": 23672,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23676,
+        "ts_last": 23676,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf060e88": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23679,
+        "ts_last": 42144,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060e90": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23681,
+        "ts_last": 42146,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060b68": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23737,
+        "ts_last": 23737,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23774,
+        "ts_last": 23774,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x7fffe8b63170": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23764,
+        "ts_last": 23764,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 23780,
+        "ts_last": 24074,
+        "access_count": 4
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x7fffe8b63148": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23765,
+        "ts_last": 23765,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 23782,
+        "ts_last": 23782,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bbb229d18": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.vtable pointer._ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvP15OptimizedStructES4_EEEEEE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "vtable pointer",
+        "field_size": 0,
+        "ts_first": 23776,
+        "ts_last": 24072,
+        "access_count": 4
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 4
+  },
+  "0x556bdf0611e8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23779,
+        "ts_last": 33025,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf0611f0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23781,
+        "ts_last": 33026,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060b70": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23811,
+        "ts_last": 23811,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23815,
+        "ts_last": 23815,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x7fffe8b63150": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23812,
+        "ts_last": 23812,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 23820,
+        "ts_last": 23820,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf061338": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23817,
+        "ts_last": 24281,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf061340": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23819,
+        "ts_last": 24282,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060b78": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23912,
+        "ts_last": 23912,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23919,
+        "ts_last": 23919,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x7fffe8b63158": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 23915,
+        "ts_last": 23915,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 23926,
+        "ts_last": 23926,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf061488": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23923,
+        "ts_last": 24357,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf061490": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 23925,
+        "ts_last": 24358,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060b80": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 24067,
+        "ts_last": 24067,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 24071,
+        "ts_last": 24071,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x7fffe8b63160": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 24068,
+        "ts_last": 24068,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 24076,
+        "ts_last": 24076,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf0615d8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 24073,
+        "ts_last": 42241,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf0615e0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 24075,
+        "ts_last": 42242,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf061100": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "OptimizedStruct",
+        "field": 1,
+        "offset": 64,
+        "field_type": "int",
+        "field_size": 4,
+        "ts_first": 24283,
+        "ts_last": 24283,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf061140": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "OptimizedStruct",
+        "field": 2,
+        "offset": 128,
+        "field_type": "int",
+        "field_size": 4,
+        "ts_first": 24360,
+        "ts_last": 24360,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf060a90": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "InnerStruct",
+        "field": 0,
+        "offset": 16,
+        "field_type": "InnerStruct",
+        "field_size": 0,
+        "ts_first": 25027,
+        "ts_last": 25027,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf0610c0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "OptimizedStruct",
+        "field": 0,
+        "offset": 0,
+        "field_type": "int",
+        "field_size": 4,
+        "ts_first": 33027,
+        "ts_last": 1000000,
+        "access_count": 124679
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 124679
+  },
+  "0x556bdf060b88": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 33156,
+        "ts_last": 33156,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 33238,
+        "ts_last": 33238,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x7fffe8b63138": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 33235,
+        "ts_last": 33235,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 33241,
+        "ts_last": 52972,
+        "access_count": 3
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 4
+  },
+  "0x556bbb229d58": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.vtable pointer._ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvP21MixedTypeFalseSharingES4_EEEEEE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "vtable pointer",
+        "field_size": 0,
+        "ts_first": 33239,
+        "ts_last": 52965,
+        "access_count": 3
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 3
+  },
+  "0x556bdf0618b8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 33240,
+        "ts_last": 61282,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf0618c0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 33242,
+        "ts_last": 61284,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060a80": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "InnerStruct",
+        "field": 0,
+        "offset": 16,
+        "field_type": "InnerStruct",
+        "field_size": 0,
+        "ts_first": 33282,
+        "ts_last": 994919,
+        "access_count": 124618
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 124618
+  },
+  "0x556bdf060aa0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "NestedFalseSharing",
+        "field": 2,
+        "offset": 32,
+        "field_type": "int",
+        "field_size": 4,
+        "ts_first": 42147,
+        "ts_last": 42147,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf061180": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "OptimizedStruct",
+        "field": 3,
+        "offset": 192,
+        "field_type": "int",
+        "field_size": 4,
+        "ts_first": 42243,
+        "ts_last": 42243,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf060b90": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 52680,
+        "ts_last": 52680,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 52683,
+        "ts_last": 52683,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf061a08": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 52685,
+        "ts_last": 53021,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf061a10": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 52687,
+        "ts_last": 53023,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060b98": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 52958,
+        "ts_last": 52958,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 52964,
+        "ts_last": 52964,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf061b58": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 52967,
+        "ts_last": 70773,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf061b60": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 52974,
+        "ts_last": 70775,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf061804": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "MixedTypeFalseSharing",
+        "field": 2,
+        "offset": 4,
+        "field_type": "int",
+        "field_size": 4,
+        "ts_first": 53024,
+        "ts_last": 53024,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf060ba0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 53196,
+        "ts_last": 53196,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 53472,
+        "ts_last": 53472,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x7fffe8b63130": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 53464,
+        "ts_last": 53466,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 53477,
+        "ts_last": 53519,
+        "access_count": 4
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 6
+  },
+  "0x556bdf061d80": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "DynamicArrayStruct",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 53465,
+        "ts_last": 77931,
+        "access_count": 6
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 6
+  },
+  "0x556bdf061d88": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "DynamicArrayStruct",
+        "field": 1,
+        "offset": 8,
+        "field_type": "long",
+        "field_size": 8,
+        "ts_first": 53468,
+        "ts_last": 53468,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x7fffe8b6312c": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.i32",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i32",
+        "field_size": 4,
+        "ts_first": 53469,
+        "ts_last": 53469,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.int",
+        "field": 0,
+        "offset": 0,
+        "field_type": "int",
+        "field_size": 0,
+        "ts_first": 53475,
+        "ts_last": 53475,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bbb229d98": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.vtable pointer._ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvP18DynamicArrayStructiES4_iEEEEEE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "vtable pointer",
+        "field_size": 0,
+        "ts_first": 53473,
+        "ts_last": 53515,
+        "access_count": 4
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 4
+  },
+  "0x556bdf060ba8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 53482,
+        "ts_last": 53482,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 53486,
+        "ts_last": 53486,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x7fffe8b63128": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.i32",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i32",
+        "field_size": 4,
+        "ts_first": 53483,
+        "ts_last": 53483,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.int",
+        "field": 0,
+        "offset": 0,
+        "field_type": "int",
+        "field_size": 0,
+        "ts_first": 53489,
+        "ts_last": 53489,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf061ef8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 53488,
+        "ts_last": 77928,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf061f00": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 53490,
+        "ts_last": 77930,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf061f08": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 53492,
+        "ts_last": 77929,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060bb0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 53496,
+        "ts_last": 53496,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 53500,
+        "ts_last": 53500,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x7fffe8b63124": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.i32",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i32",
+        "field_size": 4,
+        "ts_first": 53497,
+        "ts_last": 53497,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.int",
+        "field": 0,
+        "offset": 0,
+        "field_type": "int",
+        "field_size": 0,
+        "ts_first": 53503,
+        "ts_last": 53503,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf062058": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 53502,
+        "ts_last": 57017,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf062060": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 53504,
+        "ts_last": 57020,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf062068": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 53506,
+        "ts_last": 57019,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060bb8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 53510,
+        "ts_last": 53510,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.ptr",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 53514,
+        "ts_last": 53514,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x7fffe8b63120": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.i32",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i32",
+        "field_size": 4,
+        "ts_first": 53511,
+        "ts_last": 53511,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.int",
+        "field": 0,
+        "offset": 0,
+        "field_type": "int",
+        "field_size": 0,
+        "ts_first": 53517,
+        "ts_last": 53517,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 2
+  },
+  "0x556bdf0621b8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 53516,
+        "ts_last": 75137,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf0621c0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 53518,
+        "ts_last": 75139,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf0621c8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 53520,
+        "ts_last": 75138,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x556bdf060bc0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data",
+        "field": 1,
+        "offset": 8,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 53524,
+        "ts_last": 53524,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x556bdf061800": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "MixedTypeFalseSharing",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 61285,
+        "ts_last": 994423,
+        "access_count": 176510
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 176510
+  },
+  "0x556bdf061808": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "MixedTypeFalseSharing",
+        "field": 3,
+        "offset": 8,
+        "field_type": "long",
+        "field_size": 8,
+        "ts_first": 70776,
+        "ts_last": 70776,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  }
+}

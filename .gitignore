@@ -7,6 +7,7 @@
 /test/*.dot
 /test/*.zip
 /test/*/dfg/
+/test/**/dfg/
 /runtime/*.o
 /runtime/*.a
 /v1.patch

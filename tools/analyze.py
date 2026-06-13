@@ -4,37 +4,7 @@ import sys
 import os
 import argparse
 
-
-def load_gep_field_map(path):
-    if not os.path.isfile(path):
-        print(f"Warning: GEP field map file not found: {path}", file=sys.stderr)
-        return {}
-    with open(path, "r") as f:
-        data = json.load(f)
-    index = {}
-    for value in data.values():
-        fid = value["id"]
-        sname = value["struct"]
-        fidx = value["field"]
-        boff = value["offset"]
-        index[fid] = (sname, fidx, boff)
-    return index
-
-
-def load_struct_layout(path):
-    if not os.path.isfile(path):
-        print(f"Warning: struct_layout.json not found: {path}", file=sys.stderr)
-        return {}
-    with open(path, "r") as f:
-        data = json.load(f)
-    result = {}
-    structs = data.get("structs", {})
-    for sname, sdata in structs.items():
-        fields = {}
-        for fld in sdata.get("fields", []):
-            fields[fld["idx"]] = fld.get("size", 8)
-        result[sname] = fields
-    return result
+from field_analysis_utils import FieldMetadataLoader
 
 
 def load_affinity_bin(path):
@@ -86,7 +56,7 @@ def get_sorted_edges(graph_obj, uses_nx):
     return sorted(edge_weights.items(), key=lambda x: x[1], reverse=True)
 
 
-def get_struct_fields(graph_obj, uses_nx, field_index):
+def get_struct_fields(graph_obj, uses_nx, gep_map):
     if uses_nx:
         all_nodes = set(graph_obj.nodes())
     else:
@@ -95,14 +65,15 @@ def get_struct_fields(graph_obj, uses_nx, field_index):
 
     by_struct = {}
     for fid in all_nodes:
-        if fid in field_index:
-            sname, fidx, boff = field_index[fid]
+        if fid in gep_map:
+            sname = gep_map[fid].struct_name
             if sname not in by_struct:
                 by_struct[sname] = set()
             by_struct[sname].add(fid)
 
-    for fid, (sname, fidx, boff) in field_index.items():
+    for fid, meta in gep_map.items():
         if fid not in all_nodes:
+            sname = meta.struct_name
             if sname not in by_struct:
                 by_struct[sname] = set()
             by_struct[sname].add(fid)
@@ -110,16 +81,7 @@ def get_struct_fields(graph_obj, uses_nx, field_index):
     return by_struct
 
 
-def get_field_size(fid, field_index, struct_sizes):
-    if fid not in field_index:
-        return 8
-    sname, fidx, boff = field_index[fid]
-    if sname in struct_sizes and fidx in struct_sizes[sname]:
-        return struct_sizes[sname][fidx]
-    return 8
-
-
-def bin_pack_struct(struct_name, field_ids, graph_obj, uses_nx, field_index, cacheline_size, struct_sizes):
+def bin_pack_struct(struct_name, field_ids, graph_obj, uses_nx, gep_map, cacheline_size, struct_layout, loader):
     sorted_edges = get_sorted_edges(graph_obj, uses_nx)
 
     struct_field_set = set(field_ids)
@@ -144,7 +106,7 @@ def bin_pack_struct(struct_name, field_ids, graph_obj, uses_nx, field_index, cac
         for fid in (a, b):
             if fid in placed:
                 continue
-            fsz = get_field_size(fid, field_index, struct_sizes)
+            fsz = loader.get_field_size(fid, gep_map, struct_layout, default=8)
             if current_bin_bytes + fsz > cacheline_size:
                 if current_bin:
                     bins.append(current_bin)
@@ -155,9 +117,12 @@ def bin_pack_struct(struct_name, field_ids, graph_obj, uses_nx, field_index, cac
             placed.add(fid)
 
     remaining = struct_field_set - placed
-    sorted_remaining = sorted(remaining, key=lambda fid: field_index.get(fid, (None, 0, 0))[2])
+    sorted_remaining = sorted(
+        remaining,
+        key=lambda fid: gep_map[fid].byte_offset if fid in gep_map else 0
+    )
     for fid in sorted_remaining:
-        fsz = get_field_size(fid, field_index, struct_sizes)
+        fsz = loader.get_field_size(fid, gep_map, struct_layout, default=8)
         if current_bin_bytes + fsz > cacheline_size:
             if current_bin:
                 bins.append(current_bin)
@@ -172,7 +137,10 @@ def bin_pack_struct(struct_name, field_ids, graph_obj, uses_nx, field_index, cac
 
     result_bins = []
     for b in bins:
-        result_bins.append([(field_index[fid][1], get_field_size(fid, field_index, struct_sizes)) for fid in b])
+        result_bins.append([
+            (gep_map[fid].field_idx, loader.get_field_size(fid, gep_map, struct_layout, default=8))
+            for fid in b
+        ])
 
     return result_bins
 
@@ -184,27 +152,35 @@ def main():
     parser.add_argument("--affinity", default="affinity.bin", help="Path to affinity.bin (default: affinity.bin)")
     parser.add_argument("--output", default="reorder.json", help="Path to output reorder.json (default: reorder.json)")
     parser.add_argument("--cacheline", type=int, default=64, help="Cacheline size in bytes (default: 64)")
+    parser.add_argument("--strict", action="store_true", help="Raise exceptions on missing files instead of warnings")
     args = parser.parse_args()
 
-    field_index = load_gep_field_map(args.gep_map)
-    if not field_index:
+    loader = FieldMetadataLoader(strict=args.strict)
+
+    gep_map = loader.load_gep_field_map(args.gep_map)
+    if not gep_map:
         print("No field map data available. Exiting.")
         sys.exit(1)
 
-    struct_sizes = load_struct_layout(args.layout)
+    struct_layout = loader.load_struct_layout(args.layout)
+    loader.enrich_field_sizes(gep_map, struct_layout)
 
     records = load_affinity_bin(args.affinity)
     if not records:
         print("No affinity data available. Outputting original field order only.")
         by_struct = {}
-        for fid, (sname, fidx, boff) in field_index.items():
+        for fid, meta in gep_map.items():
+            sname = meta.struct_name
             if sname not in by_struct:
                 by_struct[sname] = []
-            by_struct[sname].append((boff, fidx))
+            by_struct[sname].append((meta.byte_offset, meta.field_idx))
         reorder = {}
         for sname, fields in by_struct.items():
             fields.sort()
-            reorder[sname] = [[(fidx, get_field_size(fid, field_index, struct_sizes)) for _, fidx in fields]]
+            reorder[sname] = [[
+                (fidx, loader.get_field_size(fid, gep_map, struct_layout, default=8))
+                for _, fidx in fields
+            ]]
         with open(args.output, "w") as f:
             json.dump(reorder, f, indent=2)
         print(f"Wrote {args.output} with original ordering (no affinity data).")
@@ -216,7 +192,7 @@ def main():
     else:
         print("networkx not available, using simple dict-based graph.")
 
-    by_struct = get_struct_fields(graph_obj, uses_nx, field_index)
+    by_struct = get_struct_fields(graph_obj, uses_nx, gep_map)
     if not by_struct:
         print("No struct fields found. Exiting.")
         sys.exit(1)
@@ -227,7 +203,7 @@ def main():
     total_fields = 0
 
     for sname, field_ids in sorted(by_struct.items()):
-        bins = bin_pack_struct(sname, field_ids, graph_obj, uses_nx, field_index, args.cacheline, struct_sizes)
+        bins = bin_pack_struct(sname, field_ids, graph_obj, uses_nx, gep_map, args.cacheline, struct_layout, loader)
         reorder[sname] = bins
         total_structs += 1
         total_bins += len(bins)

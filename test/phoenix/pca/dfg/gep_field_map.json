@@ -1,0 +1,2019 @@
+{
+
+  "parse_args::0::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 69,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::0::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 70,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::0::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 71,
+      "col": 14
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::4::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 86,
+      "col": 78
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::5::1_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::5::4_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::7::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 91,
+      "col": 8
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::9::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 97,
+      "col": 36
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::9::3_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 98,
+      "col": 48
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "generate_points::3::0_standalone": {
+
+    "struct": "scalar.ptr",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "generate_points::4::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 129,
+      "col": 31
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "generate_points::4::5_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 129,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_mean::0::0_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 142,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_mean::0::1_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 4,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 142,
+      "col": 48
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 4
+      }
+    ]
+  },
+  "calc_mean::1::1_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_mean::2::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_mean::3::0_standalone": {
+
+    "struct": "scalar.ptr.matrix",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.matrix",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_mean::5::3_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 145,
+      "col": 17
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_mean::5::6_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 7,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 145,
+      "col": 17
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_mean::8::2_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 145,
+      "col": 17
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_mean::9::2_standalone": {
+
+    "struct": "scalar.i32.mean",
+    "field": 0,
+    "offset": 0,
+    "id": 8,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 147,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.mean",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::0::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 162,
+      "col": 8
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::0::3_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 163,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::0::5_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 166,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::2::2_standalone": {
+
+    "struct": "scalar.ptr.matrix",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.matrix",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::2::4_standalone": {
+
+    "struct": "scalar.i32.mean",
+    "field": 0,
+    "offset": 0,
+    "id": 8,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.mean",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::2::5_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::2::6_standalone": {
+
+    "struct": "scalar.ptr.cov",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.cov",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::3::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::4::2_standalone": {
+
+    "struct": "scalar.ptr.matrix",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.matrix",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::4::4_standalone": {
+
+    "struct": "scalar.i32.mean",
+    "field": 0,
+    "offset": 0,
+    "id": 8,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.mean",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::6::3_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 170,
+      "col": 27
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::6::6_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 7,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 170,
+      "col": 27
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::6::9_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 170,
+      "col": 54
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::6::12_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 7,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 170,
+      "col": 54
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::9::2_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 170,
+      "col": 27
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::9::5_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 170,
+      "col": 54
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::10::3_standalone": {
+
+    "struct": "scalar.ptr.cov",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 172,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.cov",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::10::5_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 172,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::10::7_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 172,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::10::10_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 167,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::11::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 175,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::11::3_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 176,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_cov::11::5_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 166,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_mean::0::4_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 193,
+      "col": 4
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_mean::2::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 196,
+      "col": 30
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_mean::4::3_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 203,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_mean::4::4_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 203,
+      "col": 37
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_mean::6::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 208,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_mean::8::3_standalone": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 209,
+      "col": 30
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_mean::8::7_gep": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 4,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 210,
+      "col": 29
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 4
+      }
+    ]
+  },
+  "pthread_mean::10::2_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 10,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 216,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_mean::12::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 221,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_mean::13::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 10,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 223,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_cov::0::5_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 242,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_cov::0::6_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 244,
+      "col": 30
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_cov::3::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 246,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_cov::5::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 10,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 247,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_cov::7::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 251,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "pthread_cov::8::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 10,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 252,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::0::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 265,
+      "col": 44
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::0::5_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 265,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::1::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::2::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 268,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::2::3_standalone": {
+
+    "struct": "scalar.ptr.matrix",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 268,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.matrix",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::3::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 271,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::4::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 271,
+      "col": 38
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::6::0_standalone": {
+
+    "struct": "scalar.ptr.matrix",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.matrix",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::7::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 129,
+      "col": 31
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::7::5_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 129,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::9::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 277,
+      "col": 39
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::10::5_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 277,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::10::7_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 278,
+      "col": 8
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::12::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 281,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::12::3_standalone": {
+
+    "struct": "scalar.ptr.cov",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 281,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.cov",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::13::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 291,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::14::1_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 293,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::14::2_standalone": {
+
+    "struct": "scalar.ptr.cov",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 293,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.cov",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::14::5_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 294,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::14::6_standalone": {
+
+    "struct": "scalar.ptr.matrix",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 294,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.matrix",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::14::10_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 291,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::15::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 296,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::15::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 297,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::15::4_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "pca-pthread.c",
+      "line": 298,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  }
+}

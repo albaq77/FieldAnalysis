@@ -1,0 +1,29 @@
+{
+    "name": "tmi_boost_spinlock",
+    "description": "Boost spinlock false sharing benchmark - stackoverflow.cpp (spinlock pool contention on a shared integer buffer)",
+    "source_dir": ".",
+    "output_dir": "dfg",
+    "default_variant": "serial",
+    "lto": false,
+    "multithread": true,
+    "simple_access": false,
+    "pre_compile": null,
+    "input_files": {},
+    "output_files": {},
+    "trace": {
+        "runtime_seconds": 30,
+        "flush_threshold": null,
+        "sample_rate": 1
+    },
+    "variants": {
+        "serial": {
+            "sources": ["stackoverflow.cpp"],
+            "opt_level": "O1",
+            "compile_flags": ["-std=c++11"],
+            "link_flags": ["-lpthread"],
+            "run_args": [],
+            "multithread": true,
+            "pre_compile": null
+        }
+    }
+}

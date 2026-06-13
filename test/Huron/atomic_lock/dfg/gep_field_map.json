@@ -1,0 +1,1731 @@
+{
+
+  "_ZN8spinlock4lockEv::1::0_standalone": {
+
+    "struct": "struct.std::atomic_flag",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "struct.std::__atomic_flag_base",
+    "field_size": 1,
+    "source": {
+
+      "file": "spinlock.h",
+      "line": 6,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.spinlock",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "struct.std::atomic_flag",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE::0::10_standalone": {
+
+    "struct": "struct.std::chrono::duration",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/this_thread_sleep.h",
+      "line": 72,
+      "col": 17
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE::2::2_standalone": {
+
+    "struct": "struct.std::chrono::duration",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/this_thread_sleep.h",
+      "line": 74,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE::2::6_standalone": {
+
+    "struct": "struct.std::chrono::duration",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/this_thread_sleep.h",
+      "line": 75,
+      "col": 65
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE::2::9_standalone": {
+
+    "struct": "struct.std::chrono::duration.0",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/this_thread_sleep.h",
+      "line": 75,
+      "col": 14
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration.0",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE::2::11_standalone": {
+
+    "struct": "struct.timespec",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/this_thread_sleep.h",
+      "line": 78,
+      "col": 4
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.timespec",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt11this_thread9sleep_forIlSt5ratioILl1ELl1EEEEvRKNSt6chrono8durationIT_T0_EE::2::14_standalone": {
+
+    "struct": "struct.timespec",
+    "field": 0,
+    "offset": 8,
+    "id": 3,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/this_thread_sleep.h",
+      "line": 78,
+      "col": 4
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.timespec",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6chrono8durationIlSt5ratioILl1ELl1EEEC2IivEERKT_::0::5_standalone": {
+
+    "struct": "struct.std::chrono::duration",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/chrono",
+      "line": 522,
+      "col": 6
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZN8spinlock6unlockEv::0::6_standalone": {
+
+    "struct": "struct.std::atomic_flag",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "struct.std::__atomic_flag_base",
+    "field_size": 1,
+    "source": {
+
+      "file": "spinlock.h",
+      "line": 10,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.spinlock",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "struct.std::atomic_flag",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::0::13_standalone": {
+
+    "struct": "class.std::thread",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "class.std::thread::id",
+    "field_size": 8,
+    "source": {
+
+      "file": "sequential.cpp",
+      "line": 19,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::1::2_standalone": {
+
+    "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+    "field_size": 0,
+    "source": {
+
+      "file": "sequential.cpp",
+      "line": 19,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::1::3_gep": {
+
+    "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+    "field_size": 0,
+    "source": {
+
+      "file": "sequential.cpp",
+      "line": 19,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::3::0_standalone": {
+
+    "struct": "class.std::thread",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "class.std::thread::id",
+    "field_size": 8,
+    "source": {
+
+      "file": "sequential.cpp",
+      "line": 20,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::4::0_standalone": {
+
+    "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+    "field_size": 0,
+    "source": {
+
+      "file": "sequential.cpp",
+      "line": 21,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::4::5_standalone": {
+
+    "struct": "class.std::thread",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "class.std::thread::id",
+    "field_size": 8,
+    "source": {
+
+      "file": "sequential.cpp",
+      "line": 22,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::4::8_standalone": {
+
+    "struct": "class.std::thread",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "class.std::thread::id",
+    "field_size": 8,
+    "source": {
+
+      "file": "sequential.cpp",
+      "line": 22,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::4::10_gep": {
+
+    "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+    "field_size": 0,
+    "source": {
+
+      "file": "sequential.cpp",
+      "line": 22,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::8::1_standalone": {
+
+    "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+    "field_size": 0,
+    "source": {
+
+      "file": "sequential.cpp",
+      "line": 22,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::9::5_standalone": {
+
+    "struct": "class.std::thread",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "class.std::thread::id",
+    "field_size": 8,
+    "source": {
+
+      "file": "sequential.cpp",
+      "line": 25,
+      "col": 1
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::10::1_standalone": {
+
+    "struct": "class.std::thread",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "class.std::thread::id",
+    "field_size": 8,
+    "source": {
+
+      "file": "sequential.cpp",
+      "line": 25,
+      "col": 1
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::11::1_standalone": {
+
+    "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+    "field_size": 0,
+    "source": {
+
+      "file": "sequential.cpp",
+      "line": 25,
+      "col": 1
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::13::1_standalone": {
+
+    "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+    "field_size": 0,
+    "source": {
+
+      "file": "sequential.cpp",
+      "line": 25,
+      "col": 1
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6threadC2Ev::0::3_standalone": {
+
+    "struct": "class.std::thread::id",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 121,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6threadC2IRFvmEJiEvEEOT_DpOT0_::0::11_standalone": {
+
+    "struct": "class.std::thread::id",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 127,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6thread2idC2Ev::0::3_standalone": {
+
+    "struct": "class.std::thread::id",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 86,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNKSt6thread8joinableEv::0::5_standalone": {
+
+    "struct": "class.std::thread::id",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 176,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNKSt6thread8joinableEv::0::8_standalone": {
+
+    "struct": "class.std::thread::id",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 176,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNKSt6thread8joinableEv::0::10_standalone": {
+
+    "struct": "class.std::thread::id",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 176,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6thread4swapERS_::0::5_standalone": {
+
+    "struct": "class.std::thread::id",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 172,
+      "col": 17
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6thread4swapERS_::0::7_standalone": {
+
+    "struct": "class.std::thread::id",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 172,
+      "col": 28
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSteqNSt6thread2idES0_::0::2_standalone": {
+
+    "struct": "class.std::thread::id",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSteqNSt6thread2idES0_::0::4_standalone": {
+
+    "struct": "class.std::thread::id",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSteqNSt6thread2idES0_::0::6_standalone": {
+
+    "struct": "class.std::thread::id",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 293,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSteqNSt6thread2idES0_::0::8_standalone": {
+
+    "struct": "class.std::thread::id",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 293,
+      "col": 33
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6chrono8durationIlSt5ratioILl1ELl1EEE4zeroEv::1::0_standalone": {
+
+    "struct": "struct.std::chrono::duration",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/chrono",
+      "line": 624,
+      "col": 4
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1EEEElS3_EENSt9enable_ifIXsr13__is_durationIT_EE5valueES6_E4typeERKNS1_IT0_T1_EE::0::5_standalone": {
+
+    "struct": "struct.std::chrono::duration",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/chrono",
+      "line": 276,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1EEEElS3_EENSt9enable_ifIXsr13__is_durationIT_EE5valueES6_E4typeERKNS1_IT0_T1_EE::0::7_standalone": {
+
+    "struct": "struct.std::chrono::duration",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/chrono",
+      "line": 276,
+      "col": 2
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1000000000EEEElS2_ILl1ELl1EEEENSt9enable_ifIXsr13__is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE::0::5_standalone": {
+
+    "struct": "struct.std::chrono::duration.0",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/chrono",
+      "line": 276,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration.0",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1000000000EEEElS2_ILl1ELl1EEEENSt9enable_ifIXsr13__is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE::0::7_standalone": {
+
+    "struct": "struct.std::chrono::duration.0",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/chrono",
+      "line": 276,
+      "col": 2
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration.0",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6chronomiIlSt5ratioILl1ELl1EElS2_EENSt11common_typeIJNS_8durationIT_T0_EENS4_IT1_T2_EEEE4typeERKS7_RKSA_::0::17_standalone": {
+
+    "struct": "struct.std::chrono::duration",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/chrono",
+      "line": 666,
+      "col": 2
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNKSt6chrono8durationIlSt5ratioILl1ELl1EEE5countEv::0::3_standalone": {
+
+    "struct": "struct.std::chrono::duration",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/chrono",
+      "line": 538,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNKSt6chrono8durationIlSt5ratioILl1ELl1000000000EEE5countEv::0::3_standalone": {
+
+    "struct": "struct.std::chrono::duration.0",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/chrono",
+      "line": 538,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration.0",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6chrono8durationIlSt5ratioILl1ELl1EEEC2IlvEERKT_::0::5_standalone": {
+
+    "struct": "struct.std::chrono::duration",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/chrono",
+      "line": 522,
+      "col": 6
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1EEEES3_lLb1ELb1EE6__castIlS3_EES4_RKNS1_IT_T0_EE::0::8_standalone": {
+
+    "struct": "struct.std::chrono::duration",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/chrono",
+      "line": 214,
+      "col": 6
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1000000000EEEES2_ILl1000000000ELl1EElLb0ELb1EE6__castIlS2_ILl1ELl1EEEES4_RKNS1_IT_T0_EE::0::9_standalone": {
+
+    "struct": "struct.std::chrono::duration.0",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/chrono",
+      "line": 239,
+      "col": 6
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration.0",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6chrono8durationIlSt5ratioILl1ELl1000000000EEEC2IlvEERKT_::0::5_standalone": {
+
+    "struct": "struct.std::chrono::duration.0",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/chrono",
+      "line": 522,
+      "col": 6
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::chrono::duration.0",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvmEiEEEEEC2IJRS3_iEEEDpOT_::0::10_constexpr": {
+
+    "struct": "scalar.unknown._ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvmEiEEEEEE",
+    "field": 0,
+    "offset": 0,
+    "id": 7,
+    "field_type": "unknown",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.unknown._ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvmEiEEEEEE",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvmEiEEEEEC2IJRS3_iEEEDpOT_::0::11_standalone": {
+
+    "struct": "scalar.%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+    "field": 0,
+    "offset": 0,
+    "id": 8,
+    "field_type": "%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 207,
+      "col": 6
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EEC2IS3_vEEPS1_::0::5_standalone": {
+
+    "struct": "struct.std::__uniq_ptr_data",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "class.std::__uniq_ptr_impl",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/unique_ptr.h",
+      "line": 282,
+      "col": 4
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::unique_ptr",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "struct.std::__uniq_ptr_data",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EED2Ev::0::4_standalone": {
+
+    "struct": "struct.std::__uniq_ptr_data",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "class.std::__uniq_ptr_impl",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/unique_ptr.h",
+      "line": 359,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::unique_ptr",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "struct.std::__uniq_ptr_data",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6thread6_StateC2Ev::0::3_constexpr": {
+
+    "struct": "scalar.unknown._ZTVNSt6thread6_StateE",
+    "field": 0,
+    "offset": 0,
+    "id": 10,
+    "field_type": "unknown",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.unknown._ZTVNSt6thread6_StateE",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6thread8_InvokerISt5tupleIJPFvmEiEEEC2IJRS2_iEEEDpOT_::0::7_standalone": {
+
+    "struct": "class.std::tuple.3",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "struct.std::_Tuple_impl.4",
+    "field_size": 16,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 244,
+      "col": 6
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::thread::_Invoker",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "class.std::tuple.3",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvmEiEEEEE6_M_runEv::0::3_standalone": {
+
+    "struct": "scalar.%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+    "field": 0,
+    "offset": 0,
+    "id": 8,
+    "field_type": "%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 211,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt11_Tuple_implILm0EJPFvmEiEEC2IRS0_JiEvEEOT_DpOT0_::0::10_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 12,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/tuple",
+      "line": 293,
+      "col": 2
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt10_Head_baseILm0EPFvmELb0EEC2ERKS1_::0::5_standalone": {
+
+    "struct": "struct.std::_Head_base.7",
+    "field": 0,
+    "offset": 0,
+    "id": 13,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/tuple",
+      "line": 193,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::_Head_base.7",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt10_Head_baseILm1EiLb0EEC2IiEEOT_::0::5_standalone": {
+
+    "struct": "struct.std::_Head_base.6",
+    "field": 0,
+    "offset": 0,
+    "id": 14,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/tuple",
+      "line": 200,
+      "col": 4
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::_Head_base.6",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6thread8_InvokerISt5tupleIJPFvmEiEEE9_M_invokeIJLm0ELm1EEEEvSt12_Index_tupleIJXspT_EEE::0::4_standalone": {
+
+    "struct": "class.std::tuple.3",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "struct.std::_Tuple_impl.4",
+    "field_size": 16,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 259,
+      "col": 52
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::thread::_Invoker",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "class.std::tuple.3",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt6thread8_InvokerISt5tupleIJPFvmEiEEE9_M_invokeIJLm0ELm1EEEEvSt12_Index_tupleIJXspT_EEE::0::6_standalone": {
+
+    "struct": "class.std::tuple.3",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "struct.std::_Tuple_impl.4",
+    "field_size": 16,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/std_thread.h",
+      "line": 259,
+      "col": 52
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::thread::_Invoker",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "class.std::tuple.3",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt11_Tuple_implILm0EJPFvmEiEE7_M_headERS2_::0::3_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 12,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/tuple",
+      "line": 268,
+      "col": 66
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt10_Head_baseILm0EPFvmELb0EE7_M_headERS2_::0::3_standalone": {
+
+    "struct": "struct.std::_Head_base.7",
+    "field": 0,
+    "offset": 0,
+    "id": 13,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/tuple",
+      "line": 233,
+      "col": 54
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::_Head_base.7",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt10_Head_baseILm1EiLb0EE7_M_headERS0_::0::3_standalone": {
+
+    "struct": "struct.std::_Head_base.6",
+    "field": 0,
+    "offset": 0,
+    "id": 14,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/tuple",
+      "line": 233,
+      "col": 54
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::_Head_base.6",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EEC2EPS1_::0::5_standalone": {
+
+    "struct": "class.std::tuple",
+    "field": 0,
+    "offset": 0,
+    "id": 15,
+    "field_type": "struct.std::_Tuple_impl",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/unique_ptr.h",
+      "line": 155,
+      "col": 38
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::__uniq_ptr_impl",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "class.std::tuple",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE6_M_ptrEv::0::3_standalone": {
+
+    "struct": "class.std::tuple",
+    "field": 0,
+    "offset": 0,
+    "id": 15,
+    "field_type": "struct.std::_Tuple_impl",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/unique_ptr.h",
+      "line": 172,
+      "col": 48
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::__uniq_ptr_impl",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "class.std::tuple",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EEC2Ev::0::3_standalone": {
+
+    "struct": "struct.std::_Head_base.2",
+    "field": 0,
+    "offset": 0,
+    "id": 16,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/tuple",
+      "line": 190,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::_Head_base.2",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt10_Head_baseILm0EPNSt6thread6_StateELb0EE7_M_headERS3_::0::3_standalone": {
+
+    "struct": "struct.std::_Head_base.2",
+    "field": 0,
+    "offset": 0,
+    "id": 16,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/tuple",
+      "line": 233,
+      "col": 54
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::_Head_base.2",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt10unique_ptrINSt6thread6_StateESt14default_deleteIS1_EE11get_deleterEv::0::3_standalone": {
+
+    "struct": "struct.std::__uniq_ptr_data",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "class.std::__uniq_ptr_impl",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/unique_ptr.h",
+      "line": 427,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::unique_ptr",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "struct.std::__uniq_ptr_data",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNKSt14default_deleteINSt6thread6_StateEEclEPS1_::1::1_standalone": {
+
+    "struct": "scalar.ptr",
+    "field": 0,
+    "offset": 0,
+    "id": 17,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/unique_ptr.h",
+      "line": 85,
+      "col": 2
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZNSt15__uniq_ptr_implINSt6thread6_StateESt14default_deleteIS1_EE10_M_deleterEv::0::3_standalone": {
+
+    "struct": "class.std::tuple",
+    "field": 0,
+    "offset": 0,
+    "id": 15,
+    "field_type": "struct.std::_Tuple_impl",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/unique_ptr.h",
+      "line": 174,
+      "col": 52
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::__uniq_ptr_impl",
+        "field": 0,
+        "field_offset": 0
+      },
+      {
+
+        "struct": "class.std::tuple",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  }
+}

@@ -7,6 +7,8 @@ import glob
 import argparse
 from collections import defaultdict
 
+from field_analysis_utils import FieldMetadataLoader
+
 RECORD_SIZE = 32
 
 
@@ -37,12 +39,10 @@ def parse_binary_trace(files):
         if not f.endswith(".bin"):
             continue
         fsize = os.path.getsize(f)
-        fname = os.path.basename(f)
         if fsize == 0:
             continue
         if fsize % RECORD_SIZE != 0:
-            remaining = fsize % RECORD_SIZE
-            fsize -= remaining
+            fsize -= fsize % RECORD_SIZE
         with open(f, "rb") as fh:
             data = fh.read(fsize)
         for i in range(0, fsize, RECORD_SIZE):
@@ -88,73 +88,6 @@ def parse_text_trace(files):
     return records
 
 
-def load_field_info(gep_map_path, layout_path):
-    fid_info = {}
-
-    if os.path.isfile(gep_map_path):
-        with open(gep_map_path, "r") as f:
-            gep_data = json.load(f)
-        for value in gep_data.values():
-            fid = value["id"]
-            sname = value["struct"]
-            fidx = value["field"]
-            boff = value["offset"]
-            src_file = value.get("source", {}).get("file", "")
-            src_line = value.get("source", {}).get("line", 0)
-            fid_info[fid] = {
-                "struct": sname,
-                "field_idx": fidx,
-                "byte_offset": boff,
-                "source_file": src_file,
-                "source_line": src_line,
-            }
-
-    struct_fields = {}
-    if os.path.isfile(layout_path):
-        with open(layout_path, "r") as f:
-            layout_data = json.load(f)
-        structs = layout_data.get("structs", {})
-        for sname, sdata in structs.items():
-            fields = sdata.get("fields", [])
-            field_map = {}
-            for fld in fields:
-                field_map[fld["idx"]] = {
-                    "type": fld.get("type", "?"),
-                    "offset": fld.get("offset", 0),
-                    "size": fld.get("size", 0),
-                }
-            struct_fields[sname] = field_map
-
-    for fid, info in fid_info.items():
-        sname = info["struct"]
-        fidx = info["field_idx"]
-        if sname in struct_fields and fidx in struct_fields[sname]:
-            finfo = struct_fields[sname][fidx]
-            info["field_type"] = finfo["type"]
-            info["field_size"] = finfo["size"]
-            info["field_offset_in_struct"] = finfo["offset"]
-        else:
-            info["field_type"] = "?"
-            info["field_size"] = 0
-            info["field_offset_in_struct"] = 0
-
-    return fid_info
-
-
-def resolve_field_name(fid, fid_info):
-    if fid not in fid_info:
-        return f"f{fid}", "?", 0
-    info = fid_info[fid]
-    sname = info["struct"]
-    fidx = info["field_idx"]
-    raw_name = sname
-    if raw_name.startswith("struct."):
-        raw_name = raw_name[7:]
-    elif raw_name.startswith("class."):
-        raw_name = raw_name[6:]
-    return f"{raw_name}.field{fidx}", info.get("field_type", "?"), info.get("field_size", 0)
-
-
 def build_dfg_edges(records, window_size=10):
     edges = defaultdict(int)
     window = []
@@ -169,7 +102,7 @@ def build_dfg_edges(records, window_size=10):
     return edges
 
 
-def generate_dot(edges, fids, fid_info, title="DFG", color_by_region=False, records=None):
+def generate_dot(edges, fids, gep_map, struct_layout, loader, title="DFG", color_by_region=False, records=None):
     region_colors = {"G": "lightblue", "H": "lightcoral", "S": "lightgreen"}
 
     fid_region = {}
@@ -185,7 +118,7 @@ def generate_dot(edges, fids, fid_info, title="DFG", color_by_region=False, reco
     ]
 
     for fid in sorted(fids):
-        fname, ftype, fsize = resolve_field_name(fid, fid_info)
+        fname, ftype, fsize = loader.resolve_field_name(fid, gep_map, struct_layout)
         size_str = f"{fsize}" if fsize > 0 else "0"
         if color_by_region:
             region = fid_region.get(fid, "G")
@@ -202,7 +135,7 @@ def generate_dot(edges, fids, fid_info, title="DFG", color_by_region=False, reco
     return "\n".join(lines)
 
 
-def generate_four_dfgs(records, fid_info, output_dir="."):
+def generate_four_dfgs(records, gep_map, struct_layout, loader, output_dir="."):
     region_records = {"G": [], "H": [], "S": []}
     for rec in records:
         region = rec['region']
@@ -216,7 +149,7 @@ def generate_four_dfgs(records, fid_info, output_dir="."):
         for a, b in region_edges:
             fids.add(a)
             fids.add(b)
-        dot = generate_dot(region_edges, fids, fid_info, title=f"DFG-{name}")
+        dot = generate_dot(region_edges, fids, gep_map, struct_layout, loader, title=f"DFG-{name}")
         with open(os.path.join(output_dir, f"dfg_{name}.dot"), "w") as f:
             f.write(dot)
 
@@ -225,21 +158,21 @@ def generate_four_dfgs(records, fid_info, output_dir="."):
     for a, b in unified_edges:
         all_fids.add(a)
         all_fids.add(b)
-    dot = generate_dot(unified_edges, all_fids, fid_info, title="DFG-unified", color_by_region=True, records=records)
+    dot = generate_dot(unified_edges, all_fids, gep_map, struct_layout, loader, title="DFG-unified", color_by_region=True, records=records)
     with open(os.path.join(output_dir, "dfg_unified.dot"), "w") as f:
         f.write(dot)
 
 
-def decode_trace(records, fid_info, output_path):
+def decode_trace(records, gep_map, struct_layout, loader, output_path):
     with open(output_path, "w") as f:
         f.write("# ts | field_name | type | size | addr | r/w | region\n")
         for rec in records:
-            fname, ftype, fsize = resolve_field_name(rec['fid'], fid_info)
+            fname, ftype, fsize = loader.resolve_field_name(rec['fid'], gep_map, struct_layout)
             rw = 'W' if rec['is_write'] == 1 else 'M' if rec['is_write'] == 2 else 'R'
             f.write(f"[{rec['ts']}] {fname} {ftype} {fsize}B 0x{rec['addr']:x} {rw} {rec['region']}\n")
 
 
-def print_summary(records, fid_info):
+def print_summary(records, gep_map, struct_layout, loader):
     fid_stats = defaultdict(lambda: {"count": 0, "reads": 0, "writes": 0, "regions": defaultdict(int)})
     for rec in records:
         fid = rec['fid']
@@ -250,13 +183,10 @@ def print_summary(records, fid_info):
             fid_stats[fid]["reads"] += 1
         fid_stats[fid]["regions"][rec['region']] += 1
 
-    # print(f"\n{'Field':<30} {'Type':<12} {'Size':>4} {'Total':>8} {'Reads':>8} {'Writes':>8} {'Region'}")
-    # print("-" * 100)
     for fid in sorted(fid_stats.keys(), key=lambda x: fid_stats[x]["count"], reverse=True):
-        fname, ftype, fsize = resolve_field_name(fid, fid_info)
+        fname, ftype, fsize = loader.resolve_field_name(fid, gep_map, struct_layout)
         st = fid_stats[fid]
         regions = "/".join(f"{k}:{v}" for k, v in sorted(st["regions"].items()))
-        # print(f"{fname:<30} {ftype:<12} {fsize:>4} {st['count']:>8} {st['reads']:>8} {st['writes']:>8} {regions}")
 
 
 def main():
@@ -269,6 +199,7 @@ def main():
     parser.add_argument("--decode", default=None, help="Output decoded trace to this file")
     parser.add_argument("--summary", action="store_true", help="Print field access summary")
     parser.add_argument("--no-dfg", action="store_true", help="Skip DFG generation")
+    parser.add_argument("--strict", action="store_true", help="Raise exceptions on missing files instead of warnings")
     args = parser.parse_args()
 
     files = collect_trace_files(args.path)
@@ -293,17 +224,20 @@ def main():
 
     records = records[args.start:args.end]
 
-    fid_info = load_field_info(args.gep_map, args.layout)
+    loader = FieldMetadataLoader(strict=args.strict)
+    gep_map = loader.load_gep_field_map(args.gep_map)
+    struct_layout = loader.load_struct_layout(args.layout)
+    loader.enrich_field_sizes(gep_map, struct_layout)
 
     if args.summary:
-        print_summary(records, fid_info)
+        print_summary(records, gep_map, struct_layout, loader)
 
     if args.decode:
-        decode_trace(records, fid_info, args.decode)
+        decode_trace(records, gep_map, struct_layout, loader, args.decode)
         print(f"Decoded trace written to {args.decode}")
 
     if not args.no_dfg:
-        generate_four_dfgs(records, fid_info)
+        generate_four_dfgs(records, gep_map, struct_layout, loader)
         print("Generated 4 DFG DOT files in ./")
 
 

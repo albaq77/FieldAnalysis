@@ -1,0 +1,71 @@
+{
+
+  "structs": {
+
+    "struct.timespec": {
+
+      "size": 16,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i64",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "i64",
+          "offset": 8,
+          "size": 8
+        }
+      ]
+    }
+  },
+  "variables": {
+
+    "global": [
+
+      {
+
+        "name": "tpBegin2",
+        "type": "struct.timespec",
+        "size": 16,
+        "file": "/mnt/hgfs/graduate/LLVM/llvm-project-19/llvm-project/FieldAnalysis/test/Huron/false/false_unrolling.c",
+        "line": 27
+      },
+      {
+
+        "name": "tpEnd2",
+        "type": "struct.timespec",
+        "size": 16,
+        "file": "/mnt/hgfs/graduate/LLVM/llvm-project-19/llvm-project/FieldAnalysis/test/Huron/false/false_unrolling.c",
+        "line": 27
+      }
+    ],
+    "heap_sites": [
+
+    ],
+    "stack_vars": [
+
+      {
+
+        "function": "compute",
+        "type": "struct.timespec",
+        "size": 16,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "compute",
+        "type": "struct.timespec",
+        "size": 16,
+        "file": "",
+        "line": 0
+      }
+    ]
+  }
+}

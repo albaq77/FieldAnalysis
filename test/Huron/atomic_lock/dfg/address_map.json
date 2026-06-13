@@ -1,0 +1,1227 @@
+{
+  "0x7fffaa499e70": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "class.std::thread",
+        "field": 0,
+        "offset": 0,
+        "field_type": "class.std::thread::id",
+        "field_size": 8,
+        "ts_first": 1,
+        "ts_last": 1,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 2,
+        "ts_last": 3,
+        "access_count": 2
+      },
+      {
+        "struct": "class.std::thread",
+        "field": 0,
+        "offset": 0,
+        "field_type": "class.std::thread::id",
+        "field_size": 8,
+        "ts_first": 25,
+        "ts_last": 25,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 26,
+        "ts_last": 34,
+        "access_count": 2
+      },
+      {
+        "struct": "class.std::thread",
+        "field": 0,
+        "offset": 0,
+        "field_type": "class.std::thread::id",
+        "field_size": 8,
+        "ts_first": 87,
+        "ts_last": 1000339,
+        "access_count": 3
+      },
+      {
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field_size": 0,
+        "ts_first": 1000349,
+        "ts_last": 1000349,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000350,
+        "ts_last": 1000350,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 11
+  },
+  "0x7fffaa499e78": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field_size": 0,
+        "ts_first": 4,
+        "ts_last": 4,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 5,
+        "ts_last": 6,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field_size": 0,
+        "ts_first": 68,
+        "ts_last": 68,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 69,
+        "ts_last": 77,
+        "access_count": 2
+      },
+      {
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field_size": 0,
+        "ts_first": 1000336,
+        "ts_last": 1000340,
+        "access_count": 2
+      },
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000341,
+        "ts_last": 1000341,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 9
+  },
+  "0x7fffaa499e80": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"class.std::thread\" = type { %\"class.std::thread::id\" }",
+        "field_size": 0,
+        "ts_first": 7,
+        "ts_last": 1000338,
+        "access_count": 3
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 3
+  },
+  "0x7fffaa499e68": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 8,
+        "ts_last": 36,
+        "access_count": 4
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 4
+  },
+  "0x715faf81f670": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.unknown._ZTVNSt6thread6_StateE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "unknown",
+        "field_size": 0,
+        "ts_first": 10,
+        "ts_last": 46,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x57007a5fed90": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.unknown._ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvmEiEEEEEE",
+        "field": 0,
+        "offset": 0,
+        "field_type": "unknown",
+        "field_size": 0,
+        "ts_first": 11,
+        "ts_last": 47,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x5700803beeb8": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+        "field_size": 0,
+        "ts_first": 12,
+        "ts_last": 12,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::tuple.3",
+        "field": 0,
+        "offset": 0,
+        "field_type": "struct.std::_Tuple_impl.4",
+        "field_size": 16,
+        "ts_first": 13,
+        "ts_last": 13,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Head_base.6",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i32",
+        "field_size": 4,
+        "ts_first": 14,
+        "ts_last": 14,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+        "field_size": 0,
+        "ts_first": 58,
+        "ts_last": 58,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::tuple.3",
+        "field": 0,
+        "offset": 0,
+        "field_type": "struct.std::_Tuple_impl.4",
+        "field_size": 16,
+        "ts_first": 59,
+        "ts_last": 62,
+        "access_count": 2
+      },
+      {
+        "struct": "struct.std::_Head_base.6",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i32",
+        "field_size": 4,
+        "ts_first": 63,
+        "ts_last": 63,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 7
+  },
+  "0x5700803beec0": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 15,
+        "ts_last": 15,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Head_base.7",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 16,
+        "ts_last": 16,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 60,
+        "ts_last": 60,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Head_base.7",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 61,
+        "ts_last": 61,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 4
+  },
+  "0x7fffaa499d58": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::__uniq_ptr_data",
+        "field": 0,
+        "offset": 0,
+        "field_type": "class.std::__uniq_ptr_impl",
+        "field_size": 8,
+        "ts_first": 17,
+        "ts_last": 17,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::tuple",
+        "field": 0,
+        "offset": 0,
+        "field_type": "struct.std::_Tuple_impl",
+        "field_size": 8,
+        "ts_first": 18,
+        "ts_last": 18,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Head_base.2",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 19,
+        "ts_last": 19,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::tuple",
+        "field": 0,
+        "offset": 0,
+        "field_type": "struct.std::_Tuple_impl",
+        "field_size": 8,
+        "ts_first": 20,
+        "ts_last": 20,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Head_base.2",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 21,
+        "ts_last": 21,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::__uniq_ptr_data",
+        "field": 0,
+        "offset": 0,
+        "field_type": "class.std::__uniq_ptr_impl",
+        "field_size": 8,
+        "ts_first": 22,
+        "ts_last": 22,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::tuple",
+        "field": 0,
+        "offset": 0,
+        "field_type": "struct.std::_Tuple_impl",
+        "field_size": 8,
+        "ts_first": 23,
+        "ts_last": 23,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Head_base.2",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 24,
+        "ts_last": 24,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::__uniq_ptr_data",
+        "field": 0,
+        "offset": 0,
+        "field_type": "class.std::__uniq_ptr_impl",
+        "field_size": 8,
+        "ts_first": 53,
+        "ts_last": 53,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::tuple",
+        "field": 0,
+        "offset": 0,
+        "field_type": "struct.std::_Tuple_impl",
+        "field_size": 8,
+        "ts_first": 54,
+        "ts_last": 54,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Head_base.2",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 55,
+        "ts_last": 55,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::tuple",
+        "field": 0,
+        "offset": 0,
+        "field_type": "struct.std::_Tuple_impl",
+        "field_size": 8,
+        "ts_first": 56,
+        "ts_last": 56,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Head_base.2",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 57,
+        "ts_last": 57,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::__uniq_ptr_data",
+        "field": 0,
+        "offset": 0,
+        "field_type": "class.std::__uniq_ptr_impl",
+        "field_size": 8,
+        "ts_first": 65,
+        "ts_last": 65,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::tuple",
+        "field": 0,
+        "offset": 0,
+        "field_type": "struct.std::_Tuple_impl",
+        "field_size": 8,
+        "ts_first": 66,
+        "ts_last": 66,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Head_base.2",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 67,
+        "ts_last": 67,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 16
+  },
+  "0x7fffaa499d38": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 27,
+        "ts_last": 72,
+        "access_count": 4
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 4
+  },
+  "0x7fffaa499d40": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 28,
+        "ts_last": 71,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x7fffaa499d08": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 30,
+        "ts_last": 75,
+        "access_count": 4
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 4
+  },
+  "0x7fffaa499d00": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 31,
+        "ts_last": 76,
+        "access_count": 4
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 4
+  },
+  "0x7fffaa499d48": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 37,
+        "ts_last": 1000353,
+        "access_count": 8
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 8
+  },
+  "0x7fffaa499d50": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 38,
+        "ts_last": 1000352,
+        "access_count": 4
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 4
+  },
+  "0x7fffaa499d18": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 40,
+        "ts_last": 1000356,
+        "access_count": 8
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 8
+  },
+  "0x7fffaa499d10": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 41,
+        "ts_last": 1000357,
+        "access_count": 8
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 8
+  },
+  "0x7fffaa499e48": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "class.std::thread::id",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 44,
+        "ts_last": 79,
+        "access_count": 4
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 4
+  },
+  "0x5700803bf008": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+        "field_size": 0,
+        "ts_first": 48,
+        "ts_last": 48,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::tuple.3",
+        "field": 0,
+        "offset": 0,
+        "field_type": "struct.std::_Tuple_impl.4",
+        "field_size": 16,
+        "ts_first": 49,
+        "ts_last": 49,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Head_base.6",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i32",
+        "field_size": 4,
+        "ts_first": 50,
+        "ts_last": 50,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+        "field": 0,
+        "offset": 0,
+        "field_type": "%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }",
+        "field_size": 0,
+        "ts_first": 117,
+        "ts_last": 117,
+        "access_count": 1
+      },
+      {
+        "struct": "class.std::tuple.3",
+        "field": 0,
+        "offset": 0,
+        "field_type": "struct.std::_Tuple_impl.4",
+        "field_size": 16,
+        "ts_first": 118,
+        "ts_last": 121,
+        "access_count": 2
+      },
+      {
+        "struct": "struct.std::_Head_base.6",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i32",
+        "field_size": 4,
+        "ts_first": 122,
+        "ts_last": 122,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 7
+  },
+  "0x5700803bf010": {
+    "region": "H",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 51,
+        "ts_last": 51,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Head_base.7",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 52,
+        "ts_last": 52,
+        "access_count": 1
+      },
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 119,
+        "ts_last": 119,
+        "access_count": 1
+      },
+      {
+        "struct": "struct.std::_Head_base.7",
+        "field": 0,
+        "offset": 0,
+        "field_type": "ptr",
+        "field_size": 8,
+        "ts_first": 120,
+        "ts_last": 120,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 4
+  },
+  "0x57007a5ff142": {
+    "region": "G",
+    "segments": [
+      {
+        "struct": "struct.std::atomic_flag",
+        "field": 0,
+        "offset": 0,
+        "field_type": "struct.std::__atomic_flag_base",
+        "field_size": 1,
+        "ts_first": 64,
+        "ts_last": 1000337,
+        "access_count": 1000188
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1000188
+  },
+  "0x715fad379d50": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 90,
+        "ts_last": 96,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x715fad379ca8": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 91,
+        "ts_last": 105,
+        "access_count": 6
+      },
+      {
+        "struct": "struct.std::chrono::duration.0",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 110,
+        "ts_last": 111,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 8
+  },
+  "0x715fad379d20": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 93,
+        "ts_last": 93,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x715fad379c78": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 94,
+        "ts_last": 98,
+        "access_count": 3
+      },
+      {
+        "struct": "struct.std::chrono::duration.0",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 108,
+        "ts_last": 109,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x715fad379c70": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 95,
+        "ts_last": 95,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x715fad379d18": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 101,
+        "ts_last": 114,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x715fad379c88": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 102,
+        "ts_last": 102,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x715fad379c80": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 103,
+        "ts_last": 103,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x715fad379d08": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 106,
+        "ts_last": 107,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x715fad379d10": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration.0",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 112,
+        "ts_last": 116,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x715fad379cf8": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.timespec",
+        "field": 0,
+        "offset": 8,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 113,
+        "ts_last": 113,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x715fad379d00": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.timespec",
+        "field": 0,
+        "offset": 8,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 115,
+        "ts_last": 115,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x715facb78d50": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000309,
+        "ts_last": 1000315,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x715facb78ca8": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000310,
+        "ts_last": 1000324,
+        "access_count": 6
+      },
+      {
+        "struct": "struct.std::chrono::duration.0",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000329,
+        "ts_last": 1000330,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 8
+  },
+  "0x715facb78d20": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000312,
+        "ts_last": 1000312,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x715facb78c78": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000313,
+        "ts_last": 1000317,
+        "access_count": 3
+      },
+      {
+        "struct": "struct.std::chrono::duration.0",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000327,
+        "ts_last": 1000328,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": true,
+    "total_accesses": 5
+  },
+  "0x715facb78c70": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000314,
+        "ts_last": 1000314,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x715facb78d18": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000320,
+        "ts_last": 1000333,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x715facb78c88": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000321,
+        "ts_last": 1000321,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x715facb78c80": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000322,
+        "ts_last": 1000322,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x715facb78d08": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000325,
+        "ts_last": 1000326,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x715facb78d10": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.std::chrono::duration.0",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000331,
+        "ts_last": 1000335,
+        "access_count": 2
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 2
+  },
+  "0x715facb78cf8": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.timespec",
+        "field": 0,
+        "offset": 8,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000332,
+        "ts_last": 1000332,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x715facb78d00": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "struct.timespec",
+        "field": 0,
+        "offset": 8,
+        "field_type": "i64",
+        "field_size": 8,
+        "ts_first": 1000334,
+        "ts_last": 1000334,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  }
+}

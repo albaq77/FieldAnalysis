@@ -490,8 +490,63 @@ python3 tools/fa_runner.py --config test/new_project/fa_test.json
 
 | 测试 | 配置文件 | 变体 | 说明 |
 |------|---------|------|------|
-| blackscholes | `test/blackscholes/fa_test.json` | serial, pthreads, simd | PARSEC Black-Scholes 基准测试 |
-| test_structs | `test/test_structs/fa_test.json` | serial | 4 结构体 × 全局/栈/堆/嵌套/数组 综合测试 |
+| blackscholes | `test/mine-tools-test/blackscholes/fa_test.json` | serial, pthreads, simd | PARSEC Black-Scholes 基准测试 |
+| test_structs | `test/mine-tools-test/test_structs/fa_test.json` | serial | 多结构体 × 全局/栈/堆/嵌套/数组 综合测试 |
+| fs_bench | `test/mine-tools-test/fs_bench/fa_test.json` | serial | 7 种伪共享场景综合验证 |
+| sharing_bench | `test/mine-tools-test/sharing_bench/fa_test.json` | serial | 伪共享/真共享/无共享对比验证 |
+| False_Sharing | `test/False_Sharing/fa_test.json` | default | 简单伪共享基准 |
+| dwarves | `test/dwarves/fa_test.json` | serial | 36 种复杂结构体静态分析 |
+| locked | `test/locked/fa_test.json` | toy, toy_manual | 带 mutex 的伪共享 |
+| cache-effects | `test/cache-effects/fa_test.json` | cache_strides, false_sharing_bench, cache_coherence | 缓存效应测试 |
+| Phoenix (8个) | `test/phoenix/*/fa_test.json` | serial, pthreads, mapreduce | MapReduce 框架基准 |
+| Huron (11个) | `test/Huron/*/fa_test.json` | 多种 | 多线程伪共享检测 |
+| spring_2020_tutorial (8个) | `test/spring_2020_tutorial/*/fa_test.json` | 多种 | 体系结构教程基准 |
+
+### 批量测试运行器（run_all_tests.py）
+
+`test/run_all_tests.py` 是一键批量执行所有测试用例的统一入口，自动发现 `test/` 目录下所有 `fa_test.json`（排除 `mine-tools-test`），逐个调用 `fa_runner.py` 执行。
+
+```bash
+# 一键执行所有测试（完整 pipeline，含运行时追踪）
+python3 test/run_all_tests.py
+
+# 跳过运行时追踪（仅编译+插桩+分析，最快，~5-10 分钟）
+python3 test/run_all_tests.py --skip-run
+
+# 设置超时（每个变体最多 N 秒，超时自动跳过）
+python3 test/run_all_tests.py --timeout 120
+
+# 仅静态分析（不插桩不运行）
+python3 test/run_all_tests.py --analysis-only
+
+# 只执行某个套件
+python3 test/run_all_tests.py --suite phoenix
+
+# 只执行某个测试（按名称匹配）
+python3 test/run_all_tests.py --test histogram
+
+# 列出所有可用测试
+python3 test/run_all_tests.py --list
+
+# 试运行（仅打印命令）
+python3 test/run_all_tests.py --dry-run
+
+# 将所有输出保存到日志文件
+python3 test/run_all_tests.py > log.txt 2>&1
+```
+
+| 参数 | 说明 |
+|------|------|
+| `--suite` / `-s` | 只执行指定套件目录下的测试 |
+| `--test` / `-t` | 只执行名称包含指定字符串的测试 |
+| `--build-mode` / `-b` | 构建模式：`plugin`（默认）或 `in-tree` |
+| `--dry-run` | 仅打印命令不执行 |
+| `--analysis-only` | 仅静态分析（Step 0-2），不插桩不运行 |
+| `--skip-run` | 跳过运行时追踪（Step 0-4），仅编译+插桩+分析 |
+| `--timeout` | 每个变体的超时时间（秒），超时自动跳过继续下一个 |
+| `--list` / `-l` | 列出所有可用测试用例 |
+| `--fa-dir` | FieldAnalysis 根目录路径 |
+| `--clang` / `--opt` / `--llvm-link` | 指定编译器工具链路径 |
 
 ### 与旧脚本的对比
 

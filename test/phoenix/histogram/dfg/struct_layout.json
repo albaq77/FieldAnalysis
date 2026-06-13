@@ -1,0 +1,237 @@
+{
+
+  "structs": {
+
+    "struct.stat": {
+
+      "size": 144,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i64",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "i64",
+          "offset": 8,
+          "size": 8
+        },
+        {
+
+          "idx": 2,
+          "type": "i64",
+          "offset": 16,
+          "size": 8
+        },
+        {
+
+          "idx": 3,
+          "type": "i32",
+          "offset": 24,
+          "size": 4
+        },
+        {
+
+          "idx": 4,
+          "type": "i32",
+          "offset": 28,
+          "size": 4
+        },
+        {
+
+          "idx": 5,
+          "type": "i32",
+          "offset": 32,
+          "size": 4
+        },
+        {
+
+          "idx": 6,
+          "type": "i32",
+          "offset": 36,
+          "size": 4
+        },
+        {
+
+          "idx": 7,
+          "type": "i64",
+          "offset": 40,
+          "size": 8
+        },
+        {
+
+          "idx": 8,
+          "type": "i64",
+          "offset": 48,
+          "size": 8
+        },
+        {
+
+          "idx": 9,
+          "type": "i64",
+          "offset": 56,
+          "size": 8
+        },
+        {
+
+          "idx": 10,
+          "type": "i64",
+          "offset": 64,
+          "size": 8
+        },
+        {
+
+          "idx": 11,
+          "type": "%struct.timespec = type { i64, i64 }",
+          "offset": 72,
+          "size": 16
+        },
+        {
+
+          "idx": 12,
+          "type": "%struct.timespec = type { i64, i64 }",
+          "offset": 88,
+          "size": 16
+        },
+        {
+
+          "idx": 13,
+          "type": "%struct.timespec = type { i64, i64 }",
+          "offset": 104,
+          "size": 16
+        },
+        {
+
+          "idx": 14,
+          "type": "[3 x i64]",
+          "offset": 120,
+          "size": 24
+        }
+      ]
+    },
+    "struct.timespec": {
+
+      "size": 16,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i64",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "i64",
+          "offset": 8,
+          "size": 8
+        }
+      ]
+    },
+    "union.pthread_attr_t": {
+
+      "size": 56,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i64",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "[48 x i8]",
+          "offset": 8,
+          "size": 48
+        }
+      ]
+    },
+    "struct.thread_arg_t": {
+
+      "size": 3096,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "ptr",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "i64",
+          "offset": 8,
+          "size": 8
+        },
+        {
+
+          "idx": 2,
+          "type": "i64",
+          "offset": 16,
+          "size": 8
+        },
+        {
+
+          "idx": 3,
+          "type": "[256 x i32]",
+          "offset": 24,
+          "size": 1024
+        },
+        {
+
+          "idx": 4,
+          "type": "[256 x i32]",
+          "offset": 1048,
+          "size": 1024
+        },
+        {
+
+          "idx": 5,
+          "type": "[256 x i32]",
+          "offset": 2072,
+          "size": 1024
+        }
+      ]
+    }
+  },
+  "variables": {
+
+    "global": [
+
+    ],
+    "heap_sites": [
+
+    ],
+    "stack_vars": [
+
+      {
+
+        "function": "main",
+        "type": "struct.stat",
+        "size": 144,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "main",
+        "type": "union.pthread_attr_t",
+        "size": 56,
+        "file": "",
+        "line": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "scalar.i8": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "struct.TrueSharing": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.vtable pointer": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.i8._ZSt4cout": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "std::basic_ios<char, std::char_traits<char>>": [
+    [
+      [
+        5,
+        8
+      ]
+    ]
+  ],
+  "std::ctype<char>": [
+    [
+      [
+        6,
+        8
+      ]
+    ]
+  ],
+  "scalar.ptr": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.%\"class.std::vector\" = type { %\"struct.std::_Vector_base\" }": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "struct.std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data": [
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        8
+      ]
+    ]
+  ],
+  "scalar.long": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.vtable pointer._ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvP17LargeFalseSharingES4_EEEEEE": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.any pointer": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.%\"class.std::unique_ptr\" = type { %\"struct.std::__uniq_ptr_data\" }": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.vtable pointer._ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvP11TrueSharingES4_EEEEEE": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar._ZTSNSt6thread2idE": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ]
+}

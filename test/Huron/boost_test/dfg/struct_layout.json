@@ -1,0 +1,224 @@
+{
+
+  "structs": {
+
+    "class.std::ios_base::Init": {
+
+      "size": 1,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i8",
+          "offset": 0,
+          "size": 1
+        }
+      ]
+    },
+    "class.std::vector": {
+
+      "size": 24,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"struct.std::_Vector_base\" = type { %\"struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl\" }",
+          "offset": 0,
+          "size": 24
+        }
+      ]
+    },
+    "struct.std::_Vector_base": {
+
+      "size": 24,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl\" = type { %\"struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data\" }",
+          "offset": 0,
+          "size": 24
+        }
+      ]
+    },
+    "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl": {
+
+      "size": 24,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data\" = type { ptr, ptr, ptr }",
+          "offset": 0,
+          "size": 24
+        }
+      ]
+    },
+    "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data": {
+
+      "size": 24,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "ptr",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "ptr",
+          "offset": 8,
+          "size": 8
+        },
+        {
+
+          "idx": 2,
+          "type": "ptr",
+          "offset": 16,
+          "size": 8
+        }
+      ]
+    },
+    "class.spinlock_pool": {
+
+      "size": 16,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "ptr",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "ptr",
+          "offset": 8,
+          "size": 8
+        }
+      ]
+    },
+    "class.cacheline_t": {
+
+      "size": 64,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "[8 x i64]",
+          "offset": 0,
+          "size": 64
+        }
+      ]
+    },
+    "class.std::__cxx11::basic_string": {
+
+      "size": 32,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\" = type { ptr }",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "i64",
+          "offset": 8,
+          "size": 8
+        },
+        {
+
+          "idx": 2,
+          "type": "%union.anon = type { i64, [8 x i8] }",
+          "offset": 16,
+          "size": 16
+        }
+      ]
+    },
+    "struct.std::__cxx11::basic_string<char>::_Alloc_hider": {
+
+      "size": 8,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "ptr",
+          "offset": 0,
+          "size": 8
+        }
+      ]
+    },
+    "union.anon": {
+
+      "size": 16,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i64",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "[8 x i8]",
+          "offset": 8,
+          "size": 8
+        }
+      ]
+    }
+  },
+  "variables": {
+
+    "global": [
+
+      {
+
+        "name": "_ZStL8__ioinit",
+        "type": "class.std::ios_base::Init",
+        "size": 1,
+        "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/iostream",
+        "line": 74
+      },
+      {
+
+        "name": "pool",
+        "type": "class.spinlock_pool",
+        "size": 16,
+        "file": "/mnt/hgfs/graduate/LLVM/llvm-project-19/llvm-project/FieldAnalysis/test/Huron/boost_test/spinlock_pool_manual.cpp",
+        "line": 27
+      }
+    ],
+    "heap_sites": [
+
+    ],
+    "stack_vars": [
+
+      {
+
+        "function": "main",
+        "type": "class.std::__cxx11::basic_string",
+        "size": 32,
+        "file": "",
+        "line": 0
+      }
+    ]
+  }
+}

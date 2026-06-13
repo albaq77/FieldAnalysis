@@ -1,0 +1,3147 @@
+{
+
+  "__cxx_global_array_dtor::1::1_standalone": {
+
+    "struct": "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data",
+    "field": 0,
+    "offset": 18446744073709551592,
+    "id": 0,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_vector.h",
+      "line": 335,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZN13spinlock_poolD2Ev::0::0_direct": {
+
+    "struct": "spinlock_pool",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.hpp",
+      "line": 59,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "spinlock_pool",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZN13spinlock_poolD2Ev::2::0_standalone": {
+
+    "struct": "spinlock_pool",
+    "field": 1,
+    "offset": 8,
+    "id": 2,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.hpp",
+      "line": 60,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "spinlock_pool",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "_Z10threadFuncPv::0::0_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 30,
+      "col": 18
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10threadFuncPv::0::1_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 31,
+      "col": 32
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10threadFuncPv::0::5_standalone": {
+
+    "struct": "scalar.%\"class.std::vector\" = type { %\"struct.std::_Vector_base\" }.indices",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "%\"class.std::vector\" = type { %\"struct.std::_Vector_base\" }",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 32,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::vector\" = type { %\"struct.std::_Vector_base\" }.indices",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10threadFuncPv::0::8_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1028,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10threadFuncPv::2::1_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 32,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10threadFuncPv::2::2_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 33,
+      "col": 32
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10threadFuncPv::4::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1054,
+      "col": 2
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10threadFuncPv::5::1_direct": {
+
+    "struct": "spinlock_pool",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.hpp",
+      "line": 49,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "spinlock_pool",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10threadFuncPv::5::2_standalone": {
+
+    "struct": "scalar.i8.pool",
+    "field": 0,
+    "offset": 0,
+    "id": 7,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "spinlock_pool_manual.hpp",
+      "line": 49,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8.pool",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10threadFuncPv::5::3_constexpr": {
+
+    "struct": "spinlock_pool",
+    "field": 1,
+    "offset": 8,
+    "id": 2,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.hpp",
+      "line": 55,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "spinlock_pool",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "_Z10threadFuncPv::5::4_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "spinlock_pool_manual.hpp",
+      "line": 55,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10threadFuncPv::8::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 35,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10threadFuncPv::8::1_standalone": {
+
+    "struct": "scalar.%class.cacheline_t = type { [8 x i64] }.ibuffer",
+    "field": 0,
+    "offset": 0,
+    "id": 8,
+    "field_type": "%class.cacheline_t = type { [8 x i64] }",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 35,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%class.cacheline_t = type { [8 x i64] }.ibuffer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10threadFuncPv::9::2_gep": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 19,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10threadFuncPv::10::3_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 33,
+      "col": 32
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10distributev::0::1_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 41,
+      "col": 32
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10distributev::0::5_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10distributev::3::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10distributev::4::3_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 53,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10distributev::4::13_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 57,
+      "col": 36
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10distributev::5::1_standalone": {
+
+    "struct": "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/vector.tcc",
+      "line": 502,
+      "col": 30
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10distributev::6::0_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 59,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10distributev::7::1_gep": {
+
+    "struct": "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data",
+    "field": 1,
+    "offset": 8,
+    "id": 10,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/vector.tcc",
+      "line": 503,
+      "col": 31
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "_Z10distributev::7::2_gep": {
+
+    "struct": "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data",
+    "field": 2,
+    "offset": 16,
+    "id": 11,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_vector.h",
+      "line": 1189,
+      "col": 47
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data",
+        "field": 2,
+        "field_offset": 16
+      }
+    ]
+  },
+  "_Z10distributev::8::0_direct": {
+
+    "struct": "scalar.ptr",
+    "field": 0,
+    "offset": 0,
+    "id": 12,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/ext/new_allocator.h",
+      "line": 162,
+      "col": 4
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10distributev::8::1_standalone": {
+
+    "struct": "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data",
+    "field": 1,
+    "offset": 8,
+    "id": 10,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_vector.h",
+      "line": 1194,
+      "col": 6
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "_Z10distributev::13::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/vector.tcc",
+      "line": 450,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10distributev::15::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_uninitialized.h",
+      "line": 1012,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10distributev::17::1_gep": {
+
+    "struct": "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data",
+    "field": 1,
+    "offset": 8,
+    "id": 10,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/vector.tcc",
+      "line": 503,
+      "col": 31
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "_Z10distributev::17::2_standalone": {
+
+    "struct": "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data",
+    "field": 2,
+    "offset": 16,
+    "id": 11,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/vector.tcc",
+      "line": 504,
+      "col": 39
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.std::_Vector_base<unsigned long, std::allocator<unsigned long>>::_Vector_impl_data",
+        "field": 2,
+        "field_offset": 16
+      }
+    ]
+  },
+  "_Z10distributev::18::1_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 57,
+      "col": 36
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10distributev::20::2_standalone": {
+
+    "struct": "scalar.%\"class.std::vector\" = type { %\"struct.std::_Vector_base\" }.indices",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "%\"class.std::vector\" = type { %\"struct.std::_Vector_base\" }",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 62,
+      "col": 14
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::vector\" = type { %\"struct.std::_Vector_base\" }.indices",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_Z10distributev::20::5_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1028,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::1::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 73,
+      "col": 28
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::1::3_standalone": {
+
+    "struct": "class.std::__cxx11::basic_string",
+    "field": 2,
+    "offset": 16,
+    "id": 13,
+    "field_type": "union.anon",
+    "field_size": 16,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/basic_string.h",
+      "line": 201,
+      "col": 51
+    },
+    "access_path": [
+
+      {
+
+        "struct": "class.std::__cxx11::basic_string",
+        "field": 2,
+        "field_offset": 16
+      }
+    ]
+  },
+  "main::2::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/basic_string.h",
+      "line": 536,
+      "col": 34
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::5::3_direct": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/basic_string.tcc",
+      "line": 215,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::6::1_direct": {
+
+    "struct": "scalar.%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+    "field": 0,
+    "offset": 0,
+    "id": 14,
+    "field_type": "%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/basic_string.h",
+      "line": 187,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::6::2_direct": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/basic_string.tcc",
+      "line": 220,
+      "col": 18
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::7::0_direct": {
+
+    "struct": "scalar.%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+    "field": 0,
+    "offset": 0,
+    "id": 14,
+    "field_type": "%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/basic_string.h",
+      "line": 195,
+      "col": 28
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::8::0_direct": {
+
+    "struct": "scalar.ptr",
+    "field": 0,
+    "offset": 0,
+    "id": 12,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/char_traits.h",
+      "line": 357,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::8::1_direct": {
+
+    "struct": "scalar.ptr",
+    "field": 0,
+    "offset": 0,
+    "id": 12,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/char_traits.h",
+      "line": 357,
+      "col": 14
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::10::0_direct": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/basic_string.tcc",
+      "line": 232,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::10::1_standalone": {
+
+    "struct": "std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>",
+    "field": 1,
+    "offset": 8,
+    "id": 15,
+    "field_type": "long",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/basic_string.h",
+      "line": 191,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "main::10::3_direct": {
+
+    "struct": "scalar.%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+    "field": 0,
+    "offset": 0,
+    "id": 14,
+    "field_type": "%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/basic_string.h",
+      "line": 195,
+      "col": 28
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::10::4_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/basic_string.h",
+      "line": 225,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::10::7_direct": {
+
+    "struct": "scalar.%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+    "field": 0,
+    "offset": 0,
+    "id": 14,
+    "field_type": "%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/basic_string.h",
+      "line": 195,
+      "col": 28
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::10::10_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 16,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/ext/string_conversions.h",
+      "line": 63,
+      "col": 27
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::10::11_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 16,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/ext/string_conversions.h",
+      "line": 63,
+      "col": 42
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::10::13_direct": {
+
+    "struct": "scalar.ptr",
+    "field": 0,
+    "offset": 0,
+    "id": 12,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/ext/string_conversions.h",
+      "line": 82,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::13::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 16,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/ext/string_conversions.h",
+      "line": 64,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::14::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 16,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/ext/string_conversions.h",
+      "line": 64,
+      "col": 41
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::15::1_direct": {
+
+    "struct": "scalar.%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+    "field": 0,
+    "offset": 0,
+    "id": 14,
+    "field_type": "%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/basic_string.h",
+      "line": 195,
+      "col": 28
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::16::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 16,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/ext/string_conversions.h",
+      "line": 84,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::20::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 16,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/ext/string_conversions.h",
+      "line": 64,
+      "col": 41
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::21::3_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 73,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::21::4_direct": {
+
+    "struct": "scalar.%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+    "field": 0,
+    "offset": 0,
+    "id": 14,
+    "field_type": "%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/basic_string.h",
+      "line": 195,
+      "col": 28
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%\"class.std::__cxx11::basic_string\" = type { %\"struct.std::__cxx11::basic_string<char>::_Alloc_hider\", i64, %union.anon }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::23::0_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 73,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::26::0_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 74,
+      "col": 30
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::28::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 75,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::31::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 80,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::31::3_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 81,
+      "col": 25
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::33::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "spinlock_pool_manual.cpp",
+      "line": 84,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::1::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::4::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::5::3_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::5::5_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::5::10_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::5::12_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::7::2_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::7::4_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::9::3_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::10::0_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::11::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::13::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1068,
+      "col": 2
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::13::3_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_heap.h",
+      "line": 262,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::14::3_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::14::5_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::14::10_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::14::12_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::17::2_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::17::4_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::19::3_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::20::0_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::21::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::22::5_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::22::6_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1101,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::24::0_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/move.h",
+      "line": 204,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::24::1_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/move.h",
+      "line": 205,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::25::1_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/move.h",
+      "line": 204,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::26::0_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/move.h",
+      "line": 205,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::27::0_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/move.h",
+      "line": 205,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::29::0_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/move.h",
+      "line": 204,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::29::1_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/move.h",
+      "line": 205,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::30::1_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/move.h",
+      "line": 204,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::31::0_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/move.h",
+      "line": 205,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::32::0_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/move.h",
+      "line": 205,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::34::2_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::35::1_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/predefined_ops.h",
+      "line": 45,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::35::3_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1054,
+      "col": 2
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::36::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1068,
+      "col": 2
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt16__introsort_loopIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEElNS0_5__ops15_Iter_less_iterEEvT_S9_T0_T1_::38::0_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/move.h",
+      "line": 205,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::1::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algo.h",
+      "line": 1824,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::2::2_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/predefined_ops.h",
+      "line": 45,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::2::4_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/predefined_ops.h",
+      "line": 45,
+      "col": 25
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::4::0_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/predefined_ops.h",
+      "line": 98,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::5::3_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algo.h",
+      "line": 1808,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::5::4_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1068,
+      "col": 2
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::6::1_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algo.h",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::7::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::8::1_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algo.h",
+      "line": 1803,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::8::2_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1068,
+      "col": 2
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::9::3_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algo.h",
+      "line": 1808,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::9::4_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1068,
+      "col": 2
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::10::1_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algo.h",
+      "line": 1812,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::10::2_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1054,
+      "col": 2
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::11::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::12::2_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/predefined_ops.h",
+      "line": 45,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::12::3_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/predefined_ops.h",
+      "line": 45,
+      "col": 25
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::13::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1091,
+      "col": 45
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::13::6_gep": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algobase.h",
+      "line": 742,
+      "col": 33
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::14::0_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/predefined_ops.h",
+      "line": 98,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::15::3_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algo.h",
+      "line": 1808,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::15::4_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_iterator.h",
+      "line": 1068,
+      "col": 2
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::16::1_direct": {
+
+    "struct": "scalar.long",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 0,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algo.h",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.long",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_ZSt22__final_insertion_sortIN9__gnu_cxx17__normal_iteratorIPmSt6vectorImSaImEEEENS0_5__ops15_Iter_less_iterEEvT_S9_T0_::16::2_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_algo.h",
+      "line": 1824,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_GLOBAL__sub_I_spinlock_pool_manual.cpp::0::6_direct": {
+
+    "struct": "spinlock_pool",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.hpp",
+      "line": 41,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "spinlock_pool",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "_GLOBAL__sub_I_spinlock_pool_manual.cpp::0::9_constexpr": {
+
+    "struct": "spinlock_pool",
+    "field": 1,
+    "offset": 8,
+    "id": 2,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "spinlock_pool_manual.hpp",
+      "line": 43,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "spinlock_pool",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  }
+}

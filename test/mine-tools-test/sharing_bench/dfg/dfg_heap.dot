@@ -1,0 +1,44 @@
+// DFG-heap
+digraph {
+  label="DFG-heap";
+  node [shape=record, style=filled];
+  0 [label="i8", type="i8", size="1", fillcolor="lightblue"];
+  1 [label="TrueSharing.field0", type="i64", size="8", fillcolor="lightblue"];
+  6 [label="ptr", type="ptr", size="8", fillcolor="lightblue"];
+  8 [label="std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data.field1", type="ptr", size="8", fillcolor="lightblue"];
+  10 [label="long", type="long", size="0", fillcolor="lightblue"];
+  11 [label="std::_Vector_base<std::thread, std::allocator<std::thread>>::_Vector_impl_data.field2", type="ptr", size="8", fillcolor="lightblue"];
+  16 [label="std::thread" = type { %"class.std::thread::id" }", type="%"class", size="0", fillcolor="lightblue"];
+  17 [label="_ZTSNSt6thread2idE", type="_ZTSNSt6thread2idE", size="0", fillcolor="lightblue"];
+  1 -> 1 [label="3198182", weight="3198182", penwidth="6.0"];
+  0 -> 10 [label="416", weight="416", penwidth="6.0"];
+  0 -> 0 [label="371", weight="371", penwidth="6.0"];
+  10 -> 10 [label="152", weight="152", penwidth="6.0"];
+  0 -> 17 [label="131", weight="131", penwidth="6.0"];
+  10 -> 17 [label="128", weight="128", penwidth="6.0"];
+  0 -> 1 [label="122", weight="122", penwidth="6.0"];
+  0 -> 6 [label="82", weight="82", penwidth="6.0"];
+  0 -> 8 [label="68", weight="68", penwidth="6.0"];
+  0 -> 11 [label="55", weight="55", penwidth="6.0"];
+  0 -> 16 [label="50", weight="50", penwidth="6.0"];
+  1 -> 8 [label="39", weight="39", penwidth="6.0"];
+  10 -> 11 [label="21", weight="21", penwidth="6.0"];
+  1 -> 6 [label="20", weight="20", penwidth="6.0"];
+  10 -> 16 [label="16", weight="16", penwidth="5.8"];
+  6 -> 8 [label="12", weight="12", penwidth="4.6"];
+  17 -> 17 [label="11", weight="11", penwidth="4.3"];
+  6 -> 10 [label="9", weight="9", penwidth="3.7"];
+  16 -> 17 [label="7", weight="7", penwidth="3.1"];
+  11 -> 17 [label="6", weight="6", penwidth="2.8"];
+  8 -> 10 [label="6", weight="6", penwidth="2.8"];
+  6 -> 11 [label="5", weight="5", penwidth="2.5"];
+  11 -> 16 [label="4", weight="4", penwidth="2.2"];
+  6 -> 17 [label="3", weight="3", penwidth="1.9"];
+  8 -> 11 [label="3", weight="3", penwidth="1.9"];
+  6 -> 16 [label="3", weight="3", penwidth="1.9"];
+  8 -> 16 [label="3", weight="3", penwidth="1.9"];
+  8 -> 17 [label="3", weight="3", penwidth="1.9"];
+  6 -> 6 [label="3", weight="3", penwidth="1.9"];
+  8 -> 8 [label="3", weight="3", penwidth="1.9"];
+  16 -> 16 [label="1", weight="1", penwidth="1.3"];
+}

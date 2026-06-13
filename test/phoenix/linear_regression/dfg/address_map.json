@@ -1,0 +1,36 @@
+{
+  "0x7ffe9cb0ff50": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.i8",
+        "field": 0,
+        "offset": 0,
+        "field_type": "i8",
+        "field_size": 1,
+        "ts_first": 1,
+        "ts_last": 1,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  },
+  "0x7ffe9cb0ff48": {
+    "region": "S",
+    "segments": [
+      {
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "offset": 0,
+        "field_type": "any pointer",
+        "field_size": 0,
+        "ts_first": 2,
+        "ts_last": 2,
+        "access_count": 1
+      }
+    ],
+    "has_conflict": false,
+    "total_accesses": 1
+  }
+}

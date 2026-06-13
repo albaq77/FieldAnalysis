@@ -1,0 +1,1611 @@
+{
+
+  "wordcount_cmp::0::0_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 77,
+      "col": 17
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "wordcount_cmp::0::2_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 78,
+      "col": 17
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "wordcount_splitter::0::1_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 92,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_splitter::0::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 93,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_splitter::0::3_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 94,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_splitter::1::1_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 97,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "wordcount_splitter::1::4_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 97,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "wordcount_splitter::1::7_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 97,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "wordcount_splitter::1::10_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 97,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "wordcount_splitter::1::13_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 97,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "wordcount_splitter::2::1_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 100,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "wordcount_splitter::2::3_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 100,
+      "col": 14
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "wordcount_splitter::2::5_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 8,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 101,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_splitter::2::7_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 101,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_getword::2::0_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 119,
+      "col": 32
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "wordcount_getword::3::0_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 125,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_getword::6::3_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 127,
+      "col": 18
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_getword::6::4_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 127,
+      "col": 18
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_getword::6::7_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 127,
+      "col": 18
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_getword::11::4_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 125,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_getword::13::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 156,
+      "col": 4
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::0::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 167,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::0::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 195,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::1::5_standalone": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 173,
+      "col": 39
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::4::1_standalone": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 195,
+      "col": 27
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::4::3_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 196,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::4::4_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 196,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "wordcount_addword::4::6_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 197,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::4::8_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 197,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::6::0_standalone": {
+
+    "struct": "scalar.i8.words",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 202,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8.words",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::6::4_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 203,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::6::5_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 204,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::6::6_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 204,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "wordcount_addword::6::9_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 205,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::7::1_standalone": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 207,
+      "col": 37
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::8::1_gep": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 210,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "wordcount_addword::8::4_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 221,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::9::4_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 215,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::9::5_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 216,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::9::6_standalone": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 216,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::9::8_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 217,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::9::9_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 217,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "wordcount_addword::9::11_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 218,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::9::13_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 218,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::10::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 221,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::11::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 223,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "wordcount_addword::11::5_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 224,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "dobsearch::0::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 167,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "dobsearch::1::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "dobsearch::2::5_standalone": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 173,
+      "col": 39
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::0::2_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 238,
+      "col": 8
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::1::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 240,
+      "col": 70
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::2::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 245,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::6::0_standalone": {
+
+    "struct": "struct.stat",
+    "field": 8,
+    "offset": 48,
+    "id": 7,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 254,
+      "col": 4
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.stat",
+        "field": 8,
+        "field_offset": 48
+      }
+    ]
+  },
+  "main::11::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 92,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::11::3_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 93,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::11::4_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 94,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::12::1_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 97,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "main::12::4_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 97,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "main::12::7_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 97,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "main::12::10_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 97,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "main::12::13_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 97,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "main::13::1_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 100,
+      "col": 14
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "main::13::4_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 101,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::13::7_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 270,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::13::8_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 270,
+      "col": 17
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::13::11_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "wordcount_serial.c",
+      "line": 280,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  }
+}

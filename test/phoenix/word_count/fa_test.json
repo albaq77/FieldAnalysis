@@ -1,0 +1,49 @@
+{
+    "name": "phoenix_word_count",
+    "description": "Phoenix MapReduce Word Count benchmark - serial, pthreads, and MapReduce variants",
+    "source_dir": ".",
+    "output_dir": "dfg",
+    "default_variant": "serial",
+    "lto": false,
+    "multithread": false,
+    "simple_access": false,
+    "pre_compile": null,
+    "input_files": {},
+    "output_files": {},
+    "trace": {
+        "runtime_seconds": 30,
+        "flush_threshold": null,
+        "sample_rate": 1
+    },
+    "variants": {
+        "serial": {
+            "sources": ["wordcount_serial.c"],
+            "opt_level": "O1",
+            "compile_flags": ["-D_LINUX_"],
+            "link_flags": ["-lm"],
+            "run_args": [],
+            "multithread": false,
+            "pre_compile": null
+        },
+        "pthreads": {
+            "sources": ["wordcount_pthreads.c", "sort_pthreads.c", "MapReduceScheduler.c"],
+            "opt_level": "O1",
+            "compile_flags": ["-D_LINUX_"],
+            "link_flags": ["-lm", "-lpthread"],
+            "run_args": [],
+            "multithread": true,
+            "pre_compile": null,
+            "_lto": true
+        },
+        "mapreduce": {
+            "sources": ["wordcount.c", "mapreduce_sort.c", "MapReduceScheduler.c"],
+            "opt_level": "O1",
+            "compile_flags": ["-D_LINUX_"],
+            "link_flags": ["-lm", "-lpthread"],
+            "run_args": [],
+            "multithread": true,
+            "pre_compile": null,
+            "_lto": true
+        }
+    }
+}

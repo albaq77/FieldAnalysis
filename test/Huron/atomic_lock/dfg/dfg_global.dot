@@ -1,0 +1,7 @@
+// DFG-global
+digraph {
+  label="DFG-global";
+  node [shape=record, style=filled];
+  0 [label="std::atomic_flag.field_0", type="%"struct.std::__atomic_flag_base" = type { i8 }", size="1", fillcolor="lightblue"];
+  0 -> 0 [label="10001825", weight="10001825", penwidth="6.0"];
+}

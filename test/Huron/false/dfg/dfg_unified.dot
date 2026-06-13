@@ -1,0 +1,23 @@
+// DFG-unified
+digraph {
+  label="DFG-unified";
+  node [shape=record, style=filled];
+  0 [label="timespec.field_0", type="i64", size="8", fillcolor="lightgreen"];
+  1 [label="timespec.field_1", type="i64", size="8", fillcolor="lightgreen"];
+  2 [label="array", type="i32", size="4", fillcolor="lightcoral"];
+  3 [label="i32", type="i32", size="4", fillcolor="lightgreen"];
+  4 [label="i64", type="i64", size="8", fillcolor="lightgreen"];
+  2 -> 2 [label="15999608", weight="15999608", penwidth="6.0"];
+  2 -> 4 [label="506", weight="506", penwidth="6.0"];
+  2 -> 3 [label="311", weight="311", penwidth="6.0"];
+  3 -> 3 [label="122", weight="122", penwidth="6.0"];
+  4 -> 4 [label="38", weight="38", penwidth="6.0"];
+  3 -> 4 [label="30", weight="30", penwidth="6.0"];
+  0 -> 1 [label="24", weight="24", penwidth="6.0"];
+  1 -> 4 [label="19", weight="19", penwidth="6.0"];
+  0 -> 2 [label="15", weight="15", penwidth="5.5"];
+  0 -> 0 [label="15", weight="15", penwidth="5.5"];
+  1 -> 2 [label="12", weight="12", penwidth="4.6"];
+  0 -> 4 [label="9", weight="9", penwidth="3.7"];
+  1 -> 1 [label="6", weight="6", penwidth="2.8"];
+}

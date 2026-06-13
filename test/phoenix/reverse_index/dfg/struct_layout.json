@@ -1,0 +1,347 @@
+{
+
+  "structs": {
+
+    "union.pthread_mutex_t": {
+
+      "size": 40,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "%struct.__pthread_mutex_s = type { i32, i32, i32, i32, i32, i16, i16, %struct.__pthread_internal_list }",
+          "offset": 0,
+          "size": 40
+        }
+      ]
+    },
+    "struct.__pthread_mutex_s": {
+
+      "size": 40,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i32",
+          "offset": 0,
+          "size": 4
+        },
+        {
+
+          "idx": 1,
+          "type": "i32",
+          "offset": 4,
+          "size": 4
+        },
+        {
+
+          "idx": 2,
+          "type": "i32",
+          "offset": 8,
+          "size": 4
+        },
+        {
+
+          "idx": 3,
+          "type": "i32",
+          "offset": 12,
+          "size": 4
+        },
+        {
+
+          "idx": 4,
+          "type": "i32",
+          "offset": 16,
+          "size": 4
+        },
+        {
+
+          "idx": 5,
+          "type": "i16",
+          "offset": 20,
+          "size": 2
+        },
+        {
+
+          "idx": 6,
+          "type": "i16",
+          "offset": 22,
+          "size": 2
+        },
+        {
+
+          "idx": 7,
+          "type": "%struct.__pthread_internal_list = type { ptr, ptr }",
+          "offset": 24,
+          "size": 16
+        }
+      ]
+    },
+    "struct.__pthread_internal_list": {
+
+      "size": 16,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "ptr",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "ptr",
+          "offset": 8,
+          "size": 8
+        }
+      ]
+    },
+    "struct.stat": {
+
+      "size": 144,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i64",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "i64",
+          "offset": 8,
+          "size": 8
+        },
+        {
+
+          "idx": 2,
+          "type": "i64",
+          "offset": 16,
+          "size": 8
+        },
+        {
+
+          "idx": 3,
+          "type": "i32",
+          "offset": 24,
+          "size": 4
+        },
+        {
+
+          "idx": 4,
+          "type": "i32",
+          "offset": 28,
+          "size": 4
+        },
+        {
+
+          "idx": 5,
+          "type": "i32",
+          "offset": 32,
+          "size": 4
+        },
+        {
+
+          "idx": 6,
+          "type": "i32",
+          "offset": 36,
+          "size": 4
+        },
+        {
+
+          "idx": 7,
+          "type": "i64",
+          "offset": 40,
+          "size": 8
+        },
+        {
+
+          "idx": 8,
+          "type": "i64",
+          "offset": 48,
+          "size": 8
+        },
+        {
+
+          "idx": 9,
+          "type": "i64",
+          "offset": 56,
+          "size": 8
+        },
+        {
+
+          "idx": 10,
+          "type": "i64",
+          "offset": 64,
+          "size": 8
+        },
+        {
+
+          "idx": 11,
+          "type": "%struct.timespec = type { i64, i64 }",
+          "offset": 72,
+          "size": 16
+        },
+        {
+
+          "idx": 12,
+          "type": "%struct.timespec = type { i64, i64 }",
+          "offset": 88,
+          "size": 16
+        },
+        {
+
+          "idx": 13,
+          "type": "%struct.timespec = type { i64, i64 }",
+          "offset": 104,
+          "size": 16
+        },
+        {
+
+          "idx": 14,
+          "type": "[3 x i64]",
+          "offset": 120,
+          "size": 24
+        }
+      ]
+    },
+    "struct.timespec": {
+
+      "size": 16,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i64",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "i64",
+          "offset": 8,
+          "size": 8
+        }
+      ]
+    },
+    "struct.link_head": {
+
+      "size": 16,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "ptr",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "ptr",
+          "offset": 8,
+          "size": 8
+        }
+      ]
+    },
+    "union.pthread_attr_t": {
+
+      "size": 56,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i64",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "[48 x i8]",
+          "offset": 8,
+          "size": 48
+        }
+      ]
+    }
+  },
+  "variables": {
+
+    "global": [
+
+      {
+
+        "name": "file_lock",
+        "type": "union.pthread_mutex_t",
+        "size": 40,
+        "file": "/mnt/hgfs/graduate/LLVM/llvm-project-19/llvm-project/FieldAnalysis/test/phoenix/reverse_index/reverseindex-pthread.c",
+        "line": 102
+      }
+    ],
+    "heap_sites": [
+
+      {
+
+        "function": "insert_sorted",
+        "type": "struct.link_head",
+        "size": 16,
+        "file": "/mnt/hgfs/graduate/LLVM/llvm-project-19/llvm-project/FieldAnalysis/test/phoenix/reverse_index/reverseindex-pthread.c",
+        "line": 248
+      },
+      {
+
+        "function": "insert_sorted",
+        "type": "struct.link_head",
+        "size": 16,
+        "file": "/mnt/hgfs/graduate/LLVM/llvm-project-19/llvm-project/FieldAnalysis/test/phoenix/reverse_index/reverseindex-pthread.c",
+        "line": 264
+      },
+      {
+
+        "function": "insert_sorted",
+        "type": "struct.link_head",
+        "size": 16,
+        "file": "/mnt/hgfs/graduate/LLVM/llvm-project-19/llvm-project/FieldAnalysis/test/phoenix/reverse_index/reverseindex-pthread.c",
+        "line": 277
+      },
+      {
+
+        "function": "insert_sorted",
+        "type": "struct.link_head",
+        "size": 16,
+        "file": "/mnt/hgfs/graduate/LLVM/llvm-project-19/llvm-project/FieldAnalysis/test/phoenix/reverse_index/reverseindex-pthread.c",
+        "line": 290
+      }
+    ],
+    "stack_vars": [
+
+      {
+
+        "function": "recursedirs",
+        "type": "struct.stat",
+        "size": 144,
+        "file": "",
+        "line": 0
+      },
+      {
+
+        "function": "main",
+        "type": "union.pthread_attr_t",
+        "size": 56,
+        "file": "",
+        "line": 0
+      }
+    ]
+  }
+}

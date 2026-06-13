@@ -18,7 +18,7 @@
     "variants": {
         "toy": {
             "sources": ["toy.c"],
-            "opt_level": "O2",
+            "opt_level": "O1",
             "compile_flags": [],
             "link_flags": ["-lpthread"],
             "run_args": [],
@@ -27,7 +27,7 @@
         },
         "toy_manual": {
             "sources": ["toy_manual.c"],
-            "opt_level": "O2",
+            "opt_level": "O1",
             "compile_flags": [],
             "link_flags": ["-lpthread"],
             "run_args": [],

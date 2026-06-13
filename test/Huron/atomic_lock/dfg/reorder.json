@@ -1,0 +1,146 @@
+{
+  "class.std::thread": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "class.std::thread::id": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "class.std::tuple": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "class.std::tuple.3": [
+    [
+      [
+        0,
+        16
+      ]
+    ]
+  ],
+  "scalar.%\"class.std::thread\" = type { %\"class.std::thread::id\" }": [
+    [
+      [
+        0,
+        0
+      ]
+    ]
+  ],
+  "scalar.%\"struct.std::thread::_Invoker\" = type { %\"class.std::tuple.3\" }": [
+    [
+      [
+        0,
+        0
+      ]
+    ]
+  ],
+  "scalar.i8": [
+    [
+      [
+        0,
+        1
+      ]
+    ]
+  ],
+  "scalar.ptr": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "scalar.unknown._ZTVNSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvmEiEEEEEE": [
+    [
+      [
+        0,
+        0
+      ]
+    ]
+  ],
+  "scalar.unknown._ZTVNSt6thread6_StateE": [
+    [
+      [
+        0,
+        0
+      ]
+    ]
+  ],
+  "struct.std::_Head_base.2": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "struct.std::_Head_base.6": [
+    [
+      [
+        0,
+        4
+      ]
+    ]
+  ],
+  "struct.std::_Head_base.7": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "struct.std::__uniq_ptr_data": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "struct.std::atomic_flag": [
+    [
+      [
+        0,
+        1
+      ]
+    ]
+  ],
+  "struct.std::chrono::duration": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "struct.std::chrono::duration.0": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ],
+  "struct.timespec": [
+    [
+      [
+        0,
+        8
+      ]
+    ]
+  ]
+}

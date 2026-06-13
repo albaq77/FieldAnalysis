@@ -1,0 +1,1107 @@
+{
+
+  "test_endianess::0::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 64,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "swap_bytes::1::3_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 83,
+      "col": 4
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "swap_bytes::3::2_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 85,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "swap_bytes::3::6_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 86,
+      "col": 18
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "swap_bytes::3::10_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 85,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "swap_bytes::3::14_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 86,
+      "col": 18
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "swap_bytes::5::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 85,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "swap_bytes::5::4_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 86,
+      "col": 18
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_hist::0::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 108,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_hist::0::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 109,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_hist::0::2_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 110,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_hist::0::3_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 2,
+    "field_type": "long",
+    "field_size": 8,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 114,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "calc_hist::0::5_standalone": {
+
+    "struct": "",
+    "field": 2,
+    "offset": 16,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 2,
+        "field_offset": 16
+      }
+    ]
+  },
+  "calc_hist::1::0_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_hist::2::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 118,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_hist::2::5_gep": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 119,
+      "col": 17
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_hist::2::9_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 122,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_hist::2::12_gep": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 122,
+      "col": 18
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_hist::2::16_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 125,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_hist::2::19_gep": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 125,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::0::10_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 155,
+      "col": 8
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::1::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 156,
+      "col": 47
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::6::0_standalone": {
+
+    "struct": "struct.stat",
+    "field": 8,
+    "offset": 48,
+    "id": 7,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 167,
+      "col": 4
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.stat",
+        "field": 8,
+        "field_offset": 48
+      }
+    ]
+  },
+  "main::9::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 170,
+      "col": 30
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::11::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 64,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::11::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 177,
+      "col": 56
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::13::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 187,
+      "col": 52
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::21::3_standalone": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 218,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::21::6_gep": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 2,
+    "field_type": "long",
+    "field_size": 8,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 219,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "main::21::14_gep": {
+
+    "struct": "",
+    "field": 2,
+    "offset": 16,
+    "id": 3,
+    "field_type": "long",
+    "field_size": 8,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 226,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 2,
+        "field_offset": 16
+      }
+    ]
+  },
+  "main::21::16_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 8,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 229,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::23::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 8,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 233,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::24::1_standalone": {
+
+    "struct": "scalar.%struct.thread_arg_t = type { ptr, i64, i64, [256 x i32], [256 x i32], [256 x i32] }",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "%struct.thread_arg_t = type { ptr, i64, i64, [256 x i32], [256 x i32], [256 x i32] }",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%struct.thread_arg_t = type { ptr, i64, i64, [256 x i32], [256 x i32], [256 x i32] }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::25::1_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::25::2_gep": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 238,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::25::3_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 238,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::25::7_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::25::8_gep": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 239,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::25::9_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 239,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::25::13_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::25::14_gep": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 240,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::25::15_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 240,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::32::1_standalone": {
+
+    "struct": "scalar.%struct.thread_arg_t = type { ptr, i64, i64, [256 x i32], [256 x i32], [256 x i32] }",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "%struct.thread_arg_t = type { ptr, i64, i64, [256 x i32], [256 x i32], [256 x i32] }",
+    "field_size": 0,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 267,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%struct.thread_arg_t = type { ptr, i64, i64, [256 x i32], [256 x i32], [256 x i32] }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::32::3_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 267,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::32::5_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 268,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::32::7_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "hist-pthread.c",
+      "line": 269,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  }
+}

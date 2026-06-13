@@ -1,0 +1,29 @@
+{
+    "name": "atomic_lock",
+    "description": "Atomic spinlock benchmark - sequential mutex-based access pattern",
+    "source_dir": ".",
+    "output_dir": "dfg",
+    "default_variant": "serial",
+    "lto": false,
+    "multithread": true,
+    "simple_access": false,
+    "pre_compile": null,
+    "input_files": {},
+    "output_files": {},
+    "trace": {
+        "runtime_seconds": null,
+        "flush_threshold": null,
+        "sample_rate": null
+    },
+    "variants": {
+        "serial": {
+            "sources": ["sequential.cpp"],
+            "opt_level": "O0",
+            "compile_flags": ["-std=c++11"],
+            "link_flags": ["-lpthread"],
+            "run_args": [],
+            "multithread": true,
+            "pre_compile": null
+        }
+    }
+}

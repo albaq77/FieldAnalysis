@@ -1,0 +1,25 @@
+// DFG-heap
+digraph {
+  label="DFG-heap";
+  node [shape=record, style=filled];
+  8 [label="std::thread::_Invoker" = type { %"class.std::tuple.3" }", type="%"struct", size="0", fillcolor="lightblue"];
+  11 [label="std::tuple.3.field_0", type="%"struct.std::_Tuple_impl.4" = type { %"struct.std::_Tuple_impl.5", %"struct.std::_Head_base.7" }", size="16", fillcolor="lightblue"];
+  12 [label="i8", type="i8", size="1", fillcolor="lightblue"];
+  13 [label="std::_Head_base.7.field_0", type="ptr", size="8", fillcolor="lightblue"];
+  14 [label="std::_Head_base.6.field_0", type="i32", size="4", fillcolor="lightblue"];
+  11 -> 13 [label="18", weight="18", penwidth="6.0"];
+  8 -> 11 [label="17", weight="17", penwidth="6.0"];
+  11 -> 14 [label="17", weight="17", penwidth="6.0"];
+  11 -> 12 [label="17", weight="17", penwidth="6.0"];
+  12 -> 13 [label="13", weight="13", penwidth="4.9"];
+  8 -> 12 [label="12", weight="12", penwidth="4.6"];
+  8 -> 13 [label="12", weight="12", penwidth="4.6"];
+  8 -> 14 [label="11", weight="11", penwidth="4.3"];
+  12 -> 14 [label="11", weight="11", penwidth="4.3"];
+  13 -> 14 [label="10", weight="10", penwidth="4.0"];
+  11 -> 11 [label="10", weight="10", penwidth="4.0"];
+  12 -> 12 [label="5", weight="5", penwidth="2.5"];
+  13 -> 13 [label="5", weight="5", penwidth="2.5"];
+  8 -> 8 [label="4", weight="4", penwidth="2.2"];
+  14 -> 14 [label="3", weight="3", penwidth="1.9"];
+}

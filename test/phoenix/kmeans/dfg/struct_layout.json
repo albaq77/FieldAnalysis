@@ -1,0 +1,47 @@
+{
+
+  "structs": {
+
+    "union.pthread_attr_t": {
+
+      "size": 56,
+      "fields": [
+
+        {
+
+          "idx": 0,
+          "type": "i64",
+          "offset": 0,
+          "size": 8
+        },
+        {
+
+          "idx": 1,
+          "type": "[48 x i8]",
+          "offset": 8,
+          "size": 48
+        }
+      ]
+    }
+  },
+  "variables": {
+
+    "global": [
+
+    ],
+    "heap_sites": [
+
+    ],
+    "stack_vars": [
+
+      {
+
+        "function": "main",
+        "type": "union.pthread_attr_t",
+        "size": 56,
+        "file": "",
+        "line": 0
+      }
+    ]
+  }
+}

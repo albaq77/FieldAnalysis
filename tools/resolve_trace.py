@@ -20,86 +20,14 @@ Usage:
 """
 
 import argparse
-import json
 import os
 import re
 from pathlib import Path
 
-SCALAR_SIZES = {
-    "float": 4,
-    "double": 8,
-    "i8": 1,
-    "i16": 2,
-    "i32": 4,
-    "i64": 8,
-    "ptr": 8,
-    "unknown": 0,
-}
+from field_analysis_utils import FieldMetadataLoader
 
 
-def load_gep_field_map(path):
-    with open(path, "r") as f:
-        raw = json.load(f)
-    id_to_info = {}
-    for key, entry in raw.items():
-        fid = entry.get("id")
-        if fid is not None:
-            id_to_info[int(fid)] = entry
-    return id_to_info
-
-
-def load_struct_layout(path):
-    with open(path, "r") as f:
-        return json.load(f)
-
-
-def get_field_size(fid, id_to_info, struct_layout):
-    info = id_to_info.get(fid)
-    if not info:
-        return 0
-
-    struct_name = info.get("struct", "")
-
-    if struct_name.startswith("scalar."):
-        type_name = struct_name[len("scalar."):]
-        return SCALAR_SIZES.get(type_name, 0)
-
-    structs = struct_layout.get("structs", {})
-    st = structs.get(struct_name)
-    if not st:
-        return 0
-
-    field_idx = info.get("field", 0)
-    fields = st.get("fields", [])
-    if field_idx < len(fields):
-        return fields[field_idx].get("size", 0)
-
-    return 0
-
-
-def get_field_name(fid, id_to_info, struct_layout):
-    info = id_to_info.get(fid)
-    if not info:
-        return f"unknown_{fid}"
-
-    struct_name = info.get("struct", "unknown")
-    field_idx = info.get("field", 0)
-
-    if struct_name.startswith("scalar."):
-        return struct_name
-
-    structs = struct_layout.get("structs", {})
-    st = structs.get(struct_name)
-    if st:
-        fields = st.get("fields", [])
-        if field_idx < len(fields):
-            field_name = fields[field_idx].get("name", f"field_{field_idx}")
-            return f"{struct_name}.{field_name}"
-
-    return f"{struct_name}.field_{field_idx}"
-
-
-def resolve_trace_file(trace_path, id_to_info, struct_layout, output_path, skip_timestamps=True):
+def resolve_trace_file(trace_path, gep_map, struct_layout, loader, output_path):
     line_re = re.compile(
         r"\[?(\d+)\]?\s+(\d+)\s+([RWM])\s+(?:0x[0-9a-fA-F]+)\s+([SHG])"
     )
@@ -116,8 +44,8 @@ def resolve_trace_file(trace_path, id_to_info, struct_layout, output_path, skip_
             rw = m.group(3)
             region = m.group(4)
 
-            name = get_field_name(fid, id_to_info, struct_layout)
-            size = get_field_size(fid, id_to_info, struct_layout)
+            name = loader.get_field_name(fid, gep_map, struct_layout)
+            size = loader.get_field_size(fid, gep_map, struct_layout)
 
             fout.write(f"{name}  {rw}  {size}  {region}\n")
 
@@ -146,6 +74,10 @@ def main():
         "--keep-timestamps", action="store_true",
         help="Keep [n] timestamps in output"
     )
+    parser.add_argument(
+        "--strict", action="store_true",
+        help="Raise exceptions on missing files instead of warnings"
+    )
     args = parser.parse_args()
 
     base = Path(args.path)
@@ -157,17 +89,19 @@ def main():
     if not layout_path.is_absolute():
         layout_path = base / layout_path
 
+    loader = FieldMetadataLoader(strict=args.strict)
+
     if not gep_map_path.exists():
         print(f"[ERROR] gep_field_map.json not found: {gep_map_path}")
         return 1
     if not layout_path.exists():
         print(f"[WARN] struct_layout.json not found: {layout_path}")
 
-    id_to_info = load_gep_field_map(gep_map_path)
+    gep_map = loader.load_gep_field_map(str(gep_map_path))
 
     struct_layout = {}
     if layout_path.exists():
-        struct_layout = load_struct_layout(layout_path)
+        struct_layout = loader.load_struct_layout(str(layout_path))
 
     trace_files = sorted(base.glob("access_trace.*.txt"))
     if not trace_files:
@@ -181,7 +115,7 @@ def main():
         suffix = tf.name[len("access_trace."):]
         output_name = f"variable_trace.{suffix}"
         output_path = output_base / output_name
-        resolve_trace_file(tf, id_to_info, struct_layout, output_path, not args.keep_timestamps)
+        resolve_trace_file(tf, gep_map, struct_layout, loader, output_path)
         print(f"[OK] {tf.name} -> {output_path}")
 
     return 0

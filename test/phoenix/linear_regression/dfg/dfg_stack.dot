@@ -1,0 +1,8 @@
+// DFG-stack
+digraph {
+  label="DFG-stack";
+  node [shape=record, style=filled];
+  8 [label="i8", type="i8", size="1", fillcolor="lightblue"];
+  9 [label="any pointer", type="any pointer", size="0", fillcolor="lightblue"];
+  8 -> 9 [label="1", weight="1", penwidth="1.3"];
+}

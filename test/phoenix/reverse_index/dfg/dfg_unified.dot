@@ -1,0 +1,7 @@
+// DFG-unified
+digraph {
+  label="DFG-unified";
+  node [shape=record, style=filled];
+  0 [label="any pointer", type="any pointer", size="0", fillcolor="lightgreen"];
+  0 -> 0 [label="1", weight="1", penwidth="1.3"];
+}

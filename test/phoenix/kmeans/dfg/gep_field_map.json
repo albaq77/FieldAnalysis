@@ -1,0 +1,2787 @@
+{
+
+  "parse_args::0::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 91,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::0::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 92,
+      "col": 14
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::0::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 93,
+      "col": 8
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::0::3_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 94,
+      "col": 14
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::5::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 112,
+      "col": 106
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::6::1_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::6::4_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::8::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 117,
+      "col": 8
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::10::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 123,
+      "col": 40
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::10::3_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 124,
+      "col": 38
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "parse_args::10::5_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 125,
+      "col": 44
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "generate_points::1::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 137,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "generate_points::3::0_standalone": {
+
+    "struct": "scalar.ptr",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "generate_points::4::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 139,
+      "col": 31
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "generate_points::4::5_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 139,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "generate_points::4::8_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 137,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "add_to_sum::0::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 166,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "add_to_sum::1::1_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 168,
+      "col": 17
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "add_to_sum::1::3_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 168,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "add_to_sum::1::8_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 166,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::0::0_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 4,
+    "id": 4,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 182,
+      "col": 37
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 4
+      }
+    ]
+  },
+  "find_clusters::1::0_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 181,
+      "col": 27
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::1::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::1::3_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::1::4_direct": {
+
+    "struct": "scalar.ptr",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::1::5_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::1::8_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::2::2_standalone": {
+
+    "struct": "scalar.ptr.points",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 186,
+      "col": 30
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.points",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::5::3_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 154,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::5::6_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 7,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 154,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::5::7_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 154,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::5::10_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 7,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 154,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::8::2_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 154,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::8::4_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 154,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::9::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::11::3_standalone": {
+
+    "struct": "scalar.ptr.means",
+    "field": 0,
+    "offset": 0,
+    "id": 8,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 190,
+      "col": 44
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.means",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::13::3_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 154,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::13::6_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 7,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 154,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::13::7_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 154,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::13::10_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 7,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 154,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::16::2_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 154,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::16::4_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 154,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::18::1_standalone": {
+
+    "struct": "scalar.i32.clusters",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 198,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.clusters",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::19::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 201,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "find_clusters::19::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::0::0_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 4,
+    "id": 4,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 217,
+      "col": 37
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 4
+      }
+    ]
+  },
+  "calc_means::0::2_standalone": {
+
+    "struct": "",
+    "field": 2,
+    "offset": 8,
+    "id": 10,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 219,
+      "col": 17
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 2,
+        "field_offset": 8
+      }
+    ]
+  },
+  "calc_means::1::0_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 216,
+      "col": 27
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::1::4_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 223,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::2::5_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 226,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::3::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::4::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 235,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::5::2_standalone": {
+
+    "struct": "scalar.ptr.means",
+    "field": 0,
+    "offset": 0,
+    "id": 8,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.means",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::6::4_standalone": {
+
+    "struct": "scalar.i32.clusters",
+    "field": 0,
+    "offset": 0,
+    "id": 9,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 228,
+      "col": 14
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.clusters",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::7::0_standalone": {
+
+    "struct": "scalar.ptr.points",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 230,
+      "col": 29
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.points",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::7::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 166,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::8::1_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 168,
+      "col": 17
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::8::3_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 168,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::8::8_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 166,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::9::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 226,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::13::0_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 240,
+      "col": 27
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::13::4_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 240,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "calc_means::13::6_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 235,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::0::3_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 260,
+      "col": 44
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::0::7_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 260,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::1::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::2::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 263,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::2::3_standalone": {
+
+    "struct": "scalar.ptr.points",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 263,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.points",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::3::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 266,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::4::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 137,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::6::0_standalone": {
+
+    "struct": "scalar.ptr.points",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.points",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::7::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 139,
+      "col": 31
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::7::5_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 139,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::7::8_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 137,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::9::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 268,
+      "col": 43
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::9::4_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 268,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::10::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::11::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 271,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::11::3_standalone": {
+
+    "struct": "scalar.ptr.means",
+    "field": 0,
+    "offset": 0,
+    "id": 8,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 271,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.means",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::12::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 274,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::13::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 137,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::15::0_standalone": {
+
+    "struct": "scalar.ptr.means",
+    "field": 0,
+    "offset": 0,
+    "id": 8,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.means",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::16::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 139,
+      "col": 31
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::16::5_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 139,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::16::8_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 137,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::18::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 276,
+      "col": 43
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::18::4_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 276,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::22::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 286,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::22::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 293,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::24::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 293,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::25::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 349,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::26::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 295,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::26::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 297,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::30::0_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 304,
+      "col": 25
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::30::1_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 4,
+    "id": 4,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 312,
+      "col": 29
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 4
+      }
+    ]
+  },
+  "main::32::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 310,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::34::3_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 302,
+      "col": 27
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::38::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 317,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::39::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 320,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::43::0_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 326,
+      "col": 25
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::43::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 327,
+      "col": 35
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::43::5_standalone": {
+
+    "struct": "",
+    "field": 2,
+    "offset": 8,
+    "id": 10,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 327,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 2,
+        "field_offset": 8
+      }
+    ]
+  },
+  "main::43::7_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 4,
+    "id": 4,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 335,
+      "col": 29
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 4
+      }
+    ]
+  },
+  "main::45::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 333,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::47::3_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 324,
+      "col": 27
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::51::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 340,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::52::1_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 350,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::52::2_standalone": {
+
+    "struct": "scalar.ptr.points",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 350,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.points",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::52::6_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 349,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::53::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 351,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::53::2_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 353,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::54::1_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 355,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::54::2_standalone": {
+
+    "struct": "scalar.ptr.means",
+    "field": 0,
+    "offset": 0,
+    "id": 8,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 355,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.means",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::54::6_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 353,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::55::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 357,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::55::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "kmeans-pthread.c",
+      "line": 358,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  }
+}

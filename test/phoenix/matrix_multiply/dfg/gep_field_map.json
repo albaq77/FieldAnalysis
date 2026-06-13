@@ -1,0 +1,411 @@
+{
+
+  "matrix_mult::1::0_standalone": {
+
+    "struct": "",
+    "field": 3,
+    "offset": 24,
+    "id": 0,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 77,
+      "col": 28
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 3,
+        "field_offset": 24
+      }
+    ]
+  },
+  "matrix_mult::3::0_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 8,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 86,
+      "col": 30
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "matrix_mult::3::1_standalone": {
+
+    "struct": "",
+    "field": 2,
+    "offset": 16,
+    "id": 2,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 84,
+      "col": 25
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 2,
+        "field_offset": 16
+      }
+    ]
+  },
+  "matrix_mult::10::0_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 85,
+      "col": 30
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "matrix_mult::10::4_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 85,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "matrix_mult::10::10_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 86,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "matrix_mult::10::16_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 84,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::0::7_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 113,
+      "col": 8
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::1::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 115,
+      "col": 46
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::28::1_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 81,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::28::2_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::30::1_standalone": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 82,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::32::1_gep": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 85,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::32::4_gep": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 86,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::32::6_gep": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 84,
+      "col": 65
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::33::1_gep": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 85,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::33::4_gep": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "matrix_mult_serial.c",
+      "line": 86,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  }
+}

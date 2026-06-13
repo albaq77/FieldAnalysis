@@ -1,0 +1,4251 @@
+{
+
+  "cleanup::0::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 108,
+      "col": 27
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "cleanup::1::1_direct": {
+
+    "struct": "flist",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 114,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "cleanup::1::3_standalone": {
+
+    "struct": "flist",
+    "field": 1,
+    "offset": 8,
+    "id": 2,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 115,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "cleanup::1::6_standalone": {
+
+    "struct": "flist",
+    "field": 4,
+    "offset": 32,
+    "id": 3,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 118,
+      "col": 28
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 4,
+        "field_offset": 32
+      }
+    ]
+  },
+  "addtolist::0::0_standalone": {
+
+    "struct": "flist",
+    "field": 4,
+    "offset": 32,
+    "id": 3,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 128,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 4,
+        "field_offset": 32
+      }
+    ]
+  },
+  "addtolist::0::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 130,
+      "col": 8
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "addtolist::0::5_standalone": {
+
+    "struct": "scalar.i8.currfile",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 130,
+      "col": 8
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8.currfile",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "addtolist::0::7_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "addtolist::0::8_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "addtolist::0::9_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 139,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "addtolist::0::11_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 139,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "recursedirs::3::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 158,
+      "col": 28
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "recursedirs::4::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "recursedirs::5::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "recursedirs::6::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "recursedirs::13::1_standalone": {
+
+    "struct": "flist",
+    "field": 2,
+    "offset": 16,
+    "id": 7,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 197,
+      "col": 31
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 2,
+        "field_offset": 16
+      }
+    ]
+  },
+  "recursedirs::17::0_standalone": {
+
+    "struct": "struct.stat",
+    "field": 8,
+    "offset": 48,
+    "id": 8,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 183,
+      "col": 35
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.stat",
+        "field": 8,
+        "field_offset": 48
+      }
+    ]
+  },
+  "recursedirs::17::2_standalone": {
+
+    "struct": "flist",
+    "field": 3,
+    "offset": 24,
+    "id": 9,
+    "field_type": "long",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 183,
+      "col": 27
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 3,
+        "field_offset": 24
+      }
+    ]
+  },
+  "recursedirs::19::3_standalone": {
+
+    "struct": "flist",
+    "field": 1,
+    "offset": 8,
+    "id": 2,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 190,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "recursedirs::21::0_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 191,
+      "col": 29
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "recursedirs::21::3_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 191,
+      "col": 29
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "recursedirs::21::6_direct": {
+
+    "struct": "flist",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 193,
+      "col": 30
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "recursedirs::21::8_standalone": {
+
+    "struct": "flist",
+    "field": 4,
+    "offset": 32,
+    "id": 3,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 128,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 4,
+        "field_offset": 32
+      }
+    ]
+  },
+  "recursedirs::21::10_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 130,
+      "col": 8
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "recursedirs::21::13_standalone": {
+
+    "struct": "scalar.i8.currfile",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 130,
+      "col": 8
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8.currfile",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "recursedirs::21::15_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "recursedirs::21::16_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "recursedirs::21::17_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 139,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "recursedirs::21::19_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 139,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "dobsearch::1::5_standalone": {
+
+    "struct": "struct.link_head",
+    "field": 0,
+    "offset": 0,
+    "id": 10,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 217,
+      "col": 37
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.link_head",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::0::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 236,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::0::2_standalone": {
+
+    "struct": "scalar.i32.use_len",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 236,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.use_len",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::0::4_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 237,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::0::5_standalone": {
+
+    "struct": "scalar.i32.length",
+    "field": 0,
+    "offset": 0,
+    "id": 12,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 237,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.length",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::0::7_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 238,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::0::8_standalone": {
+
+    "struct": "scalar.ptr.links",
+    "field": 0,
+    "offset": 0,
+    "id": 13,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 238,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.links",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::1::5_standalone": {
+
+    "struct": "struct.link_head",
+    "field": 0,
+    "offset": 0,
+    "id": 10,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 217,
+      "col": 37
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.link_head",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::4::1_standalone": {
+
+    "struct": "struct.link_head",
+    "field": 0,
+    "offset": 0,
+    "id": 10,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 246,
+      "col": 30
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.link_head",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::6::0_standalone": {
+
+    "struct": "link_elem",
+    "field": 1,
+    "offset": 8,
+    "id": 14,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 249,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "link_elem",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "insert_sorted::6::2_direct": {
+
+    "struct": "link_elem",
+    "field": 0,
+    "offset": 0,
+    "id": 15,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 250,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "link_elem",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::6::4_gep": {
+
+    "struct": "struct.link_head",
+    "field": 1,
+    "offset": 8,
+    "id": 16,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 251,
+      "col": 30
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.link_head",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "insert_sorted::6::5_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 253,
+      "col": 8
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::6::6_standalone": {
+
+    "struct": "scalar.i32.use_len",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 253,
+      "col": 8
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.use_len",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::8::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 259,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::8::4_direct": {
+
+    "struct": "struct.link_head",
+    "field": 0,
+    "offset": 0,
+    "id": 10,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 260,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.link_head",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::10::0_standalone": {
+
+    "struct": "link_elem",
+    "field": 1,
+    "offset": 8,
+    "id": 14,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 265,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "link_elem",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "insert_sorted::10::2_direct": {
+
+    "struct": "link_elem",
+    "field": 0,
+    "offset": 0,
+    "id": 15,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 266,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "link_elem",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::10::3_standalone": {
+
+    "struct": "struct.link_head",
+    "field": 1,
+    "offset": 8,
+    "id": 16,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 267,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.link_head",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "insert_sorted::10::5_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 269,
+      "col": 6
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::10::6_standalone": {
+
+    "struct": "scalar.i32.use_len",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 269,
+      "col": 6
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.use_len",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::11::1_standalone": {
+
+    "struct": "struct.link_head",
+    "field": 0,
+    "offset": 0,
+    "id": 10,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 287,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.link_head",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::12::1_gep": {
+
+    "struct": "struct.link_head",
+    "field": 1,
+    "offset": 8,
+    "id": 16,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 275,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.link_head",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "insert_sorted::16::0_direct": {
+
+    "struct": "link_elem",
+    "field": 0,
+    "offset": 0,
+    "id": 15,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 278,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "link_elem",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::16::1_standalone": {
+
+    "struct": "link_elem",
+    "field": 1,
+    "offset": 8,
+    "id": 14,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 279,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "link_elem",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "insert_sorted::16::4_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 298,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::16::5_standalone": {
+
+    "struct": "scalar.i32.use_len",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.use_len",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::17::4_gep": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 286,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::19::0_standalone": {
+
+    "struct": "link_elem",
+    "field": 1,
+    "offset": 8,
+    "id": 14,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 291,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "link_elem",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "insert_sorted::19::2_direct": {
+
+    "struct": "link_elem",
+    "field": 0,
+    "offset": 0,
+    "id": 15,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 292,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "link_elem",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::19::4_gep": {
+
+    "struct": "struct.link_head",
+    "field": 1,
+    "offset": 8,
+    "id": 16,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 293,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.link_head",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "insert_sorted::19::5_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 295,
+      "col": 6
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::19::6_standalone": {
+
+    "struct": "scalar.i32.use_len",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 295,
+      "col": 6
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.use_len",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::21::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 300,
+      "col": 3
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::21::1_standalone": {
+
+    "struct": "scalar.i32.length",
+    "field": 0,
+    "offset": 0,
+    "id": 12,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 300,
+      "col": 3
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.length",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::21::5_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 302,
+      "col": 48
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::21::6_standalone": {
+
+    "struct": "scalar.ptr.links",
+    "field": 0,
+    "offset": 0,
+    "id": 13,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 302,
+      "col": 48
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.links",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::23::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 302,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "insert_sorted::23::1_standalone": {
+
+    "struct": "scalar.ptr.links",
+    "field": 0,
+    "offset": 0,
+    "id": 13,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 302,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.links",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::0::3_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 324,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::1::2_standalone": {
+
+    "struct": "flist",
+    "field": 4,
+    "offset": 32,
+    "id": 3,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 4,
+        "field_offset": 32
+      }
+    ]
+  },
+  "getlinks::1::4_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::1::6_standalone": {
+
+    "struct": "flist",
+    "field": 3,
+    "offset": 24,
+    "id": 9,
+    "field_type": "long",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 335,
+      "col": 25
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 3,
+        "field_offset": 24
+      }
+    ]
+  },
+  "getlinks::2::0_standalone": {
+
+    "struct": "flist",
+    "field": 1,
+    "offset": 8,
+    "id": 2,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 380,
+      "col": 57
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "getlinks::4::0_direct": {
+
+    "struct": "flist",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 340,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::4::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 340,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::5::0_direct": {
+
+    "struct": "flist",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 345,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::5::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 345,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::8::0_direct": {
+
+    "struct": "flist",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 352,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::8::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 352,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::11::0_direct": {
+
+    "struct": "flist",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 367,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::11::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 367,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::14::0_direct": {
+
+    "struct": "flist",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 376,
+      "col": 42
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::14::1_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 376,
+      "col": 36
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::15::1_direct": {
+
+    "struct": "flist",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 380,
+      "col": 41
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::15::2_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 380,
+      "col": 35
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::15::5_direct": {
+
+    "struct": "flist",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 383,
+      "col": 39
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::15::6_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 383,
+      "col": 33
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "getlinks::17::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 391,
+      "col": 14
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "merge_sections::0::0_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 17,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 410,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "merge_sections::1::0_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 4,
+    "id": 18,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 410,
+      "col": 48
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 4
+      }
+    ]
+  },
+  "merge_sections::1::1_standalone": {
+
+    "struct": "",
+    "field": 3,
+    "offset": 16,
+    "id": 19,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 412,
+      "col": 30
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 3,
+        "field_offset": 16
+      }
+    ]
+  },
+  "merge_sections::1::2_standalone": {
+
+    "struct": "",
+    "field": 4,
+    "offset": 24,
+    "id": 20,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 412,
+      "col": 55
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 4,
+        "field_offset": 24
+      }
+    ]
+  },
+  "merge_sections::1::3_standalone": {
+
+    "struct": "",
+    "field": 5,
+    "offset": 32,
+    "id": 21,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 5,
+        "field_offset": 32
+      }
+    ]
+  },
+  "merge_sections::3::5_standalone": {
+
+    "struct": "struct.link_head",
+    "field": 0,
+    "offset": 0,
+    "id": 10,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 412,
+      "col": 43
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.link_head",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "merge_sections::3::9_standalone": {
+
+    "struct": "struct.link_head",
+    "field": 0,
+    "offset": 0,
+    "id": 10,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 412,
+      "col": 68
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.link_head",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "merge_sections::4::2_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "merge_sections::7::0_standalone": {
+
+    "struct": "struct.link_head",
+    "field": 1,
+    "offset": 8,
+    "id": 16,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 424,
+      "col": 33
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.link_head",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "merge_sections::7::2_standalone": {
+
+    "struct": "link_elem",
+    "field": 1,
+    "offset": 8,
+    "id": 14,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 423,
+      "col": 25
+    },
+    "access_path": [
+
+      {
+
+        "struct": "link_elem",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "merge_sections::7::4_standalone": {
+
+    "struct": "struct.link_head",
+    "field": 1,
+    "offset": 8,
+    "id": 16,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 424,
+      "col": 54
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.link_head",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "merge_sections::8::3_standalone": {
+
+    "struct": "scalar.%struct.link_head = type { ptr, ptr }",
+    "field": 0,
+    "offset": 0,
+    "id": 22,
+    "field_type": "%struct.link_head = type { ptr, ptr }",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%struct.link_head = type { ptr, ptr }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "merge_sections::11::3_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 17,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 410,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "merge_sections::12::4_standalone": {
+
+    "struct": "",
+    "field": 5,
+    "offset": 32,
+    "id": 21,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 445,
+      "col": 18
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 5,
+        "field_offset": 32
+      }
+    ]
+  },
+  "merge_sections::12::7_standalone": {
+
+    "struct": "scalar.%struct.link_head = type { ptr, ptr }",
+    "field": 0,
+    "offset": 0,
+    "id": 22,
+    "field_type": "%struct.link_head = type { ptr, ptr }",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 444,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%struct.link_head = type { ptr, ptr }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "merge_sections::12::8_standalone": {
+
+    "struct": "",
+    "field": 3,
+    "offset": 16,
+    "id": 19,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 450,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 3,
+        "field_offset": 16
+      }
+    ]
+  },
+  "merge_sections::12::11_standalone": {
+
+    "struct": "scalar.%struct.link_head = type { ptr, ptr }",
+    "field": 0,
+    "offset": 0,
+    "id": 22,
+    "field_type": "%struct.link_head = type { ptr, ptr }",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 444,
+      "col": 36
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%struct.link_head = type { ptr, ptr }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "merge_sections::12::17_standalone": {
+
+    "struct": "scalar.%struct.link_head = type { ptr, ptr }",
+    "field": 0,
+    "offset": 0,
+    "id": 22,
+    "field_type": "%struct.link_head = type { ptr, ptr }",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 445,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%struct.link_head = type { ptr, ptr }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "merge_sections::12::18_standalone": {
+
+    "struct": "",
+    "field": 4,
+    "offset": 24,
+    "id": 20,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 451,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 4,
+        "field_offset": 24
+      }
+    ]
+  },
+  "merge_sections::12::21_standalone": {
+
+    "struct": "scalar.%struct.link_head = type { ptr, ptr }",
+    "field": 0,
+    "offset": 0,
+    "id": 22,
+    "field_type": "%struct.link_head = type { ptr, ptr }",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 445,
+      "col": 36
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.%struct.link_head = type { ptr, ptr }",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "merge_sections::12::22_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 4,
+    "id": 18,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 448,
+      "col": 51
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 4
+      }
+    ]
+  },
+  "merge_sections::12::28_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 17,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 448,
+      "col": 25
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "merge_sections::12::34_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 449,
+      "col": 4
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "merge_sections::12::35_standalone": {
+
+    "struct": "",
+    "field": 2,
+    "offset": 8,
+    "id": 23,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 449,
+      "col": 17
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 2,
+        "field_offset": 8
+      }
+    ]
+  },
+  "merge_sections::12::38_standalone": {
+
+    "struct": "scalar.i32.length",
+    "field": 0,
+    "offset": 0,
+    "id": 12,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 449,
+      "col": 4
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.length",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::1::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 467,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::1::1_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 467,
+      "col": 55
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::2::0_standalone": {
+
+    "struct": "scalar.i8",
+    "field": 0,
+    "offset": 0,
+    "id": 6,
+    "field_type": "i8",
+    "field_size": 1,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 470,
+      "col": 4
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i8",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::6::1_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::6::5_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 487,
+      "col": 60
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::6::6_direct": {
+
+    "struct": "scalar.int",
+    "field": 0,
+    "offset": 0,
+    "id": 5,
+    "field_type": "int",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 487,
+      "col": 71
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.int",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::6::8_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::10::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 504,
+      "col": 15
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::10::3_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 504,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::12::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 506,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::14::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 507,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::16::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 508,
+      "col": 11
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::21::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 511,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::21::1_standalone": {
+
+    "struct": "scalar.ptr.links",
+    "field": 0,
+    "offset": 0,
+    "id": 13,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 511,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.links",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::21::3_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 512,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::21::4_standalone": {
+
+    "struct": "scalar.i32.length",
+    "field": 0,
+    "offset": 0,
+    "id": 12,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 512,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.length",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::21::6_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 24,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 513,
+      "col": 7
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::23::1_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 24,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 517,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::29::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 572,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::29::1_direct": {
+
+    "struct": "scalar.ptr",
+    "field": 0,
+    "offset": 0,
+    "id": 25,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 572,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::33::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 535,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::33::4_standalone": {
+
+    "struct": "scalar.i32.use_len",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 535,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.use_len",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::33::6_direct": {
+
+    "struct": "",
+    "field": 0,
+    "offset": 0,
+    "id": 17,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 535,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::33::8_standalone": {
+
+    "struct": "scalar.i32.use_len",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 536,
+      "col": 28
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.use_len",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::33::10_standalone": {
+
+    "struct": "",
+    "field": 1,
+    "offset": 4,
+    "id": 18,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 536,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 1,
+        "field_offset": 4
+      }
+    ]
+  },
+  "main::33::12_standalone": {
+
+    "struct": "",
+    "field": 2,
+    "offset": 8,
+    "id": 23,
+    "field_type": "int",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 537,
+      "col": 33
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 2,
+        "field_offset": 8
+      }
+    ]
+  },
+  "main::33::15_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 538,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::33::16_standalone": {
+
+    "struct": "scalar.ptr.links",
+    "field": 0,
+    "offset": 0,
+    "id": 13,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 538,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.links",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::33::18_standalone": {
+
+    "struct": "",
+    "field": 3,
+    "offset": 16,
+    "id": 19,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 538,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 3,
+        "field_offset": 16
+      }
+    ]
+  },
+  "main::33::20_standalone": {
+
+    "struct": "scalar.ptr.links",
+    "field": 0,
+    "offset": 0,
+    "id": 13,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 539,
+      "col": 26
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.links",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::33::22_standalone": {
+
+    "struct": "",
+    "field": 4,
+    "offset": 24,
+    "id": 20,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 539,
+      "col": 24
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 4,
+        "field_offset": 24
+      }
+    ]
+  },
+  "main::33::28_standalone": {
+
+    "struct": "scalar.ptr",
+    "field": 0,
+    "offset": 0,
+    "id": 25,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 541,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::33::30_standalone": {
+
+    "struct": "",
+    "field": 5,
+    "offset": 32,
+    "id": 21,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 542,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "",
+        "field": 5,
+        "field_offset": 32
+      }
+    ]
+  },
+  "main::33::32_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 24,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 544,
+      "col": 6
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::35::2_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 24,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 551,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::37::0_direct": {
+
+    "struct": "scalar.i32",
+    "field": 0,
+    "offset": 0,
+    "id": 26,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 552,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::39::0_standalone": {
+
+    "struct": "scalar.ptr",
+    "field": 0,
+    "offset": 0,
+    "id": 25,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 554,
+      "col": 16
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::39::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 554,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::39::3_standalone": {
+
+    "struct": "scalar.ptr.links",
+    "field": 0,
+    "offset": 0,
+    "id": 13,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 554,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.links",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::39::5_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 555,
+      "col": 18
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::39::6_standalone": {
+
+    "struct": "scalar.i32.length",
+    "field": 0,
+    "offset": 0,
+    "id": 12,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 555,
+      "col": 18
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.length",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::39::8_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 555,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::39::9_standalone": {
+
+    "struct": "scalar.i32.use_len",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 555,
+      "col": 5
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.use_len",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::41::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 560,
+      "col": 31
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::41::3_standalone": {
+
+    "struct": "scalar.ptr.links",
+    "field": 0,
+    "offset": 0,
+    "id": 13,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 560,
+      "col": 31
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.links",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::41::6_standalone": {
+
+    "struct": "scalar.ptr.links",
+    "field": 0,
+    "offset": 0,
+    "id": 13,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 560,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr.links",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::41::8_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 561,
+      "col": 33
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::41::9_standalone": {
+
+    "struct": "scalar.i32.use_len",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 561,
+      "col": 33
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.use_len",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::41::11_standalone": {
+
+    "struct": "scalar.i32.use_len",
+    "field": 0,
+    "offset": 0,
+    "id": 11,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 561,
+      "col": 10
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.use_len",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::43::2_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 575,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::43::3_direct": {
+
+    "struct": "scalar.ptr",
+    "field": 0,
+    "offset": 0,
+    "id": 25,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 575,
+      "col": 19
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::43::4_standalone": {
+
+    "struct": "struct.link_head",
+    "field": 1,
+    "offset": 8,
+    "id": 16,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 575,
+      "col": 31
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.link_head",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "main::44::1_standalone": {
+
+    "struct": "link_elem",
+    "field": 1,
+    "offset": 8,
+    "id": 14,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 580,
+      "col": 33
+    },
+    "access_path": [
+
+      {
+
+        "struct": "link_elem",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "main::45::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 572,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::45::1_direct": {
+
+    "struct": "scalar.ptr",
+    "field": 0,
+    "offset": 0,
+    "id": 25,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 572,
+      "col": 20
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::47::0_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 586,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::47::1_direct": {
+
+    "struct": "scalar.ptr",
+    "field": 0,
+    "offset": 0,
+    "id": 25,
+    "field_type": "ptr",
+    "field_size": 8,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 586,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.ptr",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::47::3_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 589,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::47::6_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 591,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::47::8_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 592,
+      "col": 9
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::47::10_direct": {
+
+    "struct": "scalar.any pointer",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 108,
+      "col": 27
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.any pointer",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::48::1_direct": {
+
+    "struct": "flist",
+    "field": 0,
+    "offset": 0,
+    "id": 1,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 114,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::48::3_standalone": {
+
+    "struct": "flist",
+    "field": 1,
+    "offset": 8,
+    "id": 2,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 115,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "main::48::6_standalone": {
+
+    "struct": "flist",
+    "field": 4,
+    "offset": 32,
+    "id": 3,
+    "field_type": "any pointer",
+    "field_size": 0,
+    "source": {
+
+      "file": "reverseindex-pthread.c",
+      "line": 118,
+      "col": 28
+    },
+    "access_path": [
+
+      {
+
+        "struct": "flist",
+        "field": 4,
+        "field_offset": 32
+      }
+    ]
+  }
+}

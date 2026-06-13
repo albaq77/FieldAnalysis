@@ -1,0 +1,507 @@
+{
+
+  "compute::0::3_standalone": {
+
+    "struct": "struct.timespec",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.timespec",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "compute::0::5_standalone": {
+
+    "struct": "struct.timespec",
+    "field": 1,
+    "offset": 8,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.timespec",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "compute::0::7_standalone": {
+
+    "struct": "struct.timespec",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.timespec",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "compute::0::9_standalone": {
+
+    "struct": "struct.timespec",
+    "field": 1,
+    "offset": 8,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.timespec",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "compute::0::11_standalone": {
+
+    "struct": "struct.timespec",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 41,
+      "col": 12
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.timespec",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "compute::0::13_standalone": {
+
+    "struct": "struct.timespec",
+    "field": 0,
+    "offset": 0,
+    "id": 0,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 41,
+      "col": 27
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.timespec",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "compute::0::19_standalone": {
+
+    "struct": "struct.timespec",
+    "field": 0,
+    "offset": 8,
+    "id": 0,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 42,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.timespec",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "compute::0::21_standalone": {
+
+    "struct": "struct.timespec",
+    "field": 0,
+    "offset": 8,
+    "id": 0,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 42,
+      "col": 29
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.timespec",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "thread_func1::4::3_standalone": {
+
+    "struct": "scalar.i32.array",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 52,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.array",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "thread_func2::4::3_standalone": {
+
+    "struct": "scalar.i32.array",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 65,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.array",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "thread_func3::4::3_standalone": {
+
+    "struct": "scalar.i32.array",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 78,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.array",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "thread_func4::4::3_standalone": {
+
+    "struct": "scalar.i32.array",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 91,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.array",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "thread_func::4::4_standalone": {
+
+    "struct": "scalar.i32.offsets",
+    "field": 0,
+    "offset": 0,
+    "id": 3,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 108,
+      "col": 23
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.offsets",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "thread_func::4::8_standalone": {
+
+    "struct": "scalar.i32.array",
+    "field": 0,
+    "offset": 0,
+    "id": 2,
+    "field_type": "i32",
+    "field_size": 4,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 108,
+      "col": 13
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i32.array",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::0::15_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 126,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::0::17_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 127,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::0::19_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 128,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::0::21_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 129,
+      "col": 21
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::2::2_standalone": {
+
+    "struct": "scalar.i64",
+    "field": 0,
+    "offset": 0,
+    "id": 4,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "false_unrolling.c",
+      "line": 133,
+      "col": 22
+    },
+    "access_path": [
+
+      {
+
+        "struct": "scalar.i64",
+        "field": 0,
+        "field_offset": 0
+      }
+    ]
+  },
+  "main::4::2_constexpr": {
+
+    "struct": "struct.timespec",
+    "field": 1,
+    "offset": 8,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.timespec",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  },
+  "main::4::4_constexpr": {
+
+    "struct": "struct.timespec",
+    "field": 1,
+    "offset": 8,
+    "id": 1,
+    "field_type": "i64",
+    "field_size": 8,
+    "source": {
+
+      "file": "",
+      "line": 0,
+      "col": 0
+    },
+    "access_path": [
+
+      {
+
+        "struct": "struct.timespec",
+        "field": 1,
+        "field_offset": 8
+      }
+    ]
+  }
+}

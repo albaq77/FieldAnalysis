@@ -1,0 +1,10 @@
+// DFG-stack
+digraph {
+  label="DFG-stack";
+  node [shape=record, style=filled];
+  6 [label="points", type="ptr", size="8", fillcolor="lightblue"];
+  9 [label="clusters", type="i32", size="4", fillcolor="lightblue"];
+  6 -> 6 [label="2005655", weight="2005655", penwidth="6.0"];
+  6 -> 9 [label="11385", weight="11385", penwidth="6.0"];
+  9 -> 9 [label="5605", weight="5605", penwidth="6.0"];
+}
