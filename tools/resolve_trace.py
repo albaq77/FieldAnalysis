@@ -44,7 +44,7 @@ def resolve_trace_file(trace_path, gep_map, struct_layout, loader, output_path):
             rw = m.group(3)
             region = m.group(4)
 
-            name = loader.get_field_name(fid, gep_map, struct_layout)
+            name = loader.get_nested_field_name(fid, gep_map, struct_layout)
             size = loader.get_field_size(fid, gep_map, struct_layout)
 
             fout.write(f"{name}  {rw}  {size}  {region}\n")

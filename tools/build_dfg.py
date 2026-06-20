@@ -88,17 +88,25 @@ def parse_text_trace(files):
     return records
 
 
-def build_dfg_edges(records, window_size=10):
+def build_dfg_edges(records, window_size=10, dedup=True):
     edges = defaultdict(int)
     window = []
+    window_keys = set()
     for rec in records:
         fid = rec['fid']
-        for other_fid in window:
+        addr = rec.get('addr', 0)
+        key = (fid, addr) if dedup else fid
+        if dedup and key in window_keys:
+            continue
+        for item in window:
+            other_fid = item[0]
             a, b = (fid, other_fid) if fid < other_fid else (other_fid, fid)
             edges[(a, b)] += 1
-        window.append(fid)
+        window.append((fid, key))
+        window_keys.add(key)
         if len(window) > window_size:
-            window.pop(0)
+            old = window.pop(0)
+            window_keys.discard(old[1])
     return edges
 
 
@@ -118,14 +126,14 @@ def generate_dot(edges, fids, gep_map, struct_layout, loader, title="DFG", color
     ]
 
     for fid in sorted(fids):
-        fname, ftype, fsize = loader.resolve_field_name(fid, gep_map, struct_layout)
+        fname, ftype, fsize, fcat = loader.resolve_field_full(fid, gep_map, struct_layout)
         size_str = f"{fsize}" if fsize > 0 else "0"
         if color_by_region:
             region = fid_region.get(fid, "G")
             color = region_colors.get(region, "white")
         else:
             color = "lightblue"
-        lines.append(f'  {fid} [label="{fname}", type="{ftype}", size="{size_str}", fillcolor="{color}"];')
+        lines.append(f'  {fid} [label="{fname}", type="{ftype}", size="{size_str}", cat="{fcat}", fillcolor="{color}"];')
 
     for (a, b), w in sorted(edges.items(), key=lambda x: -x[1]):
         penwidth = max(1.0, min(6.0, 1.0 + w * 0.3))
@@ -135,7 +143,7 @@ def generate_dot(edges, fids, gep_map, struct_layout, loader, title="DFG", color
     return "\n".join(lines)
 
 
-def generate_four_dfgs(records, gep_map, struct_layout, loader, output_dir="."):
+def generate_four_dfgs(records, gep_map, struct_layout, loader, output_dir=".", window_size=10, dedup=True):
     region_records = {"G": [], "H": [], "S": []}
     for rec in records:
         region = rec['region']
@@ -144,7 +152,7 @@ def generate_four_dfgs(records, gep_map, struct_layout, loader, output_dir="."):
 
     for region, recs in region_records.items():
         name = {"G": "global", "H": "heap", "S": "stack"}[region]
-        region_edges = build_dfg_edges(recs)
+        region_edges = build_dfg_edges(recs, window_size=window_size, dedup=dedup)
         fids = set()
         for a, b in region_edges:
             fids.add(a)
@@ -153,7 +161,7 @@ def generate_four_dfgs(records, gep_map, struct_layout, loader, output_dir="."):
         with open(os.path.join(output_dir, f"dfg_{name}.dot"), "w") as f:
             f.write(dot)
 
-    unified_edges = build_dfg_edges(records)
+    unified_edges = build_dfg_edges(records, window_size=window_size, dedup=dedup)
     all_fids = set()
     for a, b in unified_edges:
         all_fids.add(a)
@@ -199,6 +207,8 @@ def main():
     parser.add_argument("--decode", default=None, help="Output decoded trace to this file")
     parser.add_argument("--summary", action="store_true", help="Print field access summary")
     parser.add_argument("--no-dfg", action="store_true", help="Skip DFG generation")
+    parser.add_argument("--window-size", type=int, default=10, help="Sliding window size for edge co-occurrence (default: 10)")
+    parser.add_argument("--no-dedup", action="store_true", help="Disable deduplication of same (fid,addr) within window")
     parser.add_argument("--strict", action="store_true", help="Raise exceptions on missing files instead of warnings")
     args = parser.parse_args()
 
@@ -237,7 +247,8 @@ def main():
         print(f"Decoded trace written to {args.decode}")
 
     if not args.no_dfg:
-        generate_four_dfgs(records, gep_map, struct_layout, loader)
+        generate_four_dfgs(records, gep_map, struct_layout, loader,
+                           window_size=args.window_size, dedup=not args.no_dedup)
         print("Generated 4 DFG DOT files in ./")
 
 
