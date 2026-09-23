@@ -1,5 +1,0 @@
-// DFG-unified
-digraph {
-  label="DFG-unified";
-  node [shape=record, style=filled];
-}

@@ -6,39 +6,40 @@ from test-case-specific variables. Users define test cases via
 JSON config files; this script handles the full pipeline.
 
 Usage:
-    python3 tools/fa_runner.py --config test/blackscholes/fa_test.json
-    python3 tools/fa_runner.py --config test/blackscholes/fa_test.json --variant pthreads
+    python3 tools/fa_runner.py --config test/mine-tools-test/blackscholes/fa_test.json
+    python3 tools/fa_runner.py --config test/mine-tools-test/blackscholes/fa_test.json --variant pthreads
     python3 tools/fa_runner.py --discover
     python3 tools/fa_runner.py --template test/my_project/fa_test.json
 
     # 1. 串行版（默认）
-    python3 tools/fa_runner.py --config test/blackscholes/fa_test.json
+    python3 tools/fa_runner.py --config test/mine-tools-test/blackscholes/fa_test.json
     
     # 2. 多线程版（4 线程）
-    python3 tools/fa_runner.py --config test/blackscholes/fa_test.json --variant pthreads --nthreads 4
+    python3 tools/fa_runner.py --config test/mine-tools-test/blackscholes/fa_test.json --variant pthreads --nthreads 4
     
     # 3. SIMD 向量化版
-    python3 tools/fa_runner.py --config test/blackscholes/fa_test.json --variant simd
+    python3 tools/fa_runner.py --config test/mine-tools-test/blackscholes/fa_test.json --variant simd
     
     # 4. 查看所有可用变体
-    python3 tools/fa_runner.py --config test/blackscholes/fa_test.json --list
+    python3 tools/fa_runner.py --config test/mine-tools-test/blackscholes/fa_test.json --list
     
     # 5. 自动发现所有测试
     python3 tools/fa_runner.py --discover
     
     # 6. 先试运行看命令（不实际执行）
-    python3 tools/fa_runner.py --config test/blackscholes/fa_test.json --dry-run
+    python3 tools/fa_runner.py --config test/mine-tools-test/blackscholes/fa_test.json --dry-run
     
     # 7. 带运行时控制
-    python3 tools/fa_runner.py --config test/blackscholes/fa_test.json --trace-seconds 30 --trace-sample 100
+    python3 tools/fa_runner.py --config test/mine-tools-test/blackscholes/fa_test.json --trace-flush 4096
     
     # 8. 只运行分析步骤（跳过编译）
-    python3 tools/fa_runner.py --config test/blackscholes/fa_test.json --steps 5-9
+    python3 tools/fa_runner.py --config test/mine-tools-test/blackscholes/fa_test.json --steps 6-7
 """
 
 import argparse
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -168,7 +169,7 @@ class TestConfig:
         self.description: str = self._raw.get("description", "")
         self.source_dir: str = self._raw["source_dir"]
         self.output_dir: str = self._raw.get("output_dir", "dfg")
-        self.default_variant: str = self._raw.get("default_variant", "serial")
+        self.default_variant: str = self._raw.get("default_variant", next(iter(self._raw["variants"])))
         self.variants: Dict[str, Dict] = self._raw["variants"]
         self.lto: bool = self._raw.get("lto", False)
         self.input_files: Dict[str, str] = self._raw.get("input_files", {})
@@ -185,12 +186,33 @@ class TestConfig:
             if field not in data:
                 raise ValueError(f"Missing required field: '{field}' in {self.config_path}")
 
+        if not isinstance(data["variants"], dict) or not data["variants"]:
+            raise ValueError("variants must be a nonempty object")
+        if data.get("default_variant", next(iter(data["variants"]))) not in data["variants"]:
+            raise ValueError("default_variant must name an existing variant")
+        functions = data.get("functions", [])
+        if not isinstance(functions, list) or any(not isinstance(n, str) or not n for n in functions):
+            raise ValueError("functions must be an array of nonempty IR names; omit or use [] for all")
+        trace = data.get("trace", {})
+        if not isinstance(trace, dict):
+            raise ValueError("trace must be an object")
+        for key in ("sample_rate", "flush_threshold", "runtime_seconds"):
+            value = trace.get(key)
+            if value is not None and (type(value) is not int or value <= 0):
+                raise ValueError(f"trace.{key} must be a positive integer or null")
+
         for vname, vdata in data["variants"].items():
             for field in self.REQUIRED_VARIANT_FIELDS:
                 if field not in vdata:
                     raise ValueError(
                         f"Variant '{vname}' missing required field: '{field}'"
                     )
+                if not isinstance(vdata[field], list) or any(not isinstance(v, str) for v in vdata[field]):
+                    raise ValueError(f"Variant '{vname}': {field} must be an array of strings")
+            if not vdata["sources"]:
+                raise ValueError(f"Variant '{vname}': sources must not be empty")
+            if any(re.fullmatch(r"-O(?:[0-3szg]|fast)", flag) for flag in vdata["compile_flags"]):
+                raise ValueError(f"Variant '{vname}': use opt_level instead of -O flags in compile_flags")
 
         return data
 
@@ -220,47 +242,7 @@ class TestConfig:
         ]
 
 
-TEMPLATE_CONFIG = {
-    "name": "my_test",
-    "description": "Description of the test program",
-    "source_dir": "src",
-    "output_dir": "dfg",
-    "default_variant": "serial",
-    "lto": False,
-    "multithread": False,
-    "simple_access": False,
-    "pre_compile": None,
-    "input_files": {
-        "input": "src/input.txt"
-    },
-    "output_files": {
-        "output": "output.txt"
-    },
-    "trace": {
-        "runtime_seconds": None,
-        "flush_threshold": None,
-        "sample_rate": None
-    },
-    "variants": {
-        "serial": {
-            "sources": ["main.c"],
-            "opt_level": "O2",
-            "compile_flags": [],
-            "link_flags": ["-lm"],
-            "run_args": [],
-            "multithread": False,
-            "pre_compile": None
-        },
-        "pthreads": {
-            "sources": ["main_pthreads.c"],
-            "compile_flags": ["-O0", "-DENABLE_THREADS"],
-            "link_flags": ["-lm", "-lpthread"],
-            "run_args": ["{nthreads}", "{input}", "{output}"],
-            "multithread": True,
-            "pre_compile": None
-        }
-    }
-}
+TEMPLATE_PATH = Path(__file__).with_name("fa_test_template.json")
 
 
 class FieldAnalysisRunner:
@@ -281,6 +263,8 @@ class FieldAnalysisRunner:
         self.variant = config.get_variant(self.variant_name)
 
         self.opt_level = args.opt_level or self.variant.get("opt_level", "O2")
+        if self.opt_level not in ("O0", "O1", "O2", "O3", "Os", "Oz", "Og", "Ofast"):
+            raise ValueError("invalid opt_level")
 
         self.dry_run = args.dry_run
         self.simple_access = args.simple_access or config._raw.get("simple_access", False)
@@ -292,7 +276,7 @@ class FieldAnalysisRunner:
 
         self.multithread = self.variant.get("multithread", config.multithread)
         self.nthreads = args.nthreads or 1
-        self.use_lto = self.variant.get("_lto", config.lto)
+        self.use_lto = self.variant.get("_lto", config.lto) or len(self.variant["sources"]) > 1
 
         self.is_cpp = any(
             s.endswith((".cpp", ".cc", ".cxx", ".C"))
@@ -300,6 +284,9 @@ class FieldAnalysisRunner:
         )
 
         self.trace_env = {}
+        for value in (args.trace_seconds, args.trace_flush, args.trace_sample):
+            if value is not None and value <= 0:
+                raise ValueError("trace options must be positive integers")
         trace_cfg = config.trace
         if args.trace_seconds is not None:
             self.trace_env["TRACE_RUNTIME_SECONDS"] = str(args.trace_seconds)
@@ -335,10 +322,14 @@ class FieldAnalysisRunner:
     def _parse_steps(self, steps_str: Optional[str]) -> range:
         if steps_str is None:
             return range(0, 10)
+        if not re.fullmatch(r"[0-9](?:-[0-9])?", steps_str):
+            raise ValueError("steps must be an integer or inclusive range within 0-9")
         parts = steps_str.split("-")
         if len(parts) == 1:
             s = int(parts[0])
             return range(s, s + 1)
+        if int(parts[0]) > int(parts[1]):
+            raise ValueError("steps range must be increasing")
         return range(int(parts[0]), int(parts[1]) + 1)
 
     def _resolve_run_args(self) -> List[str]:
@@ -378,7 +369,7 @@ class FieldAnalysisRunner:
         return Path(fa_build_dir) / f"FieldAnalysis{self._plugin_ext()}"
 
     def _pass_extra_flags(self) -> List[str]:
-        flags = []
+        flags = [f"-fa-function={name}" for name in self.config._raw.get("functions", [])]
         if self.simple_access:
             flags.append("--simple-access-record")
         return flags
@@ -394,7 +385,7 @@ class FieldAnalysisRunner:
 
     def step0_build_runtime(self):
         Log.step("Step 0: Build runtime library (libaffinity.a)")
-        cflags = ["-DFIELDANALYSIS_MULTITHREAD"] if self.multithread else []
+        cflags = ["-std=c11", "-pthread"]
         cmd = [
             os.environ.get("RUNTIME_CC", "cc"),
             "-c",
@@ -417,7 +408,7 @@ class FieldAnalysisRunner:
             return
         plugin = self._plugin_path()
         if plugin.exists():
-            Log.info(f"Plugin already exists: {plugin}")
+            run_cmd(["cmake", "--build", str(plugin.parent)], dry_run=self.dry_run)
             return
 
         Log.step("Step 0.5: Build FieldAnalysis plugin")
@@ -438,7 +429,7 @@ class FieldAnalysisRunner:
         if not self.dry_run and not plugin.exists():
             Log.error(f"Plugin build failed! Expected: {plugin}")
             Log.error("Check:")
-            Log.error("  1. LLVM 19 installed with RTTI enabled (LLVM_ENABLE_RTTI=ON)")
+            Log.error("  1. LLVM headers/build must match opt; RTTI/EH are inherited by AddLLVM")
             Log.error("  2. cmake -G Ninja -DLLVM_DIR=<path> configured correctly")
             Log.error("  3. Or use --build-mode in-tree and rebuild opt with FieldAnalysis")
             Log.error("  Install LLVM: https://releases.llvm.org/")
@@ -447,12 +438,14 @@ class FieldAnalysisRunner:
         Log.ok(f"Plugin: {plugin}")
 
     def _verify_plugin_exists(self):
+        if self.dry_run:
+            return
         plugin = self._plugin_path()
         if not plugin.exists():
             Log.error(f"FieldAnalysis plugin not found: {plugin}")
             Log.error("Build it first:")
             Log.error(f"  1. Set LLVM_DIR to your LLVM cmake directory")
-            Log.error(f"  2. Run: python3 tools/fa_runner.py --config ... --steps 0-0.5")
+            Log.error(f"  2. Run: python3 tools/fa_runner.py --config ... --steps 0")
             Log.error(f"  3. Or use --build-mode in-tree")
             raise RuntimeError("Plugin not built — instrumentation cannot be applied")
         from datetime import datetime
@@ -466,17 +459,19 @@ class FieldAnalysisRunner:
             return
         with open(ir_file, "r", encoding="utf-8", errors="replace") as f:
             content = f.read()
-        if "__record_field_access" not in content:
-            Log.warn("INSTRUMENTATION CHECK FAILED: no __record_field_access calls in IR!")
+        if not re.search(r"call void @(?:__record_field_access|__fa_record_access_v2)\(", content):
+            Log.warn("INSTRUMENTATION CHECK FAILED: no tracing calls in IR!")
             Log.warn("The pass may not have run. Possible causes:")
             Log.warn("  1. Plugin failed to load silently")
-            Log.warn("  2. The IR has no identifiable struct field accesses")
+            Log.warn("  2. The IR has no supported memory accesses")
             Log.warn("  3. --field-analysis-only was set (use steps 2-4 for in-tree)")
         else:
-            count = content.count("__record_field_access")
-            Log.ok(f"Instrumentation verified: {count} x __record_field_access calls")
+            count = len(re.findall(r"call void @(?:__record_field_access|__fa_record_access_v2)\(", content))
+            Log.ok(f"Instrumentation verified: {count} tracing calls")
 
     def _verify_json_output(self):
+        if self.dry_run:
+            return
         json_files = ["gep_field_map.json", "struct_layout.json"]
         missing = []
         for name in json_files:
@@ -510,12 +505,7 @@ class FieldAnalysisRunner:
                 Log.warn(f"  ls -la gep_field_map.json struct_layout.json")
 
     def _run_opt_in_output_dir(self, cmd_list):
-        old_cwd = os.getcwd()
-        try:
-            os.chdir(str(self.output_dir))
-            return run_cmd(cmd_list, dry_run=self.dry_run)
-        finally:
-            os.chdir(old_cwd)
+        return run_cmd(cmd_list, cwd=str(self.output_dir), dry_run=self.dry_run)
 
     # ---- Plugin mode: generate IR, run pass via opt, compile ----
 
@@ -545,7 +535,7 @@ class FieldAnalysisRunner:
             self.opt, f"-load-pass-plugin={plugin}",
             "-passes=field-analysis", "--field-analysis-only",
             "-S", str(ir_path), "-o", str(analyzed_path),
-        ]
+        ] + self._pass_extra_flags()
         self._run_opt_in_output_dir(cmd)
         self._verify_json_output()
 
@@ -570,7 +560,7 @@ class FieldAnalysisRunner:
         inst_path = self.output_dir / f"{self.config.name}_instrumented.ll"
         exe_path = self.output_dir / self.config.name
         ldflags = self.variant["link_flags"]
-        extra_ld = ["-lpthread"] if self.multithread else []
+        extra_ld = ["-pthread"]
         if self.is_cpp:
             extra_ld.append("-lstdc++")
         cmd = (
@@ -606,7 +596,7 @@ class FieldAnalysisRunner:
         cmd = [
             self.opt, "-passes=field-analysis", "--field-analysis-only",
             "-S", str(ir_path), "-o", str(analyzed_path),
-        ]
+        ] + self._pass_extra_flags()
         self._run_opt_in_output_dir(cmd)
         self._verify_json_output()
 
@@ -628,7 +618,7 @@ class FieldAnalysisRunner:
         inst_path = self.output_dir / f"{self.config.name}_instrumented.ll"
         exe_path = self.output_dir / self.config.name
         ldflags = self.variant["link_flags"]
-        extra_ld = ["-lpthread"] if self.multithread else []
+        extra_ld = ["-pthread"]
         if self.is_cpp:
             extra_ld.append("-lstdc++")
         cmd = (
@@ -645,7 +635,7 @@ class FieldAnalysisRunner:
         sources = [str(self.src_dir / s) for s in self.variant["sources"]]
         cflags = self.variant["compile_flags"]
         ldflags = self.variant["link_flags"]
-        extra_ld = ["-lpthread"] if self.multithread else []
+        extra_ld = ["-pthread"]
         if self.is_cpp:
             extra_ld.append("-lstdc++")
 
@@ -654,9 +644,9 @@ class FieldAnalysisRunner:
             obj_dir.mkdir(parents=True, exist_ok=True)
 
         obj_files = []
-        for src in sources:
+        for index, src in enumerate(sources):
             src_name = Path(src).stem
-            obj_path = obj_dir / f"{src_name}.o"
+            obj_path = obj_dir / f"{index}_{src_name}.o"
             Log.info(f"  {src} -> {obj_path}")
             cmd = (
                 [self.clang, "-g", f"-{self.opt_level}", "-flto=thin", "-c"]
@@ -673,6 +663,9 @@ class FieldAnalysisRunner:
 
         inst_ll = self.output_dir / f"{self.config.name}_instrumented.ll"
         pass_flags = self._pass_extra_flags()
+        if self.analysis_only:
+            inst_ll = self.output_dir / f"{self.config.name}_analyzed.ll"
+            pass_flags.append("--field-analysis-only")
 
         if self.build_mode == "plugin":
             plugin = self._plugin_path()
@@ -687,6 +680,8 @@ class FieldAnalysisRunner:
                 "-S", str(combined_ll), "-o", str(inst_ll),
             ] + pass_flags
         self._run_opt_in_output_dir(cmd)
+        if self.analysis_only:
+            return
         self._verify_instrumentation(inst_ll)
 
         exe_path = self.output_dir / self.config.name
@@ -706,8 +701,11 @@ class FieldAnalysisRunner:
         Log.info(f"  Args: {run_args}")
         if self.trace_env:
             Log.info(f"  Trace env: {self.trace_env}")
-        run_cmd(cmd, cwd=str(self.output_dir), env_extra=self.trace_env,
-                check=False, dry_run=self.dry_run)
+        trace_env = {**self.trace_env, "FA_TRACE_DIR": str(self.output_dir)}
+        if not self.dry_run and any(any(self.output_dir.glob(pattern)) for pattern in
+                                    ("trace.*.bin", "access_trace.*.txt", "trace_run.*.json", "affinity.bin")):
+            raise RuntimeError("Output contains a previous capture; use a fresh output_dir")
+        run_cmd(cmd, cwd=str(self.output_dir), env_extra=trace_env, dry_run=self.dry_run)
 
     def step55_resolve_trace(self):
         Log.step("Step 5.5: Resolve variable trace (resolve_trace.py)")
@@ -813,6 +811,10 @@ class FieldAnalysisRunner:
 
         if not self.dry_run:
             self.output_dir.mkdir(parents=True, exist_ok=True)
+            if 5 in self.steps and not self.analysis_only and any(
+                    any(self.output_dir.glob(pattern)) for pattern in
+                    ("trace.*.bin", "access_trace.*.txt", "trace_run.*.json", "affinity.bin")):
+                raise RuntimeError("Output contains a previous capture; use a fresh output_dir")
 
         self._run_pre_compile()
 
@@ -838,12 +840,13 @@ class FieldAnalysisRunner:
 
         if not self.analysis_only:
             steps[5] = self.step5_run_program
-        steps["5.5"] = self.step55_resolve_trace
-        steps["5.6"] = self.step56_build_address_map
-        steps[6] = self.step6_analyze
-        steps[7] = self.step7_build_dfg
-        # steps[8] = self.step8_render_dfg
-        # steps[9] = self.step9_display_results
+            steps["5.5"] = self.step55_resolve_trace
+            steps["5.6"] = self.step56_build_address_map
+            steps[6] = self.step6_analyze
+            steps[7] = self.step7_build_dfg
+            if self.args.steps is not None:
+                steps[8] = self.step8_render_dfg
+                steps[9] = self.step9_display_results
 
         step_order = [0, "0.5", 1, 2, 3, 4, 5, "5.5", "5.6", 6, 7, 8, 9]
 
@@ -856,10 +859,8 @@ class FieldAnalysisRunner:
             try:
                 steps[step_id]()
             except KeyboardInterrupt:
-                Log.warn("Interrupted by user (Ctrl+C)")
-                Log.info("Program trace data saved by runtime signal handler")
-                Log.info("Continuing to analysis steps...")
-                Log.info("")
+                Log.error("Interrupted; trace tail and completeness are not guaranteed")
+                raise SystemExit(130)
             except RuntimeError as e:
                 Log.error(f"Step {step_id} failed: {e}")
                 sys.exit(1)
@@ -891,9 +892,10 @@ def list_variants(config_path: Path):
 
 
 def create_template(output_path: Path):
+    if output_path.exists():
+        raise ValueError(f"Refusing to overwrite existing config: {output_path}")
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(TEMPLATE_CONFIG, f, indent=2, ensure_ascii=False)
+    shutil.copyfile(TEMPLATE_PATH, output_path)
     print(f"Template config created: {output_path}")
     print("Edit this file to match your test program, then run:")
     print(f"  python3 fa_runner.py --config {output_path}")
@@ -906,13 +908,13 @@ def main():
         epilog="""
 Examples (run from FieldAnalysis root directory):
   # Run blackscholes with default variant
-  python3 tools/fa_runner.py --config test/blackscholes/fa_test.json
+  python3 tools/fa_runner.py --config test/mine-tools-test/blackscholes/fa_test.json
 
   # Run pthreads variant
-  python3 tools/fa_runner.py --config test/blackscholes/fa_test.json --variant pthreads
+  python3 tools/fa_runner.py --config test/mine-tools-test/blackscholes/fa_test.json --variant pthreads
 
   # In-tree build mode
-  python3 tools/fa_runner.py --config test/blackscholes/fa_test.json --build-mode in-tree
+  python3 tools/fa_runner.py --config test/mine-tools-test/blackscholes/fa_test.json --build-mode in-tree
 
   # Discover all test cases
   python3 tools/fa_runner.py --discover
@@ -921,10 +923,10 @@ Examples (run from FieldAnalysis root directory):
   python3 tools/fa_runner.py --template test/my_project/fa_test.json
 
   # Dry run (print commands without executing)
-  python3 tools/fa_runner.py --config test/blackscholes/fa_test.json --dry-run
+  python3 tools/fa_runner.py --config test/mine-tools-test/blackscholes/fa_test.json --dry-run
 
   # Run only steps 5-7 (run + analyze + DFG)
-  python3 tools/fa_runner.py --config test/blackscholes/fa_test.json --steps 5-7
+  python3 tools/fa_runner.py --config test/mine-tools-test/blackscholes/fa_test.json --steps 5-7
 
 Step numbers (same structure for plugin & in-tree):
   0   Build runtime library (libaffinity.a)
@@ -947,7 +949,7 @@ Step numbers (same structure for plugin & in-tree):
                         help="Build mode (default: plugin)")
     parser.add_argument("--opt-level", "-O", type=str, help="Optimization level (default: O2)")
     parser.add_argument("--clang", type=str, help="Path to clang")
-    parser.add_argument("--opt", type=str, help="Path to opt (in-tree mode)")
+    parser.add_argument("--opt", type=str, help="Path to opt matching the plugin LLVM build")
     parser.add_argument("--llvm-link", type=str, help="Path to llvm-link (LTO mode)")
     parser.add_argument("--fa-dir", type=str, help="FieldAnalysis root directory")
     parser.add_argument("--fa-build-dir", type=str, help="FieldAnalysis plugin build directory")
@@ -969,7 +971,42 @@ Step numbers (same structure for plugin & in-tree):
     parser.add_argument("--template", "-t", type=str,
                         help="Create a template config file at the given path")
 
+    parser.add_argument("--logical-config", type=str, help="v3 object selection JSON (runs logical_runner)")
+    parser.add_argument("--source", action="append", help="source for logical mode; all sources are linked before instrumentation")
+    parser.add_argument("--llvm-build", type=str, help="LLVM build directory for logical mode")
+    parser.add_argument("--run-arg", action="append", default=[], help="logical mode program argument")
+    parser.add_argument("--logical-input", action="append", default=[], help="input copied into logical run directories")
+    parser.add_argument("--logical-output-dir", type=str, help="empty output directory for logical mode")
+    parser.add_argument("--compare-stdout", action="store_true", help="compare logical and baseline stdout")
+
     args = parser.parse_args()
+
+    if args.logical_config:
+        if args.config or not args.source or args.variant or args.steps:
+            parser.error("logical mode needs --source and cannot mix with legacy --config/--variant/--steps")
+        if (args.dry_run or args.analysis_only or args.simple_access or args.build_mode or
+                args.opt or args.llvm_link or args.llvm_dir or args.opt_level or args.nthreads or
+                args.trace_seconds is not None or args.trace_flush is not None or args.trace_sample is not None):
+            parser.error("v2 build/step/trace options do not apply to logical mode; use --llvm-build and tools/logical_runner.py --help")
+        from logical_runner import main as run_logical
+        logical_args = ["--logical-config", args.logical_config]
+        for source in args.source:
+            logical_args += ["--source", source]
+        for item in args.run_arg:
+            logical_args += ["--run-arg=" + item]
+        for item in args.logical_input:
+            logical_args += ["--input", item]
+        if args.logical_output_dir:
+            logical_args += ["--output-dir", args.logical_output_dir]
+        if args.compare_stdout:
+            logical_args.append("--compare-stdout")
+        if args.fa_build_dir:
+            logical_args += ["--build-dir", args.fa_build_dir]
+        if args.llvm_build:
+            logical_args += ["--llvm-build", args.llvm_build]
+        if args.clang:
+            logical_args += ["--clang", args.clang]
+        return run_logical(logical_args)
 
     if args.template:
         create_template(Path(args.template))

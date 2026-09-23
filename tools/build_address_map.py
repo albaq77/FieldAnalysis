@@ -6,8 +6,8 @@ Reads access_trace.*.txt and gep_field_map.json from a dfg/ directory,
 produces address_map.json mapping each unique runtime address to its
 struct type, field index, offset, type, size, region, and access count.
 
-Handles address reuse (heap free/realloc, stack frame reuse) by
-tracking field_id changes over time and splitting into time segments.
+Field-ID changes are heuristic segments, NOT allocation lifetimes.
+Uses the shared v1/v2 reader; v2 unknown memory regions remain U.
 
 Usage:
     python3 build_address_map.py <dfg_dir>
@@ -38,29 +38,11 @@ def load_gep_field_map(path):
 
 
 def collect_all_trace_lines(dfg_dir):
-    trace_pattern = re.compile(
-        r"\[(\d+)\]\s+(\d+)\s+([RWM])\s+0x([0-9a-fA-F]+)\s+([GHS])"
-    )
-    lines = []
-
-    for fname in sorted(os.listdir(dfg_dir)):
-        if not fname.startswith("access_trace.") or not fname.endswith(".txt"):
-            continue
-        fpath = os.path.join(dfg_dir, fname)
-        with open(fpath, "r") as f:
-            for line in f:
-                m = trace_pattern.match(line.strip())
-                if not m:
-                    continue
-                ts = int(m.group(1))
-                fid = int(m.group(2))
-                rw = m.group(3)
-                addr = "0x" + m.group(4)
-                region = m.group(5)
-                lines.append((ts, fid, rw, addr, region))
-
-    lines.sort(key=lambda x: x[0])
-    return lines
+    from trace_io import read_trace
+    from build_dfg import require_single_module
+    rows = read_trace(dfg_dir)
+    require_single_module(rows)
+    return [(r['ts'], r['fid'], r['mode'], hex(r['addr']), r['region']) for r in rows]
 
 
 def build_segmented_map(sorted_lines, id_to_info):
@@ -161,7 +143,7 @@ def main():
     print(f"  Total accesses:   {total_accesses}")
 
     if conflict_addrs > 0:
-        print(f"\n  Address reuse detected at {conflict_addrs} address(es):")
+        print(f"\n  Field-ID changes observed at {conflict_addrs} address(es):")
         for addr, state in addr_map.items():
             if state["has_conflict"]:
                 segs = state["segments"]

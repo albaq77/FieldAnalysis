@@ -1,0 +1,7 @@
+{
+  "objects": {
+    "1": {"base": "0x100000", "extent": 32, "strides": [16, 4], "fields": {"value": 0}},
+    "2": {"base": "0x200000", "extent": 32, "strides": [16, 4], "fields": {"value": 0}},
+    "3": {"base": "0x300000", "extent": 32, "strides": [16, 4], "fields": {"value": 0}}
+  }
+}

@@ -18,20 +18,16 @@ Usage:
     # 只执行某个套件
     python3 test/run_all_tests.py --suite phoenix
     python3 test/run_all_tests.py --suite Huron
-    python3 test/run_all_tests.py --suite spring_2020_tutorial
-    python3 test/run_all_tests.py --suite cache-effects
     python3 test/run_all_tests.py --suite locked
-    python3 test/run_all_tests.py --suite False_Sharing
-    python3 test/run_all_tests.py --suite dwarves
 
     # 只执行某个具体测试（按名称匹配）
     python3 test/run_all_tests.py --test histogram
-    python3 test/run_all_tests.py --test blackscholes
+    python3 test/run_all_tests.py --include-local --test blackscholes
 
     # 列出所有可用的测试
     python3 test/run_all_tests.py --list
 
-    # 只执行分析步骤（跳过编译和运行）
+    # 只生成 IR 和静态报告（跳过插桩和运行）
     python3 test/run_all_tests.py --analysis-only
 """
 
@@ -211,7 +207,7 @@ Examples:
   # Use in-tree build mode
   python3 test/run_all_tests.py --build-mode in-tree
 
-  # Analysis only (skip compile & run)
+  # Generate IR and static reports only (skip instrumentation & execution)
   python3 test/run_all_tests.py --analysis-only
 
   # Skip runtime execution (steps 0-4 only, no tracing)
@@ -231,8 +227,17 @@ Examples:
                         help="Build mode (default: plugin)")
     parser.add_argument("--dry-run", action="store_true",
                         help="Print commands without executing")
+    parser.add_argument("--regressions", action="store_true",
+                        help="Run v2/v3 correctness suites and Python unit tests")
+    parser.add_argument("--llvm-build", type=Path,
+                        help="LLVM build directory for correctness suites")
+    parser.add_argument("--include-local", action="store_true",
+                        help="Include mine-tools-test benchmarks")
+    parser.add_argument("--skip-external", action="store_true",
+                        help="Skip benchmarks whose configured input files are missing")
+    parser.add_argument("--steps", help="Forward fa_runner step range for benchmarks")
     parser.add_argument("--analysis-only", action="store_true",
-                        help="Only run analysis steps (skip compile & run)")
+                        help="Generate IR and static reports only (skip instrumentation & execution)")
     parser.add_argument("--skip-run", action="store_true",
                         help="Skip runtime execution (steps 0-4 only, no tracing)")
     parser.add_argument("--timeout", type=int, default=None,
@@ -259,7 +264,29 @@ Examples:
         print(f"  FA_DIR: {fa_dir}")
         sys.exit(1)
 
-    tests = discover_tests(script_dir)
+    if args.regressions:
+        if args.suite or args.test or args.analysis_only or args.skip_run or args.steps:
+            parser.error("--regressions cannot be combined with benchmark filters or steps")
+        commands = [[sys.executable, str(script_dir / folder / "run_tests.py")]
+                    for folder in ("trace_v2", "logical_trace")]
+        for command in commands:
+            if args.llvm_build:
+                command += ["--llvm-build", str(args.llvm_build.resolve())]
+            if args.fa_build_dir:
+                command += ["--build-dir", str(Path(args.fa_build_dir).resolve())]
+        commands += [[sys.executable, "-m", "unittest", "discover", "-s", str(folder), "-p", "test_*.py", "-v"]
+                     for folder in (script_dir, script_dir / "logical_trace")]
+        failed = 0
+        for command in commands:
+            print("$ " + " ".join(command), flush=True)
+            if not args.dry_run:
+                failed += subprocess.run(command, cwd=fa_dir).returncode != 0
+        return 1 if failed else 0
+
+    tests = discover_tests(script_dir, [] if args.include_local else None)
+    if args.skip_external:
+        tests = [test for test in tests if all((test.config_path.parent / path).exists()
+                 for path in test.data.get("input_files", {}).values())]
 
     if args.suite:
         tests = [t for t in tests if t.suite_name.lower() == args.suite.lower()]
@@ -292,6 +319,8 @@ Examples:
         return
 
     extra_args = []
+    if args.steps:
+        extra_args.extend(["--steps", args.steps])
     if args.clang:
         extra_args.extend(["--clang", args.clang])
     if args.opt:

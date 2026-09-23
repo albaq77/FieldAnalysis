@@ -18,5 +18,19 @@ __pycache__/
 .vs
 .clangd/
 .cache
-*.txt
 *.bin
+
+# Local planning/state documents are intentionally not maintained as project docs.
+*_PLAN.md
+*plan*.md
+/WORK_STATE.md
+/docs/worklog/
+
+# Generated captures, local review artifacts and patch scratch files.
+/artifacts/
+*.orig
+*.rej
+/.patch-probe
+/test/mine-tools-test/blackscholes/src/blackscholes
+/test/locked/src/hitm.txt
+/test/Agent CPU 端调用工具清单.pdf

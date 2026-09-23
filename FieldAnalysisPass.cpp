@@ -12,6 +12,8 @@
 #include "llvm/Support/CommandLine.h"
 #include "llvm/Support/raw_ostream.h"
 #include "llvm/Support/FileSystem.h"
+#include "llvm/Support/ErrorHandling.h"
+#include "llvm/Config/llvm-config.h"
 #include "llvm/Demangle/Demangle.h"
 #include "JsonWriter.h"
 #include <map>
@@ -21,6 +23,9 @@
 #include <set>
 
 using namespace llvm;
+
+static cl::list<std::string> SelectedFunctions(
+    "fa-function", cl::desc("Instrument this IR function (repeatable; omitted means all)"));
 
 static cl::opt<bool> FieldAnalysisOnly(
     "field-analysis-only", cl::init(false),
@@ -47,13 +52,6 @@ struct FieldInfo {
   std::string source_file;
   uint32_t source_line;
   uint32_t source_col;
-};
-
-struct InstrumentPoint {
-  Instruction *insert_before;
-  uint32_t field_id;
-  Value *gep_value;
-  int is_write;
 };
 
 struct GEPFieldAnalysisPass : PassInfoMixin<GEPFieldAnalysisPass> {
@@ -102,6 +100,8 @@ static Value *getGEPPointerOperand(Value *GEPV) {
 }
 
 static Type *getPointedElementType(Value *PtrOp) {
+  if (auto *GV = dyn_cast<GlobalVariable>(PtrOp))
+    return GV->getValueType();
   if (auto *GEP = dyn_cast<GetElementPtrInst>(PtrOp))
     return GEP->getResultElementType();
   if (auto *AI = dyn_cast<AllocaInst>(PtrOp))
@@ -126,6 +126,8 @@ static std::string getBasePointerName(Value *GEPV) {
   if (!GEPV)
     return "";
 
+  if (auto *GV = dyn_cast<GlobalVariable>(GEPV)) return GV->getName().str();
+  if (auto *AI = dyn_cast<AllocaInst>(GEPV)) return AI->getName().str();
   Value *BasePtr = nullptr;
   if (auto *GEP = dyn_cast<GetElementPtrInst>(GEPV))
     BasePtr = GEP->getPointerOperand();
@@ -633,7 +635,7 @@ static std::optional<FieldInfo> analyzeGEPTyped(
   for (unsigned i = 0; i < Indices.size(); ++i) {
     if (auto *ST = dyn_cast<StructType>(CurTy)) {
       HasStruct = true;
-      if (ST->isOpaque() || !ST->hasName())
+      if (ST->isOpaque() || !ST->hasName() || !ST->isSized() || ST->isScalableTy())
         return std::nullopt;
 
       auto *CI = dyn_cast<ConstantInt>(Indices[i]);
@@ -981,7 +983,7 @@ static void writeStructLayoutJson(Module &M, const DataLayout &DL,
   W.key("structs");
   W.beginObject();
   for (StructType *ST : M.getIdentifiedStructTypes()) {
-    if (ST->isOpaque() || !ST->hasName())
+    if (ST->isOpaque() || !ST->hasName() || !ST->isSized() || ST->isScalableTy())
       continue;
     W.key(ST->getName().str());
     W.beginObject();
@@ -1018,7 +1020,7 @@ static void writeStructLayoutJson(Module &M, const DataLayout &DL,
     if (!isa<StructType>(Ty))
       continue;
     auto *ST = cast<StructType>(Ty);
-    if (ST->isOpaque() || !ST->hasName())
+    if (ST->isOpaque() || !ST->hasName() || !ST->isSized() || ST->isScalableTy())
       continue;
     W.beginObject();
     W.key("name").value(GV.getName().str());
@@ -1079,7 +1081,7 @@ static void writeStructLayoutJson(Module &M, const DataLayout &DL,
             }
           }
         }
-        if (!HeapST)
+        if (!HeapST || !HeapST->isSized() || HeapST->isScalableTy())
           continue;
 
         W.beginObject();
@@ -1121,7 +1123,7 @@ static void writeStructLayoutJson(Module &M, const DataLayout &DL,
         if (!isa<StructType>(ATy))
           continue;
         auto *ST = cast<StructType>(ATy);
-        if (ST->isOpaque() || !ST->hasName())
+        if (ST->isOpaque() || !ST->hasName() || !ST->isSized() || ST->isScalableTy())
           continue;
 
         W.beginObject();
@@ -1155,242 +1157,30 @@ static void writeStructLayoutJson(Module &M, const DataLayout &DL,
   W.endObject();
 }
 
-PreservedAnalyses GEPFieldAnalysisPass::run(Module &M,
-                                            ModuleAnalysisManager &MAM) {
-  if (M.getNamedMetadata("fieldanalysis.instrumented"))
-    return PreservedAnalyses::all();
-
-  M.getOrInsertNamedMetadata("fieldanalysis.instrumented");
-
-  if (M.getIdentifiedStructTypes().empty())
-    return PreservedAnalyses::all();
-
-  const DataLayout &DL = M.getDataLayout();
-  std::map<std::pair<std::string, uint32_t>, uint32_t> FieldIdMap;
-  uint32_t NextFieldId = 0;
-
-  std::vector<GEPRecord> Records;
-  std::vector<InstrumentPoint> InstrumentPoints;
-  std::set<std::pair<Instruction*, uint32_t>> InstrumentedPairs;
-
-  for (Function &F : M) {
-    if (F.isDeclaration())
-      continue;
-    std::set<Value *> ProcessedGEPs;
-    unsigned BBIdx = 0;
-
-    for (BasicBlock &BB : F) {
-      unsigned InstIdx = 0;
-
-      for (Instruction &I : BB) {
-        if (auto *CB = dyn_cast<CallBase>(&I)) {
-          if (auto *CF = CB->getCalledFunction()) {
-            StringRef FName = CF->getName();
-            if (FName == "__record_field_access_full" ||
-                FName == "__record_field_access") {
-              ++InstIdx;
-              continue;
-            }
-          }
-        }
-
-        if (isa<PHINode>(&I)) {
-          ++InstIdx;
-          continue;
-        }
-
-        MDNode *TBAA = I.getMetadata(LLVMContext::MD_tbaa);
-        bool HasTBAA = (TBAA != nullptr);
-        bool HitGEP = false;
-
-        for (Use &U : I.operands()) {
-          Value *V = U.get();
-          if (!isGEPValue(V))
-            continue;
-
-          HitGEP = true;
-
-          if (ProcessedGEPs.count(V))
-            continue;
-
-          Instruction *UserInst = HasTBAA ? &I : nullptr;
-          auto Info =
-              analyzeGEP(V, UserInst, DL, M, FieldIdMap, NextFieldId);
-          if (!Info) {
-            Info = createScalarFieldInfo(V, UserInst, DL,
-                                         FieldIdMap, NextFieldId);
-            if (!Info)
-              continue;
-          }
-
-          ProcessedGEPs.insert(V);
-          uint32_t Fid = Info->field_id;
-
-          std::string MapKey;
-          if (isa<GetElementPtrInst>(V)) {
-            MapKey = (Twine(F.getName()) + "::" + Twine(BBIdx) + "::" +
-                      Twine(InstIdx) + "_gep")
-                         .str();
-          } else {
-            MapKey = (Twine(F.getName()) + "::" + Twine(BBIdx) + "::" +
-                      Twine(InstIdx) + "_constexpr")
-                         .str();
-          }
-
-          Records.push_back({MapKey, std::move(*Info)});
-
-          int rw_flag = isa<StoreInst>(&I) ? 1 :
-                        isa<LoadInst>(&I) ? 0 :
-                        isa<MemCpyInst>(&I) || isa<MemSetInst>(&I) ? 2 : 0;
-          auto IPKey = std::make_pair(&I, Fid);
-          if (InstrumentedPairs.count(IPKey))
-            continue;
-          InstrumentedPairs.insert(IPKey);
-          InstrumentPoints.push_back({&I, Fid, V, rw_flag});
-        }
-
-        if (!HitGEP && isa<GetElementPtrInst>(&I)) {
-          auto *GEP = cast<GetElementPtrInst>(&I);
-          if (ProcessedGEPs.count(GEP)) {
-            ++InstIdx;
-            continue;
-          }
-
-          auto Info =
-              analyzeGEP(GEP, GEP, DL, M, FieldIdMap, NextFieldId);
-          if (!Info) {
-            Info = createScalarFieldInfo(GEP, GEP, DL,
-                                         FieldIdMap, NextFieldId);
-          }
-          if (Info) {
-            ProcessedGEPs.insert(GEP);
-            uint32_t Fid = Info->field_id;
-
-            std::string MapKey = (Twine(F.getName()) + "::" + Twine(BBIdx) +
-                                  "::" + Twine(InstIdx) + "_standalone")
-                                     .str();
-
-            Records.push_back({MapKey, std::move(*Info)});
-
-            int default_rw = 0;
-            for (User *U : GEP->users()) {
-              if (isa<StoreInst>(U)) { default_rw = 1; break; }
-              if (isa<MemCpyInst>(U)) { default_rw = 2; break; }
-            }
-            Instruction *ActualInsertAt = GEP->getNextNode() ? GEP->getNextNode() : GEP;
-            auto IPKey = std::make_pair(ActualInsertAt, Fid);
-            if (InstrumentedPairs.count(IPKey)) {
-              ++InstIdx;
-              continue;
-            }
-            InstrumentedPairs.insert(IPKey);
-            InstrumentPoints.push_back({GEP, Fid, GEP, default_rw});
-          }
-        }
-
-        if (!HitGEP && HasTBAA) {
-          Value *PtrOp = nullptr;
-          if (auto *SI = dyn_cast<StoreInst>(&I))
-            PtrOp = SI->getPointerOperand();
-          else if (auto *LI = dyn_cast<LoadInst>(&I))
-            PtrOp = LI->getPointerOperand();
-
-          if (PtrOp && !isGEPValue(PtrOp)) {
-            auto Info = analyzeGEP(PtrOp, &I, DL, M, FieldIdMap, NextFieldId);
-            if (!Info) {
-              Info = createScalarFieldInfo(PtrOp, &I, DL,
-                                           FieldIdMap, NextFieldId);
-            }
-            if (Info) {
-              uint32_t Fid = Info->field_id;
-
-              std::string MapKey = (Twine(F.getName()) + "::" + Twine(BBIdx) +
-                                    "::" + Twine(InstIdx) + "_direct")
-                                       .str();
-              Records.push_back({MapKey, std::move(*Info)});
-
-              int rw_flag = isa<StoreInst>(&I) ? 1 : 0;
-
-              Value *ArgGEP = SimpleAccessRecord ? nullptr : PtrOp;
-              auto IPKey = std::make_pair(&I, Fid);
-              if (InstrumentedPairs.count(IPKey)) {
-                ++InstIdx;
-                continue;
-              }
-              InstrumentedPairs.insert(IPKey);
-              InstrumentPoints.push_back({&I, Fid, ArgGEP, rw_flag});
-            }
-          }
-        }
-
-        ++InstIdx;
-      }
-      ++BBIdx;
-    }
-  }
-
-  {
-    std::error_code EC;
-    raw_fd_ostream OS("gep_field_map.json", EC, sys::fs::OF_Text);
-    if (!EC) {
-      writeFieldMapJson(Records, OS);
-    }
-  }
-
-  {
-    std::error_code EC2;
-    raw_fd_ostream LayoutOS("struct_layout.json", EC2, sys::fs::OF_Text);
-    if (!EC2) {
-      writeStructLayoutJson(M, DL, LayoutOS);
-    }
-  }
-
-  if (FieldAnalysisOnly) {
-    return PreservedAnalyses::all();
-  }
-
-  FunctionCallee RecordFn = M.getOrInsertFunction(
-      "__record_field_access",
-      FunctionType::get(Type::getVoidTy(M.getContext()),
-                        {Type::getInt32Ty(M.getContext())}, false));
-
-  FunctionCallee RecordFullFn = M.getOrInsertFunction(
-      "__record_field_access_full",
-      FunctionType::get(Type::getVoidTy(M.getContext()),
-                        {Type::getInt32Ty(M.getContext()),
-                         PointerType::getUnqual(M.getContext()),
-                         Type::getInt32Ty(M.getContext())},
-                        false));
-
-  for (auto &IP : InstrumentPoints) {
-    Instruction *InsertAt = IP.insert_before;
-    if (IP.gep_value && IP.gep_value == IP.insert_before) {
-      InsertAt = IP.insert_before->getNextNode();
-    }
-    IRBuilder<> Builder(InsertAt);
-    if (!InsertAt)
-      Builder.SetInsertPoint(IP.insert_before->getParent());
-    if (IP.gep_value && !SimpleAccessRecord) {
-      Builder.CreateCall(RecordFullFn,
-                         {ConstantInt::get(Type::getInt32Ty(M.getContext()), IP.field_id),
-                          IP.gep_value,
-                          ConstantInt::get(Type::getInt32Ty(M.getContext()), IP.is_write)});
-    } else {
-      Builder.CreateCall(
-          RecordFn,
-          {ConstantInt::get(Type::getInt32Ty(M.getContext()), IP.field_id)});
-    }
-  }
-
-  return PreservedAnalyses::none();
-}
+#include "FieldAnalysisInstrumentation.inc"
+#include "LogicalTraceInstrumentation.inc"
 
 PassPluginLibraryInfo getFieldAnalysisPluginInfo() {
   return {LLVM_PLUGIN_API_VERSION, "GEPFieldAnalysis", LLVM_VERSION_STRING,
           [](PassBuilder &PB) {
+#if LLVM_VERSION_MAJOR >= 22
+            PB.registerOptimizerLastEPCallback(
+                [](ModulePassManager &MPM, OptimizationLevel, ThinOrFullLTOPhase) {
+                  MPM.addPass(GEPFieldAnalysisPass());
+                });
+#else
+            PB.registerOptimizerLastEPCallback(
+                [](ModulePassManager &MPM, OptimizationLevel) {
+                  MPM.addPass(GEPFieldAnalysisPass());
+                });
+#endif
             PB.registerPipelineParsingCallback(
                 [](StringRef Name, ModulePassManager &MPM,
                    ArrayRef<PassBuilder::PipelineElement>) {
+                  if (Name == "logical-trace") {
+                    MPM.addPass(LogicalTracePass());
+                    return true;
+                  }
                   if (Name == "field-analysis") {
                     MPM.addPass(GEPFieldAnalysisPass());
                     return true;

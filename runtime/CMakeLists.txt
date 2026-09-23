@@ -1,2 +1,5 @@
+find_package(Threads REQUIRED)
 add_library(affinity STATIC libaffinity.c)
+set_target_properties(affinity PROPERTIES C_STANDARD 11 C_STANDARD_REQUIRED ON)
 target_include_directories(affinity PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(affinity PUBLIC Threads::Threads)

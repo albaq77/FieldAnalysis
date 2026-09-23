@@ -9,86 +9,26 @@ from collections import defaultdict
 
 from field_analysis_utils import FieldMetadataLoader
 
-RECORD_SIZE = 32
-
+from trace_io import collect_files, read_files
 
 def collect_trace_files(path):
-    if os.path.isfile(path):
-        return [path]
-    pattern = os.path.join(path, "trace.*.bin")
-    files = glob.glob(pattern)
-    if not files:
-        pattern = os.path.join(path, "access_trace.*.txt")
-        files = glob.glob(pattern)
-        if files:
-            return sorted(files)
-        print("No trace files found", file=sys.stderr)
-        sys.exit(1)
-
-    def extract_index(f):
-        m = re.search(r"(?:trace|access_trace)\.(\d+)\.(?:bin|txt)", os.path.basename(f))
-        return int(m.group(1)) if m else -1
-
-    files.sort(key=extract_index)
-    return files
-
+    return collect_files(path)
 
 def parse_binary_trace(files):
-    records = []
-    for f in files:
-        if not f.endswith(".bin"):
-            continue
-        fsize = os.path.getsize(f)
-        if fsize == 0:
-            continue
-        if fsize % RECORD_SIZE != 0:
-            fsize -= fsize % RECORD_SIZE
-        with open(f, "rb") as fh:
-            data = fh.read(fsize)
-        for i in range(0, fsize, RECORD_SIZE):
-            chunk = data[i:i + RECORD_SIZE]
-            ts, fid, addr, is_write, region_byte = struct.unpack("<QIxxxxQib3x", chunk)
-            region = chr(region_byte)
-            records.append({
-                'ts': ts,
-                'fid': fid,
-                'addr': addr,
-                'is_write': is_write,
-                'region': region,
-            })
-    return records
-
+    return read_files([f for f in files if str(f).endswith('.bin')])
 
 def parse_text_trace(files):
-    records = []
-    for f in files:
-        if not f.endswith(".txt"):
-            continue
-        with open(f, "r") as fh:
-            for line in fh:
-                line = line.strip()
-                if not line:
-                    continue
-                m = re.match(r'\[(\d+)\]\s+(\d+)\s+([RWM])\s+0x([0-9a-fA-F]+)\s+([GHS])', line)
-                if not m:
-                    continue
-                ts = int(m.group(1))
-                fid = int(m.group(2))
-                rw_char = m.group(3)
-                addr = int(m.group(4), 16)
-                region = m.group(5)
-                is_write = 1 if rw_char == 'W' else 2 if rw_char == 'M' else 0
-                records.append({
-                    'ts': ts,
-                    'fid': fid,
-                    'addr': addr,
-                    'is_write': is_write,
-                    'region': region,
-                })
-    return records
+    return read_files([f for f in files if str(f).endswith('.txt')])
 
+def require_single_module(records):
+    if any(r.get("schema_version") == 3 for r in records):
+        raise ValueError("v3 logical objects require build_access_graph.py")
+    keys = {(r.get('pid'), r.get('run_id'), r.get('module_id')) for r in records}
+    if len(keys) > 1:
+        raise ValueError('Legacy field graph requires one run/module; use export_trace.py for all events')
 
 def build_dfg_edges(records, window_size=10, dedup=True):
+    require_single_module(records)
     edges = defaultdict(int)
     window = []
     window_keys = set()
@@ -172,12 +112,19 @@ def generate_four_dfgs(records, gep_map, struct_layout, loader, output_dir=".", 
 
 
 def decode_trace(records, gep_map, struct_layout, loader, output_path):
-    with open(output_path, "w") as f:
-        f.write("# ts | field_name | type | size | addr | r/w | region\n")
+    import csv
+    columns = ['timestamp_ns', 'event_index', 'address', 'access_size', 'mode',
+               'cpu_id', 'os_tid', 'thread_instance', 'thread_seq', 'module_id',
+               'site_id', 'fid', 'field_name', 'declared_field_size', 'region']
+    with open(output_path, 'w', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=columns)
+        writer.writeheader()
         for rec in records:
-            fname, ftype, fsize = loader.resolve_field_name(rec['fid'], gep_map, struct_layout)
-            rw = 'W' if rec['is_write'] == 1 else 'M' if rec['is_write'] == 2 else 'R'
-            f.write(f"[{rec['ts']}] {fname} {ftype} {fsize}B 0x{rec['addr']:x} {rw} {rec['region']}\n")
+            name, _, field_size = loader.resolve_field_name(rec['fid'], gep_map, struct_layout)
+            row = {key: rec.get(key) for key in columns}
+            row.update(address=hex(rec['addr']), field_name=name,
+                       declared_field_size=field_size)
+            writer.writerow(row)
 
 
 def print_summary(records, gep_map, struct_layout, loader):
@@ -227,6 +174,9 @@ def main():
         print("No trace records found.", file=sys.stderr)
         sys.exit(1)
 
+    require_single_module(records)
+    if records[0].get('schema_version') == 2:
+        print('Note: legacy field co-occurrence graph; not the fixed-window FS graph. Region is unknown (U).', file=sys.stderr)
     total = len(records)
     if args.start >= total:
         print(f"start exceeds total records ({total}), nothing to process")

@@ -1,0 +1,10 @@
+{
+  "functions": ["main"],
+  "objects": [
+    {"kind": "global", "symbol": "grid", "name": "grid"},
+    {"kind": "heap", "function": "main", "callee": "mmap", "ordinal": 0,
+     "name": "mapped", "type": "i32", "shape": [2, 2]},
+    {"kind": "heap", "function": "main", "callee": "mmap", "ordinal": 1,
+     "name": "mapped", "type": "i32", "shape": [2, 2]}
+  ]
+}

@@ -8,6 +8,18 @@ from field_analysis_utils import FieldMetadataLoader
 
 
 def load_affinity_bin(path):
+    from pathlib import Path
+    from trace_io import collect_files, read_files
+    files = collect_files(Path(path).parent)
+    if files:
+        rows = read_files(files)
+        if rows and rows[0]['schema_version'] == 3:
+            raise ValueError("v3 logical objects require build_access_graph.py")
+        if rows and rows[0]['schema_version'] == 2:
+            from build_dfg import build_dfg_edges
+            print('Using legacy 16-event field-affinity aggregation of v2; not FS graph.', file=sys.stderr)
+            edges = build_dfg_edges(rows, window_size=16, dedup=False)
+            return [(a, b, n) for (a, b), n in edges.items()]
     if not os.path.isfile(path):
         print(f"Warning: Affinity binary file not found: {path}", file=sys.stderr)
         return []
